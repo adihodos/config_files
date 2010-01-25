@@ -16,11 +16,16 @@
 	format = html
 	browser = konqueror
 [merge]
-	tool = kdiff3
+	tool = extMerge
 [web]
 	browser = konqueror
 [diff]
 	tool = kdiff3
+	external = extDiff
 [github]
 	user = adihodos
 	token = 08e8b4227fffcdc6c54b90c4324543fb
+[mergetool "extMerge"]
+	cmd = extMerge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+[mergetool]
+	trustExitCode = false
