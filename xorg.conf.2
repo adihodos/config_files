@@ -1,0 +1,57 @@
+Section "ServerLayout"
+	Identifier     "X.org Configured"
+	Screen      0  "aticonfig-Screen[0]-0" 0 0
+	InputDevice    "Mouse0" "CorePointer"
+	InputDevice    "Keyboard0" "CoreKeyboard"
+EndSection
+
+Section "Files"
+	ModulePath   "/usr/lib/xorg/modules"
+	FontPath     "catalogue:/etc/X11/fontpath.d"
+	FontPath     "built-ins"
+EndSection
+
+Section "Module"
+	Load  "dri"
+	Load  "dbe"
+	Load  "glx"
+	Load  "extmod"
+EndSection
+
+Section "InputDevice"
+	Identifier  "Keyboard0"
+	Driver      "kbd"
+EndSection
+
+Section "InputDevice"
+	Identifier  "Mouse0"
+	Driver      "mouse"
+	Option	    "Protocol" "auto"
+	Option	    "Device" "/dev/input/mice"
+	Option	    "ZAxisMapping" "4 5 6 7"
+EndSection
+
+Section "Monitor"
+	Identifier   "aticonfig-Monitor[0]-0"
+	Option	    "VendorName" "ATI Proprietary Driver"
+	Option	    "ModelName" "Generic Autodetecting Monitor"
+	Option	    "DPMS" "true"
+EndSection
+
+Section "Device"
+	Identifier  "aticonfig-Device[0]-0"
+	Driver      "fglrx"
+	BusID       "PCI:1:0:0"
+EndSection
+
+Section "Screen"
+	Identifier "aticonfig-Screen[0]-0"
+	Device     "aticonfig-Device[0]-0"
+	Monitor    "aticonfig-Monitor[0]-0"
+	DefaultDepth     24
+	SubSection "Display"
+		Viewport   0 0
+		Depth     24
+	EndSubSection
+EndSection
+

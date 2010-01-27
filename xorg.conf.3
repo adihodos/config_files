@@ -1,0 +1,79 @@
+# Xorg configuration created by livna-config-display
+
+Section "ServerLayout"
+	Identifier     "aticonfig Layout"
+	Screen      0  "Screen0" 0 0
+	Screen         "aticonfig-Screen[0]-1" RightOf "aticonfig-Screen[0]-0"
+EndSection
+
+Section "Files"
+	ModulePath   "/usr/lib/xorg/modules/extensions/fglrx"
+	ModulePath   "/usr/lib/xorg/modules/extensions"
+	ModulePath   "/usr/lib/xorg/modules"
+EndSection
+
+Section "ServerFlags"
+	Option	    "AIGLX" "on"
+	Option			"Xinerama" "on"
+EndSection
+
+Section "Monitor"
+	Identifier   "aticonfig-Monitor[0]-0"
+	Option	    "VendorName" "ATI Proprietary Driver"
+	Option	    "ModelName" "Generic Autodetecting Monitor"
+	Option	    "DPMS" "true"
+EndSection
+
+Section "Monitor"
+	Identifier   "aticonfig-Monitor[0]-1"
+	Option	    "VendorName" "ATI Proprietary Driver"
+	Option	    "ModelName" "Generic Autodetecting Monitor"
+	Option	    "DPMS" "true"
+EndSection
+
+Section "Device"
+	Identifier  "Videocard0"
+	Driver      "fglrx"
+	Option	    "OpenGLOverlay" "off"
+	Option	    "VideoOverlay" "on"
+	#BusID       "PCI:1:0:0"
+EndSection
+
+Section "Device"
+	Identifier  "aticonfig-Device[0]-1"
+	Driver      "fglrx"
+	Option	    "OpenGLOverlay" "off"
+	Option	    "VideoOverlay" "on"
+	#BusID       "PCI:1:0:0"
+	Screen      1
+EndSection
+
+Section "Screen"
+	Identifier "Screen0"
+	Device     "Videocard0"
+	Monitor    "aticonfig-Monitor[0]-0"
+	DefaultDepth     24
+	SubSection "Display"
+		Viewport   0 0
+		Depth     24
+	EndSubSection
+EndSection
+
+Section "Screen"
+	Identifier "aticonfig-Screen[0]-1"
+	Device     "aticonfig-Device[0]-1"
+	Monitor    "aticonfig-Monitor[0]-1"
+	DefaultDepth     24
+	SubSection "Display"
+		Viewport   0 0
+		Depth     24
+	EndSubSection
+EndSection
+
+Section "Extensions"
+	Option	    "Composite" "Enable"
+EndSection
+
+Section "DRI"
+        Mode         0666
+EndSection
