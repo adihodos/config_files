@@ -14,18 +14,17 @@
 	ui = always
 [help]
 	format = html
-	browser = konqueror
-[merge]
-	tool = extMerge
+	browser = firefox
 [web]
-	browser = konqueror
-[diff]
-	tool = kdiff3
-	external = extDiff
+	browser = firefox
 [github]
 	user = adihodos
 	token = 08e8b4227fffcdc6c54b90c4324543fb
+[merge]
+	tool = extMerge
 [mergetool "extMerge"]
 	cmd = extMerge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
 [mergetool]
 	trustExitCode = false
+[diff]
+	external = extDiff
