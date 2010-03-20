@@ -41,7 +41,7 @@ if has("win32")
   set guifont=Consolas:h11
 endif  
 if has("unix")
-  set guifont=Liberation\ Mono\ 12
+  set guifont=Consolas\ 13
 endif
 set history=100
 set ruler
@@ -76,6 +76,7 @@ if has("win32")
 endif
 if has("unix")
   set tags+=~/opt/tags/linux_tags
+  set tags+=~/opt/tags/stl_tags
 endif
 
 "switch tabs
@@ -85,6 +86,20 @@ nnoremap <silent> <C-p> :tabprevious <CR>
 "showfunc
 map <F7> <Plug>ShowFunc
 map! <F7> <Plug>ShowFunc
+
+" c syntax highlight
+let c_c_vim_compatible = 1
+let c_gnu = 1
+let c_ansi_typedefs = 1
+let c_ansi_constants = 1
+let c_posix = 1
+let c_math = 1
+let c_C99 = 1
+let c_syntax_for_h = 1  
+"let c_comment_strings = 1
+"let c_comment_numbers = 1
+"let c_comment_types = 1
+"let c_comment_date_time = 1
  
 let OmniCpp_NamespaceSearch = 1
 let OmniCpp_GlobalScopeSearch = 1
