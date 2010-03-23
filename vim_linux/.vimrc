@@ -41,7 +41,7 @@ if has("win32")
   set guifont=Consolas:h11
 endif  
 if has("unix")
-  set guifont=Consolas\ 13
+  set guifont=Liberation\ Mono\ 14
 endif
 set history=100
 set ruler
