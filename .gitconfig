@@ -2,7 +2,7 @@
 	name = Adrian Hodos
 	email = adi.hodos@gmail.com
 [core]
-	editor = vim
+	editor = gvim -f
 	autocrlf = input
 [color]
 	branch = always
