@@ -1,0 +1,22 @@
+[user]
+	name = Adi Hodos
+	email = adi.hodos@gmail.com
+[core]
+	editor = gvim -n -f $*
+	pager = less -FRSX
+	autocrlf = input
+[color]
+	ui = always
+[merge]
+  tool = diffmerge
+[mergetool "diffmerge"]
+  cmd = ~/opt/utils/git_mergetools/git_mergewrapper.sh "$PWD/$BASE" "$PWD/$LOCAL" "$PWD/$REMOTE" "$PWD/$MERGED"
+  trustExitCode = false
+  keepBackup = false
+[diff]
+  external = ~/opt/utils/git_mergetools/git_diffwrapper.sh
+[web]
+	browser = firefox
+[help]
+	browser = firefox
+	format = html
