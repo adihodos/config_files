@@ -1,36 +1,28 @@
+(setq visible-bell t)
 (setq inhibit-startup-message t)
 (add-to-list 'load-path "~/.emacs.d/plugins/color-theme-6.6.0")
 (add-to-list 'load-path "~/.emacs.d/plugins/color-theme-6.6.0/themes")
 (add-to-list 'load-path "~/.emacs.d/plugins/company")
 (add-to-list 'load-path "~/.emacs.d/plugins/styles")
+;(add-to-list 'load-path "~/.emacs.d/plugins/completion-ui")
+;(require 'completion-ui)
 
-;; CEDET
-;(add-to-list 'load-path "~/.emacs.d/plugins/cedet-1.0pre7/common")
-;(load-file "~/.emacs.d/plugins/cedet-1.0pre7/common/cedet.el")
-;(global-ede-mode t)                      ; Enable the Project management system
-;(semantic-load-enable-code-helpers)      ; Enable prototype help and smart completion 
-;(global-srecode-minor-mode 1)            ; Enable template insertion menu
-;(semantic-load-enable-gaudy-code-helpers)
-;(semantic-load-enable-excessive-code-helpers)
-;(require 'semantic-ia)
-;(defun my-semantic-hook ()
-;  (imenu-add-to-menubar "TAGS"))
-;(add-hook 'semantic-init-hooks 'my-semantic-hook)
+(add-to-list 'load-path "/home/adi.hodos/.emacs.d/")
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "/home/adi.hodos/.emacs.d//ac-dict")
+(ac-config-default)
+(global-set-key "\M-/" 'auto-complete)
+(setq ac-auto-start 4)
+(setq ac-delay 0)
+(set-face-background 'ac-candidate-face "lightgray")
+(set-face-underline 'ac-candidate-face "darkgray")
+(set-face-background 'ac-selection-face "steelblue")
 
-;(defun my-cedet-hook ()
-;  (local-set-key [(control return)] 'semantic-ia-complete-symbol)
-;  (local-set-key "\C-c?" 'semantic-ia-complete-symbol-menu)
-;  (local-set-key "\C-c>" 'semantic-complete-analyze-inline)
-;  (local-set-key "\C-cp" 'semantic-analyze-proto-impl-toggle))
-;(add-hook 'c-mode-common-hook 'my-cedet-hook)
+(require 'gccsense)
+(add-hook 'c-mode-common-hook
+          (lambda ()
+            (local-set-key (kbd "C-c .") 'ac-complete-gccsense)))
 
-;(defun my-c-mode-cedet-hook ()
-; (local-set-key "." 'semantic-complete-self-insert)
-; (local-set-key ">" 'semantic-complete-self-insert))
-;(add-hook 'c-mode-common-hook 'my-c-mode-cedet-hook)
-
-
-(autoload 'company-mode "company" nil t)
 (line-number-mode 1)
 (require 'color-theme)
 (color-theme-initialize)
@@ -237,7 +229,7 @@ spaces across the current buffer."
     
 (show-paren-mode t)
 (setq scalable-fonts-allowed t)
-(modify-all-frames-parameters '((font . "Consolas-14"))) 
+(modify-all-frames-parameters '((font . "-unknown-Liberation Mono-normal-normal-normal-*-*-140-*-*-m-0-iso10646-1"))) 
 
 ;; visit a file
 (global-set-key (kbd "<f3>") 'find-file)
