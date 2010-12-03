@@ -4,21 +4,24 @@
 (add-to-list 'load-path "~/.emacs.d/plugins/color-theme-6.6.0/themes")
 (add-to-list 'load-path "~/.emacs.d/plugins/company")
 (add-to-list 'load-path "~/.emacs.d/plugins/styles")
-;(add-to-list 'load-path "~/.emacs.d/plugins/completion-ui")
+(add-to-list 'load-path "~/.emacs.d/plugins/completion-ui")
+;(add-to-list 'load-path "~/.emacs.d/plugins/company")
+;(autoload 'company-mode "company" nil t)
 ;(require 'completion-ui)
 
-(add-to-list 'load-path "/home/adi.hodos/.emacs.d/")
+
+(add-to-list 'load-path "~/.emacs.d/")
 (require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "/home/adi.hodos/.emacs.d//ac-dict")
+(add-to-list 'ac-dictionary-directories "/home/adi.hodos/.emacs.d/ac-dict")
 (ac-config-default)
 (global-set-key "\M-/" 'auto-complete)
-(setq ac-auto-start 4)
+(setq ac-auto-start nil)
 (setq ac-delay 0)
 (set-face-background 'ac-candidate-face "lightgray")
 (set-face-underline 'ac-candidate-face "darkgray")
 (set-face-background 'ac-selection-face "steelblue")
 
-(require 'gccsense)
+;(require 'gccsense)
 (add-hook 'c-mode-common-hook
           (lambda ()
             (local-set-key (kbd "C-c .") 'ac-complete-gccsense)))
@@ -166,7 +169,7 @@ spaces across the current buffer."
   "Look up the word under cursor in a browser."
   (interactive)
   (browse-url
-   (concat "http://www.answers.com/main/ntquery?s="
+   (concat "http://social.msdn.microsoft.com/Search/en-US?query="
            (thing-at-point 'word))))
 (global-set-key (kbd "<f1>") 'answers-define)    
 
@@ -229,7 +232,7 @@ spaces across the current buffer."
     
 (show-paren-mode t)
 (setq scalable-fonts-allowed t)
-(modify-all-frames-parameters '((font . "-unknown-Liberation Mono-normal-normal-normal-*-*-140-*-*-m-0-iso10646-1"))) 
+(modify-all-frames-parameters '((font . "-outline-Consolas-normal-r-normal-normal-20-90-96-96-c-*-iso8859-1"))) 
 
 ;; visit a file
 (global-set-key (kbd "<f3>") 'find-file)

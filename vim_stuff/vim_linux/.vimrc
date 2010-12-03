@@ -1,14 +1,10 @@
 set nocompatible
-"source $VIMRUNTIME/vimrc_example.vim
-"source $VIMRUNTIME/mswin.vim
-"behave mswin
  
 "colorscheme vibrantink
 "colorscheme vividchalk
-"colorscheme jellybeans
+colorscheme jellybeans
 let g:load_doxygen_syntax=1
 set ff=unix
-colorscheme candy
 set matchpairs+={:},(:),[:],<:>
 set guioptions=gR
 set showtabline=2
@@ -38,9 +34,8 @@ set foldenable
 set foldminlines=50
 set foldopen=all
 if has("win32")
-  set guifont=Consolas:h11
-endif  
-if has("unix")
+  set guifont=Consolas:h14
+elseif has("unix")
   set guifont=Liberation\ Mono\ 14
 endif
 set history=100
@@ -78,6 +73,8 @@ if has("unix")
   set tags+=~/opt/tags/linux_tags
   set tags+=~/opt/tags/stl_tags
 endif
+
+autocmd BufRead,BufNewFile *.s,*.S,*.asm,*.inc set syntax=asmx86
 
 "switch tabs
 nnoremap <silent> <C-n> :tabnext <CR>
@@ -134,6 +131,5 @@ au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 set completeopt=menuone,menu,longest,preview
  
 let g:EchoFuncLangsUsed = ["java","cpp","c"]
-let g:EchoFuncKeyNext = "Alt++"
-let g:EchoFuncKeyPrev	= "Alt+="
-
+let g:EchoFuncKeyNext = '<M-+>'
+let g:EchoFuncKeyPrev	= '<M+=>'
