@@ -2,7 +2,7 @@ set nocompatible
  
 "colorscheme vibrantink
 "colorscheme vividchalk
-colorscheme jellybeans
+colorscheme zenburn
 let g:load_doxygen_syntax=1
 set ff=unix
 set matchpairs+={:},(:),[:],<:>
@@ -20,9 +20,9 @@ set cindent
 "set cinoptions=(0,l1,g0
 set cinoptions=(s,(0,W4,l1,g0
 "set cino=>2,:0,=0,l1,g0,t0,c0,(0,w1,(s,m1,)100,*100
-"set autoindent
+set autoindent
 set autoread
-set cmdheight=2
+set cmdheight=1
 set textwidth=80
 set columns=80
 set cursorline
@@ -36,12 +36,13 @@ set foldopen=all
 if has("win32")
   set guifont=Consolas:h14
 elseif has("unix")
-  set guifont=Liberation\ Mono\ 14
+  "set guifont=Liberation\ Mono\ 14
+  set guifont=Envy\ Code\ R\ 10
 endif
 set history=100
 set ruler
 set scrolloff=2
-set shiftwidth=2
+set shiftwidth=4
 set showbreak="+++"
 set showmode
 set showcmd
@@ -54,7 +55,8 @@ set splitright
 set statusline=%<%f%=\ [%1*%M%*%n%R%H]\ %-19(%3l,%02c%03V%)%O'%02b'
 set number
 set numberwidth=4
-set tabstop=2
+set tabstop=8
+set softtabstop=4
 set visualbell
 set wrap
 set wildmenu
@@ -73,8 +75,6 @@ if has("unix")
   set tags+=~/opt/tags/linux_tags
   set tags+=~/opt/tags/stl_tags
 endif
-
-autocmd BufRead,BufNewFile *.s,*.S,*.asm,*.inc set syntax=asmx86
 
 "switch tabs
 nnoremap <silent> <C-n> :tabnext <CR>
@@ -110,7 +110,7 @@ au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 set completeopt=menuone,menu,longest,preview
  
 " build tags of your own project with CTRL+F12
-map <C-F12> :silent !ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+map <C-F12> :silent !exctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 " switch between header/*.c/*.cpp
 map <C-O><C-O> :A <CR>
@@ -133,3 +133,18 @@ set completeopt=menuone,menu,longest,preview
 let g:EchoFuncLangsUsed = ["java","cpp","c"]
 let g:EchoFuncKeyNext = '<M-+>'
 let g:EchoFuncKeyPrev	= '<M+=>'
+
+"
+" Minibuff explorer shit
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1
+let Tlist_Ctags_Cmd='/usr/local/bin/exctags'
+map T :TaskList<CR>
+map P :TlistToggle<CR>
+"
+" Completion for python
+autocmd FileType python set ofu=pythoncomplete#Complete
+let python_highlight_all = 1
+let python_slow_sync = 1
