@@ -19,7 +19,7 @@
 [difftool "p4merge"]
   cmd = p4merge "$LOCAL" "$REMOTE"
 [web]
-	browser = chrome
+	browser = links
 [help]
-	browser = chrome
+	browser = links
 	format = html
