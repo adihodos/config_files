@@ -1,0 +1,5 @@
+(add-to-list 'load-path "~/.emacs.d/plugins/color-theme-6.6.0/themes")
+(load "color-theme.el")
+(require 'color-theme)
+(color-theme-initialize)
+(setq color-theme-is-global t)

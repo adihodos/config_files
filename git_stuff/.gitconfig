@@ -1,0 +1,27 @@
+[user]
+    name = Adi Hodos
+    email = adi.hodos@gmail.com
+[core]
+    pager = most
+    autocrlf = input
+    editor = emacs -mm
+[color]
+    ui = always
+
+[help]
+	format = web
+
+[diff]
+	tool = p4merge
+[difftool "p4merge"]
+	path = "/usr/home/adi.hodos/opt/p4v/bin/p4merge"
+	cmd = \"$LOCAL\" \"$REMOTE\"
+
+[difftool]
+        prompt = false
+
+[merge]
+	tool = p4merge
+[mergetool "p4merge"]
+	path = "/usr/home/adi.hodos/opt/p4v/bin/p4merge"
+	cmd = \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
