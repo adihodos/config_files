@@ -1,6 +1,16 @@
-((("ThreadExtensions" .
+((("ListIterator" .
+   [0 0 0 0 0 2 0 0 0 0 0 3])
+  ("new_tail" .
+   [0 0 0 0 0 0 0 1])
+  ("old_head" .
+   [0 0 0 0 0 0 0 2])
+  ("new_data" .
+   [0 0 0 0 0 0 0 2])
+  ("GDB_DEBUG_SCRIPT" .
    [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("ListPushHead" .
+   [0 0 0 0 0 0 0 0 1 0 0 0])
   ("LambdaHeadPushHelper" .
    [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2])
-  ("ListPushHead" .
-   [0 0 0 0 0 0 0 0 1 0 0 0])))
+  ("ThreadExtensions" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])))

@@ -60,7 +60,8 @@
                     :weight 'bold :underline t :overline nil :slant 'normal)        
 
 (setq scalable-fonts-allowed t)
-(set-default-font "Liberation Mono-14")
+;;(set-default-font "Liberation Mono-14")
+(set-default-font "Dina-14")
 
 ;; open my Emacs init file
 (defun my-open-dot-emacs ()
@@ -73,6 +74,4 @@
 (global-hl-line-highlight)
 (scroll-bar-mode -1)
 (global-linum-mode 1)
-
-     
 
