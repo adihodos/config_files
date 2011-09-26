@@ -2,7 +2,7 @@ set nocompatible
  
 "colorscheme vibrantink
 "colorscheme vividchalk
-colorscheme zenburn
+colorscheme desertEx
 let g:load_doxygen_syntax=1
 set ff=unix
 set matchpairs+={:},(:),[:],<:>
@@ -37,7 +37,8 @@ if has("win32")
   set guifont=Consolas:h14
 elseif has("unix")
   "set guifont=Liberation\ Mono\ 14
-  set guifont=Envy\ Code\ R\ 10
+  "set guifont=Envy\ Code\ R\ 10
+  set guifont=Dina\ 12
 endif
 set history=100
 set ruler
@@ -98,13 +99,13 @@ let c_syntax_for_h = 1
 "let c_comment_types = 1
 "let c_comment_date_time = 1
  
-let OmniCpp_NamespaceSearch = 1
-let OmniCpp_GlobalScopeSearch = 1
-let OmniCpp_ShowAccess = 1
-let OmniCpp_MayCompleteDot = 1
-let OmniCpp_MayCompleteArrow = 1
-let OmniCpp_MayCompleteScope = 1
-let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
+"let OmniCpp_NamespaceSearch = 1
+"let OmniCpp_GlobalScopeSearch = 1
+"let OmniCpp_ShowAccess = 1
+"let OmniCpp_MayCompleteDot = 1
+"let OmniCpp_MayCompleteArrow = 1
+"let OmniCpp_MayCompleteScope = 1
+"let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
 "automatically open and close the popup menu / preview window
 au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 set completeopt=menuone,menu,longest,preview
@@ -117,18 +118,6 @@ map <C-O><C-O> :A <CR>
 map <C-O><C-H> :AS <CR>
 map <C-O><C-V> :AV <CR>
 map <C-O><C-T> :AT <CR>
- 
-" OmniCppComplete
-let OmniCpp_NamespaceSearch = 1
-let OmniCpp_GlobalScopeSearch = 1
-let OmniCpp_ShowAccess = 1
-let OmniCpp_MayCompleteDot = 1
-let OmniCpp_MayCompleteArrow = 1
-let OmniCpp_MayCompleteScope = 1
-let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
-" automatically open and close the popup menu / preview window
-au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
-set completeopt=menuone,menu,longest,preview
  
 let g:EchoFuncLangsUsed = ["java","cpp","c"]
 let g:EchoFuncKeyNext = '<M-+>'
@@ -148,3 +137,5 @@ map P :TlistToggle<CR>
 autocmd FileType python set ofu=pythoncomplete#Complete
 let python_highlight_all = 1
 let python_slow_sync = 1
+
+autocmd BufNewFile,BufRead *.h set filetype=cpp

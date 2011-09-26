@@ -1,25 +1,28 @@
 [user]
-	name = Adi Hodos
-	email = adi.hodos@gmail.com
+    name = Adi Hodos
+    email = adi.hodos@gmail.com
 [core]
-	editor = gvim -n -f $*
-	pager = most
-	autocrlf = input
+    pager = most
+    autocrlf = input
+    editor = emacs -mm
 [color]
-	ui = always
-[merge]
-  tool = p4merge
-[mergetool "p4merge"]
-  cmd = git_mergewrapper.sh "$PWD/$BASE" "$PWD/$LOCAL" "$PWD/$REMOTE" "$PWD/$MERGED"
-  trustExitCode = false
-  keepBackup = false
-[diff]
-  #external = git_diffwrapper.sh
-  tool = p4merge
-[difftool "p4merge"]
-  cmd = p4merge "$LOCAL" "$REMOTE"
-[web]
-	browser = links
+    ui = always
+
 [help]
-	browser = links
-	format = html
+	format = web
+
+[diff]
+	tool = p4merge
+[difftool "p4merge"]
+	cmd = \"$LOCAL\" \"$REMOTE\"
+
+[difftool]
+        prompt = false
+
+[merge]
+	tool = p4merge
+[mergetool "p4merge"]
+	cmd = \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+[github]
+	user = adi.hodos@gmail.com
+	token = 08e8b4227fffcdc6c54b90c4324543fb
