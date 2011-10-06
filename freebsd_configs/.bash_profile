@@ -1,2 +1,1 @@
-PATH=$PATH:$HOME/opt/bin
-export PATH
+source ~/.bashrc

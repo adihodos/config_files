@@ -60,8 +60,8 @@
                     :weight 'bold :underline t :overline nil :slant 'normal)        
 
 (setq scalable-fonts-allowed t)
-;;(set-default-font "Liberation Mono-14")
-(set-default-font "Dina-14")
+(set-default-font "Liberation Mono-14")
+;;(set-default-font "Dina-14")
 
 ;; open my Emacs init file
 (defun my-open-dot-emacs ()
@@ -75,3 +75,16 @@
 (scroll-bar-mode -1)
 (global-linum-mode 1)
 
+;;
+;; clang auto completion
+(require 'auto-complete-clang)
+(setq clang-completion-suppress-error 't)
+
+(defun my-c-mode-common-hook()
+  (setq ac-auto-start nil)
+  (setq ac-expand-on-auto-complete nil)
+  (setq ac-quick-help-delay 0.3)
+  (define-key c-mode-base-map (kbd "M-/") 'ac-complete-clang)
+)
+
+(add-hook 'c-mode-common-hook 'my-c-mode-common-hook)

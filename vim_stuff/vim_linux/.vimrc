@@ -2,7 +2,7 @@ set nocompatible
  
 "colorscheme vibrantink
 "colorscheme vividchalk
-colorscheme desertEx
+colorscheme inkpot
 let g:load_doxygen_syntax=1
 set ff=unix
 set matchpairs+={:},(:),[:],<:>
@@ -38,7 +38,7 @@ if has("win32")
 elseif has("unix")
   "set guifont=Liberation\ Mono\ 14
   "set guifont=Envy\ Code\ R\ 10
-  set guifont=Dina\ 12
+  set guifont=Consolas\ 14
 endif
 set history=100
 set ruler
@@ -132,7 +132,9 @@ let g:miniBufExplModSelTarget = 1
 let Tlist_Ctags_Cmd='/usr/local/bin/exctags'
 map T :TaskList<CR>
 map P :TlistToggle<CR>
-"
+
+set ofu=syntaxcomplete#Complete
+
 " Completion for python
 autocmd FileType python set ofu=pythoncomplete#Complete
 let python_highlight_all = 1
