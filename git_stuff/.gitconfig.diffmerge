@@ -1,0 +1,37 @@
+[user]
+    name = Adi Hodos
+    email = adi.hodos@gmail.com
+[core]
+    pager = most
+    autocrlf = input
+    editor = emacs -mm
+[color]
+    ui = always
+
+[help]
+	format = web
+
+[diff]
+	tool = p4merge
+        tool = diffmerge	
+[difftool "diffmerge"]
+        cmd = diffmerge -nosplash -ro2 -t1=\"$LOCAL\" -t2=\"$REMOTE\" \"$LOCAL\" \"$REMOTE\"
+
+[difftool "p4merge"]
+        cmd = \"$LOCAL\" \"$REMOTE\"
+
+[difftool]
+        prompt = false
+
+[merge]
+        tool = p4merge
+        tool = diffmerge
+[mergetool "diffmerge"]
+        cmd = diffmerge -nosplash -ro2 -result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+
+[mergetool "p4merge"]
+        cmd = \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+
+[github]
+	user = adi.hodos@gmail.com
+	token = 08e8b4227fffcdc6c54b90c4324543fb
