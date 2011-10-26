@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <settings>
-	<console change_refresh="10" refresh="100" rows="40" columns="150" buffer_rows="500" buffer_columns="0" shell="" init_dir="C:\\projects" start_hidden="0" save_size="0">
+	<console change_refresh="10" refresh="100" rows="40" columns="125" buffer_rows="500" buffer_columns="0" shell="" init_dir="C:\\projects" start_hidden="0" save_size="0">
 		<colors>
 			<color id="0" r="0" g="0" b="0"/>
 			<color id="1" r="0" g="0" b="128"/>
@@ -99,7 +99,7 @@
 				</image>
 			</background>
 		</tab>
-		<tab title="Windows SDK buid">
+		<tab title="Windows SDK build - x86">
 			<console shell="C:\Windows\System32\cmd.exe /E:ON /V:ON /T:0E /K &quot;&quot;C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SetEnv.Cmd&quot;&quot; &quot;/DEBUG /X86 /WIN7&quot;" init_dir="&quot;C:\Program Files\Microsoft SDKs\Windows\v7.1\&quot;"/>
 			<cursor style="1" r="255" g="128" b="0"/>
 			<background type="0" r="0" g="0" b="0">
@@ -108,8 +108,26 @@
 				</image>
 			</background>
 		</tab>
-		<tab title="MSVC build">
+		<tab title="Windows SDK build - x64">
+			<console shell="C:\Windows\System32\cmd.exe /E:ON /V:ON /T:0E /K &quot;&quot;C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SetEnv.Cmd&quot;&quot; &quot;/DEBUG /X64 /WIN7&quot;" init_dir="&quot;C:\Program Files\Microsoft SDKs\Windows\v7.1\&quot;"/>
+			<cursor style="1" r="255" g="128" b="0"/>
+			<background type="0" r="0" g="0" b="0">
+				<image file="" relative="0" extend="0" position="0">
+					<tint opacity="0" r="0" g="0" b="0"/>
+				</image>
+			</background>
+		</tab>
+		<tab title="Visual C++ build - x86">
 			<console shell="cmd /k &quot;&quot;C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\vcvars32.bat&quot;&quot;" init_dir="&quot;C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\&quot;"/>
+			<cursor style="1" r="255" g="128" b="0"/>
+			<background type="0" r="0" g="0" b="0">
+				<image file="" relative="0" extend="0" position="0">
+					<tint opacity="0" r="0" g="0" b="0"/>
+				</image>
+			</background>
+		</tab>
+		<tab title="Visual C++ build - x64">
+			<console shell="cmd /k &quot;&quot;C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\amd64\vcvars64.bat&quot;&quot;" init_dir="&quot;C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\&quot;"/>
 			<cursor style="1" r="255" g="128" b="0"/>
 			<background type="0" r="0" g="0" b="0">
 				<image file="" relative="0" extend="0" position="0">
