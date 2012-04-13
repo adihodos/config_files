@@ -76,6 +76,12 @@ result = mergeLists(configuration, args)
 writeConfiguration(map(lambda x: x + "\n", result))
 
 
-sys.exit(os.system(" ".join(sys.argv[1:])))
+import subprocess
+proc = subprocess.Popen(sys.argv[1:])
+ret = proc.wait()
+
+if ret is None:
+  sys.exit(1)
+sys.exit(ret)
 
 # vim: set ts=2 sts=2 sw=2 expandtab :

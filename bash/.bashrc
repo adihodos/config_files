@@ -1,21 +1,18 @@
-# .bashrc
-
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
-fi
-
-PAGER=most; export PAGER
+#
+# bla bla
+#
 EDITOR=gvim; export EDITOR
-alias clang='$HOME/opt/bin/clang'
-alias clang++='$HOME/opt/bin/clang++'
-PATH=$PATH:/opt/eclipse; export PATH
-PATH=$PATH:/opt/jdk1.6.0_22/bin; export PATH 
-PATH=$PATH:$HOME/opt/depot_tools; export PATH
+PAGER=most; export PAGER
+PS1='\[\e[m\n\e[1;30m\][$$:$PPID \j:\!\[\e[1;30m\]]\[\e[0;36m\] \T \d \[\e[1;30m\][\[\e[1;34m\]\u@\H\[\e[1;30m\]:\[\e[0;37m\]${SSH_TTY} \[\e[0;32m\]+${SHLVL}\[\e[1;30m\]] \[\e[1;37m\]\w\[\e[0;37m\] \n($SHLVL:\!)\$ '
 
-# User specific aliases and functions
-if [ "$PS1" ] ; then  
-   mkdir -p -m 0700 /dev/cgroup/cpu/user/$$ > /dev/null 2>&1
-   echo $$ > /dev/cgroup/cpu/user/$$/tasks
-   echo "1" > /dev/cgroup/cpu/user/$$/notify_on_release
-fi
+export PATH="/usr/local/texlive/2011/bin/x86_64-linux:$PATH"
+export PATH="/usr/local/clang/bin:$PATH"
+export PATH="/usr/local/Trolltech/Qt-4.8.1/bin:$PATH"
+export PATH="/usr/local/gcc48/bin:$PATH"
+
+export LD_LIBRARY_PATH="/usr/local/clang/lib:$LD_LIBRARY_PATH"
+export LD_LIBRARY_PATH="/usr/local/Trolltech/Qt-4.8.11/lib:$LD_LIBRARY_PATH"
+
+export MANPATH="/usr/local/texlive/2011/texmf/doc/man:$MANPATH"
+export INFOPATH="/usr/local/texlive/2011/texmf/doc/info:$INFOPATH"
+

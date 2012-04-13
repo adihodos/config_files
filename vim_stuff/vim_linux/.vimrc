@@ -2,7 +2,9 @@ set nocompatible
  
 "colorscheme vibrantink
 "colorscheme vividchalk
-colorscheme inkpot
+"
+set background=dark
+colorscheme solarized
 let g:load_doxygen_syntax=1
 set ff=unix
 set matchpairs+={:},(:),[:],<:>
@@ -111,7 +113,7 @@ au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 set completeopt=menuone,menu,longest,preview
  
 " build tags of your own project with CTRL+F12
-map <C-F12> :silent !exctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+"map <C-F12> :silent !exctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 " switch between header/*.c/*.cpp
 map <C-O><C-O> :A <CR>
@@ -141,3 +143,12 @@ let python_highlight_all = 1
 let python_slow_sync = 1
 
 autocmd BufNewFile,BufRead *.h set filetype=cpp
+
+" 
+" clnag complete
+let g:clang_snippets = 1
+let g:clang_snippets_engine = 'clang_complete'
+
+
+"let g:clang_snippets = 1
+"let g:clang_snippets_engine = 'snipmate'

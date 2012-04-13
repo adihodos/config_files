@@ -18,14 +18,7 @@ def getCurrentFile():
   file = "\n".join(vim.eval("getline(1, '$')"))
   return (vim.current.buffer.name, file)
 
-def getCurrentTranslationUnit(update = False):
-  userOptionsGlobal = splitOptions(vim.eval("g:clang_user_options"))
-  userOptionsLocal = splitOptions(vim.eval("b:clang_user_options"))
-  args = userOptionsGlobal + userOptionsLocal
-
-  currentFile = getCurrentFile()
-  fileName = vim.current.buffer.name
-
+def getCurrentTranslationUnit(args, currentFile, fileName, update = False):
   if fileName in translationUnits:
     tu = translationUnits[fileName]
     if update:
@@ -34,7 +27,7 @@ def getCurrentTranslationUnit(update = False):
       tu.reparse([currentFile])
       if debug:
         elapsed = (time.time() - start)
-        print "LibClang - Reparsing: " + str(elapsed)
+        print "LibClang - Reparsing: %.3f" % elapsed
     return tu
 
   if debug:
@@ -43,7 +36,7 @@ def getCurrentTranslationUnit(update = False):
   tu = index.parse(fileName, args, [currentFile], flags)
   if debug:
     elapsed = (time.time() - start)
-    print "LibClang - First parse: " + str(elapsed)
+    print "LibClang - First parse: %.3f" % elapsed
 
   if tu == None:
     print "Cannot parse this source file. The following arguments " \
@@ -60,7 +53,7 @@ def getCurrentTranslationUnit(update = False):
   tu.reparse([currentFile])
   if debug:
     elapsed = (time.time() - start)
-    print "LibClang - First reparse (generate PCH cache): " + str(elapsed)
+    print "LibClang - First reparse (generate PCH cache): %.3f" % elapsed
   return tu
 
 def splitOptions(options):
@@ -154,47 +147,62 @@ def getCurrentQuickFixList():
 def updateCurrentDiagnostics():
   global debug
   debug = int(vim.eval("g:clang_debug")) == 1
-  getCurrentTranslationUnit(update = True)
+  userOptionsGlobal = splitOptions(vim.eval("g:clang_user_options"))
+  userOptionsLocal = splitOptions(vim.eval("b:clang_user_options"))
+  args = userOptionsGlobal + userOptionsLocal
+  getCurrentTranslationUnit(args, getCurrentFile(),
+                          vim.current.buffer.name, update = True)
 
-def getCurrentCompletionResults(line, column):
-  tu = getCurrentTranslationUnit()
-  currentFile = getCurrentFile()
+def getCurrentCompletionResults(line, column, args, currentFile, fileName):
+  tu = getCurrentTranslationUnit(args, currentFile, fileName)
   if debug:
     start = time.time()
-  cr = tu.codeComplete(vim.current.buffer.name, line, column, [currentFile],
+  cr = tu.codeComplete(fileName, line, column, [currentFile],
       complete_flags)
   if debug:
     elapsed = (time.time() - start)
-    print "LibClang - Code completion time: " + str(elapsed)
+    print "LibClang - Code completion time (library): %.3f" % elapsed
   return cr
-
-def completeCurrentAt(line, column):
-  print "\n".join(map(str, getCurrentCompletionResults().results))
-
-def formatChunkForWord(chunk):
-  return chunk.spelling
 
 def formatResult(result):
   completion = dict()
 
-  abbr = getAbbr(result.string)
-  info = filter(lambda x: not x.isKindInformative(), result.string)
-  word = filter(lambda x: not x.isKindResultType(), info)
-  returnValue = filter(lambda x: x.isKindResultType(), info)
+  returnValue = None
+  abbr = ""
+  chunks = filter(lambda x: not x.isKindInformative(), result.string)
 
-  if len(returnValue) > 0:
-    returnStr = returnValue[0].spelling + " "
-  else:
-    returnStr = ""
+  args_pos = []
+  cur_pos = 0
+  word = ""
 
-  info = returnStr + "".join(map(lambda x: x.spelling, word))
-  word = abbr
+  for chunk in chunks:
+
+    if chunk.isKindResultType():
+      returnValue = chunk
+      continue
+
+    chunk_spelling = chunk.spelling
+
+    if chunk.isKindTypedText():
+      abbr = chunk_spelling
+
+    chunk_len = len(chunk_spelling)
+    if chunk.isKindPlaceHolder():
+      args_pos += [[ cur_pos, cur_pos + chunk_len ]]
+    cur_pos += chunk_len
+    word += chunk_spelling
+
+  menu = word
+
+  if returnValue:
+    menu = returnValue.spelling + " " + menu
 
   completion['word'] = word
   completion['abbr'] = abbr
-  completion['menu'] = info
-  completion['info'] = info
-  completion['dup'] = 1
+  completion['menu'] = menu
+  completion['info'] = word
+  completion['args_pos'] = args_pos
+  completion['dup'] = 0
 
   # Replace the number that represents a specific kind with a better
   # textual representation.
@@ -206,28 +214,53 @@ def formatResult(result):
 class CompleteThread(threading.Thread):
   lock = threading.Lock()
 
-  def __init__(self, line, column):
+  def __init__(self, line, column, currentFile, fileName):
     threading.Thread.__init__(self)
     self.line = line
     self.column = column
+    self.currentFile = currentFile
+    self.fileName = fileName
     self.result = None
+    userOptionsGlobal = splitOptions(vim.eval("g:clang_user_options"))
+    userOptionsLocal = splitOptions(vim.eval("b:clang_user_options"))
+    self.args = userOptionsGlobal + userOptionsLocal
 
   def run(self):
     try:
       CompleteThread.lock.acquire()
-      self.result = getCurrentCompletionResults(self.line, self.column)
+      if self.line == -1:
+        # Warm up the caches. For this it is sufficient to get the current
+        # translation unit. No need to retrieve completion results.
+        # This short pause is necessary to allow vim to initialize itself.
+        # Otherwise we would get: E293: block was not locked
+        # The user does not see any delay, as we just pause a background thread.
+        time.sleep(0.1)
+        getCurrentTranslationUnit(self.args, self.currentFile, self.fileName)
+      else:
+        self.result = getCurrentCompletionResults(self.line, self.column,
+                                          self.args, self.currentFile, self.fileName)
     except Exception:
       pass
     CompleteThread.lock.release()
 
+def WarmupCache():
+  global debug
+  debug = int(vim.eval("g:clang_debug")) == 1
+  t = CompleteThread(-1, -1, getCurrentFile(), vim.current.buffer.name)
+  t.start()
+
+
 def getCurrentCompletions(base):
   global debug
   debug = int(vim.eval("g:clang_debug")) == 1
-  priority = vim.eval("g:clang_sort_algo") == 'priority'
+  sorting = vim.eval("g:clang_sort_algo")
   line = int(vim.eval("line('.')"))
   column = int(vim.eval("b:col"))
 
-  t = CompleteThread(line, column)
+  if debug:
+    start = time.time()
+
+  t = CompleteThread(line, column, getCurrentFile(), vim.current.buffer.name)
   t.start()
   while t.isAlive():
     t.join(0.01)
@@ -238,17 +271,27 @@ def getCurrentCompletions(base):
   if cr is None:
     return []
 
-  regexp = re.compile("^" + base)
-  filteredResult = filter(lambda x: regexp.match(getAbbr(x.string)), cr.results)
+  results = cr.results
 
-  getPriority = lambda x: x.string.priority
-  getAbbrevation = lambda x: getAbbr(x.string).lower()
-  if priority:
-    key = getPriority
-  else:
-    key = getAbbrevation
-  sortedResult = sorted(filteredResult, None, key)
-  return map(formatResult, sortedResult)
+  if base != "":
+    regexp = re.compile("^" + base)
+    results = filter(lambda x: regexp.match(getAbbr(x.string)), results)
+
+  if sorting == 'priority':
+    getPriority = lambda x: x.string.priority
+    results = sorted(results, None, getPriority)
+  if sorting == 'alpha':
+    getAbbrevation = lambda x: getAbbr(x.string).lower()
+    results = sorted(results, None, getAbbrevation)
+
+  result = map(formatResult, results)
+
+  if debug:
+    elapsed = (time.time() - start)
+    print "LibClang - Code completion time (library + formatting): %.3f" \
+      % elapsed
+    time.sleep(1)
+  return result
 
 def getAbbr(strings):
   tmplst = filter(lambda x: x.isKindTypedText(), strings)
