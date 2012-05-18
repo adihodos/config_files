@@ -1,0 +1,145 @@
+<gconfschemafile>
+  <schemalist>
+
+    <schema>
+      <key>/schemas/desktop/gnome/policykit/auth_dialog_grab_keyboard</key>
+      <applyto>/desktop/gnome/policykit/auth_dialog_grab_keyboard</applyto>
+      <owner>policykit-gnome</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Whether the authentication dialog should grab the keyboard</short>
+         <long>
+          If set to true, the authentication dialog from PolicyKit-gnome will grab the keyboard,
+          so that you will not be able to type in other programs while the dialog is active.
+	  Use this if your window manager does not focus the authentication dialog automatically,
+	  and you want to avoid accidentally typing passwords in other programs.
+         </long>
+      </locale>
+
+      <locale name="cs">
+         <short>Jestli by mělo ověřovací okno převzít klávesnici</short>
+         <long>Pokud nastavíte jako pravdivé, ověřovací okno PolicyKit-gnome převezme klávesnici, takže nebudete schopni psát v jiných programech, dokud bude okno aktivní. Toto použijte, pokud váš správce oken automaticky nezaregistruje ověřovací okno a chcete se vyhnout nechtěnému psaní hesla do jiných programů.</long>
+      </locale>
+
+      <locale name="de">
+         <short>Legt fest, ob der Legitimationsdialog Tastatureingaben auf sich ziehen soll.</short>
+         <long>Ist dies auf wahr gesetzt, zieht der Legitimationsdialog Tastatureingaben auf sich, sodass es nicht möglich ist, in anderen Programmen zu tippen, solange der Dialog aktiv ist. Benutzen Sie dies, wenn ihr Fenstermanager den Legitimationsdialog nicht automatisch fokussiert und sie vermeiden wollen, versehentlich Passwörter in andere Programme zu schreiben.</long>
+      </locale>
+
+      <locale name="es">
+         <short>Indica si el diálogo de autenticación debería obtener el teclado</short>
+         
+      </locale>
+
+      <locale name="ja">
+         <short>認証ダイアログでキーボード入力をつかんだままにするかどうか</short>
+         <long>TRUE にすると、PolicyKit-gnome の認証ダイアログでキーボード入力をつかんだままにするので、このダイアログが表示されている間は他のアプリでキーボードを利用することができなくなります。この機能を使えば、お使いのウィンドウ・マネージャが認証ダイアログにフォーカスを与えなかった場合、キーボードからパスワードを入力した時にフォーカスが当たっている他のプログラムに誤って表示されるという危険性を回避することができます。</long>
+      </locale>
+
+      <locale name="pl">
+         <short>Określa, czy okno dialogowe uwierzytelniania powinno przejąć klawiaturę</short>
+         <long>Jeśli ustawione na &quot;true&quot;, okno dialogowe uwierzytelniania z PolicyKit-gnome przechwyci klawiaturę, co uniemożliwi wprowadzanie znaków do innych programów podczas aktywności okna. Należy tego użyć, jeśli menedżer okien nie wprowadza automatycznie skupienia na okno dialogowe uwierzytelniania, a istnieje potrzeba uniknięcia przypadkowego wprowadzenia hasła w innych programach.</long>
+      </locale>
+
+      <locale name="pt">
+         <short>Se o diálogo de autenticação deverá ou não capturar o teclado</short>
+         <long>Se definido como verdadeiro, o diálogo de autenticação do PolicyKit-gnome irá capturar o teclado, pelo que não será possível enviar pressões de tecla para outras aplicações enquanto o diálogo estiver activo. Utilize esta opção se o seu gestor de janelas não transmitir o foco automaticamente ao diálogo de autenticação, e deseja evitar introduzir acidentalmente a sua senha noutra aplicação.</long>
+      </locale>
+
+      <locale name="pt_BR">
+         <short>Se o diálogo de autenticação deve capturar o teclado</short>
+         <long>Se ajustado para verdadeiro, o diálogo de autenticação do PolicyKit-gnome irá capturar o teclado, então você não será capaz de digitar em outros programas enquanto o diálogo estiver ativo. Use isto se seu gerenciador de janelas não der o foco no diálogo de autenticação automaticamente e você você deseja evitar digitar acidentalmente a senha em outros programas.</long>
+      </locale>
+
+      <locale name="ru">
+         <short>Должен ли диалог аутентификации перехватывать клавиатуру</short>
+         <long>Если установлено, диалог аутентификации программы PolicyKit-gnome будет перехватывать клавиатуру, то есть вы не сможете вводить текст в другой программе, пока диалог активен.  Используйте этот менеджер окон не передаёт фокус диалогу аутентификации автоматически и если вы не хотите случайно набрать пароль в другой программе.</long>
+      </locale>
+
+      <locale name="sk">
+         <short>Či má overovacie dialógové okno odchytiť vstup z klávesnice</short>
+         <long>Ak má hodnotu true, dialógové okno overenia z PolicyKit-gnome odchytí vstup z klávesnice, takže pokiaľ bude toto dialógové okno aktívne, nebudete môcť písať do iných aplikácií. Použite to, ak váš správca okien toto dialógové okno nepresunie automaticky do popredia a chcete zabrániť náhodnému vpísaniu hesiel do iných programov.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/desktop/gnome/policykit/auth_dialog_retain_authorization</key>
+      <applyto>/desktop/gnome/policykit/auth_dialog_retain_authorization</applyto>
+      <owner>policykit-gnome</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Whether the retain authorization check box is checked by default</short>
+         <long>
+          If set to true, then "retain authorization" check box (if present) is
+          checked by default in the authentication dialog unless the action
+          is mentioned in the
+          "/desktop/gnome/policykit/auth_dialog_retain_authorization_blacklist"
+          key.
+         </long>
+      </locale>
+
+      <locale name="ja">
+         <short>&quot;認証結果を使用し続ける&quot; のチェックボックスをデフォルトで ON にするかどうか</short>
+         <long>TRUE にすると、&quot;/desktop/gnome/policykit/auth_dialog_retain_authorization_blacklist&quot; キーに格納したアクションを除き、認証ダイアログで &quot;認証結果を使用し続ける&quot; のチェックボックスをデフォルトで ON にしておきます。</long>
+      </locale>
+
+      <locale name="pl">
+         <short>Określa, czy opcja &quot;Zachowanie uwierzytelnienia&quot; jest domyślnie zaznaczona</short>
+         <long>Jeśli ustawione na &quot;true&quot;, opcja &quot;Zachowanie uwierzytelnienia&quot; (jeśli obecna) jest domyślnie włączona w oknie dialogowym uwierzytelniania, chyba, że działanie jest wymienione w kluczu &quot;/desktop/gnome/policykit/auth_dialog_retain_authorization_blacklist&quot;.</long>
+      </locale>
+
+      <locale name="pt">
+         <short>Se a caixa de selecção &quot;reter autorização&quot; encontra-se marcada por omissão</short>
+         <long>Se definido como verdadeiro, então a caixa de selecção &quot;Reter Autorização&quot; (caso esteja presente) encontra-se marcada por omissão, excepto se a acção está mencionada na chave  &quot;/desktop/gnome/policykit/auth_dialog_retain_authorization_blacklist&quot;.</long>
+      </locale>
+
+      <locale name="pt_BR">
+         <short>Se a caixa de seleção de preservar autorização deve ou não ser marcada por padrão</short>
+         <long>Caso esteja definida para &quot;true&quot; (verdadeiro), então a caixa de seleção &quot;retain authorization&quot; (preservar autorização) - caso presente - está marcada por padrão na caixa de diálogo de autenticação, a não ser que a ação esteja mencionada na chave &quot;/desktop/gnome/policykit/auth_dialog_retain_authorization_blacklist&quot;.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/desktop/gnome/policykit/auth_dialog_retain_authorization_blacklist</key>
+      <applyto>/desktop/gnome/policykit/auth_dialog_retain_authorization_blacklist</applyto>
+      <owner>policykit-gnome</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <locale name="C">
+         <short>A list of actions where the "retain authorization" checkbox isn't checked by default</short>
+         <long>
+          A list of PolicyKit action where the "retain authorization"
+          checkbox isn't checked by default; this list is maintained
+          by the authentication dialog code itself. For example, if a
+          user unchecks the "retain authorization" check box for an
+          action and successfully obtains an authorization for the
+          action, the action will be added to this list.
+         </long>
+      </locale>
+
+      <locale name="ja">
+         <short>デフォルトで &quot;認証結果を使用し続ける&quot; のチェックボックスを OFF にしておくアクション</short>
+         <long>&quot;認証結果を使用し続ける&quot; のチェックボックスをデフォルトで OFF にしておく PolicyKit アクションを並べたリストです。このリストは認証ダイアログのオブジェクトよって管理されます。例えば、ユーザが任意のアクションに対して &quot;認証結果を使用し続ける&quot; のチェックを外し、そのアクションを実行する権限を手に入れたら、このリストにそのアクションが追加されるということです。</long>
+      </locale>
+
+      <locale name="pl">
+         <short>Lista działań, przy których opcja &quot;Zachowanie uwierzytelnienia&quot; nie jest domyślnie włączona.</short>
+         <long>Lista działań PolicyKit, przy których opcja &quot;Zachowanie uwierzytelnienia&quot; nie jest domyślnie włączona; ta lista jest utrzymywana przez kod okna dialogowego uwierzytelniania. Przykładowo, jeśli użytkownik odznaczy opcję &quot;Zachowaj uwierzytelnienie&quot; dla działania i uzyska uwierzytelnienie dla tego działania, to te działanie zostanie dodane do listy.</long>
+      </locale>
+
+      <locale name="pt">
+         <short>Uma lista de acções onde a caixa de selecção &quot;Reter Autorização&quot; não se encontra marcada por omissão</short>
+         <long>Uma lista de acções do PolicyKit onde a caixa de selecção &quot;Reter Autorização&quot; não se encontra marcada por omissão; esta lista é mantida pelo próprio código de diálogo da autenticação. Por exemplo, se um utilizador desmarca a caixa de selecção &quot;Reter Autorização&quot; para uma determinada acção e obtém uma autorização para esta, a acção será adicionada à lista.</long>
+      </locale>
+
+      <locale name="pt_BR">
+         <short>Uma lista de ações na qual a caixa de seleção &quot;retain authorization&quot; (preservar autorização) não está marcada por padrão</short>
+         <long>Uma lista de ações do PolicyKit na qual a caixa de seleção &quot;retain authorization&quot; (preservar autorização) não está marcada por padrão; essa lista é mantida pelo próprio código da caixa de diálogo. Por exemplo, se um usuário desmarcar a caixa de seleção &quot;retain authorization&quot; para uma ação e obter com sucesso uma autorização para realizá-la, então a ação será adicionada à lista.</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

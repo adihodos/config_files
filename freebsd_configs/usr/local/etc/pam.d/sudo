@@ -1,0 +1,19 @@
+#
+# $FreeBSD: ports/security/sudo/files/pam.conf,v 1.5 2008/04/09 16:44:28 tmclaugh Exp $
+#
+# PAM configuration for the "sudo" service
+#
+
+# auth
+auth		include		system
+
+# account
+account		include		system
+
+# session
+# XXX: pam_lastlog (used in system) causes users to appear as though
+# they are no longer logged in in system logs.
+session		required	pam_permit.so
+
+# password
+password	include		system

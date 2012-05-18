@@ -1,0 +1,731 @@
+<gconfschemafile>
+  <schemalist>
+
+      <schema>
+        <key>/schemas/system/storage/default_options/vfat/mount_options</key>
+        <applyto>/system/storage/default_options/vfat/mount_options</applyto>
+        <type>list</type>
+        <list_type>string</list_type>
+        <default>[longnames,-u=]</default>
+        <locale name="C">
+          <short>Default mount options for vfat fs</short>
+          <long>A list of default mount options for volumes formatted with the vfat file system.</long>
+        </locale>
+
+        <locale name="be">
+          <short>Звычайныя парамэтры мацавання для файлавай сістэмы vfat</short>
+          <long>Спіс звычайных парамэтраў мацавання для файлавай сістэмы vfat.</long>
+        </locale>
+
+        <locale name="be@latin">
+          <short>Zmoŭčanyja opcyi mantavańnia fajłavaj systemy vfat</short>
+          <long>Śpis zmoŭčanych opcyjaŭ mantavańnia masivaŭ, jakija ŭžyvajuć fajłavuju systemu vfat.</long>
+        </locale>
+
+        <locale name="ca">
+          <short>Opcions de muntatge per defecte per al sistema de fitxers vfat</short>
+          <long>Llista d&apos;opcions de muntatge per defecte per a volums amb el sistema de fitxers vfat.</long>
+        </locale>
+
+        <locale name="da">
+          <short>Standardmonteringsvalg for vfat-filsystem</short>
+          <long>En liste over standardmonteringsvalg for enheder formateret med vfat-filsystemet.</long>
+        </locale>
+
+        <locale name="dz">
+          <short>བི་ཨེཕ་ཨེ་ཊི་ ཨེཕ་ཨེསི་གི་དོན་ལུ་ སྔོན་སྒྲིག་སྦྱར་བརྩེགས་གདམ་ཁ་</short>
+          <long>བི་ཨེཕ་ཨེ་ཊི་ ཡིག་སྣོད་རིམ་ལུགས་དང་གཅིག་ཁར་ རྩ་སྒྲིག་འབད་ཡོད་པའི་སྐད་ཤུགས་ཀྱི་དོན་ལུ་ སྔོན་སྒྲིག་སྦྱར་བརྩེགས་གདམ་ཁའི་ཐོ་ཡིག</long>
+        </locale>
+
+        <locale name="el">
+          <short>Προκαθορισμένες επιλογές προσάρτησης για το vfat fs</short>
+          <long>Λίστα με τις προκαθορισμένες επιλογές προσάρτησης για τόμους διαμορφωμένους με το σύστημα αρχείων vfat.</long>
+        </locale>
+
+        <locale name="en_GB">
+          <short>Default mount options for vfat fs</short>
+          <long>A list of default mount options for volumes formatted with the vfat file system.</long>
+        </locale>
+
+        <locale name="es">
+          <short>Opciones de montaje predeterminadas para vfat</short>
+          <long>Una lista de opciones de montaje predeterminadas para volúmenes con el sistema de archivos vfat.</long>
+        </locale>
+
+        <locale name="fi">
+          <short>VFAT-tiedostojärjestelmän liitoksen oletusvalitsimet</short>
+          <long>Luettelo VFAT-muotoisten taltioiden liittämisen oletusvalitsimista.</long>
+        </locale>
+
+        <locale name="fr">
+          <short>Options de montage par défaut pour le système de fichiers vfat</short>
+          <long>Une liste d&apos;options de montage par défaut pour les volumes formatés avec un système de fichiers vfat.</long>
+        </locale>
+
+        <locale name="hu">
+          <short>A vfat fájlrendszer alapértelmezett csatolási beállításai</short>
+          <long>Alapértelmezett csatolási beállítások listája vfat fájlrendszerűre formázott kötetekhez.</long>
+        </locale>
+
+        <locale name="it">
+          <short>Opzioni di mount predefinite per fs vfat</short>
+          <long>Un elenco di opzioni di mount predefinite per volumi formattati con il file system vfat.</long>
+        </locale>
+
+        <locale name="ja">
+          <short>VFAT 形式のマウント・オプション (デフォルト値)</short>
+          <long>VFAT 形式でフォーマットされたボリュームに対するデフォルトのマウント・オプションの並びです。</long>
+        </locale>
+
+        <locale name="lv">
+          <short>Noklusētās montēšanas opcijas priekš vfat fs</short>
+          <long>Saraksts ar noklusētājām montēšanas opcijām priekš sējumiem, kas noformatēti ar vfat failu sistēmu.</long>
+        </locale>
+
+        <locale name="mk">
+          <short>Стандардни опции за монтирање за vfat датотечниот систем</short>
+          <long>Листа на стандардни опции за монтирање на просторот форматиран со vfatдатотечниот систем.</long>
+        </locale>
+
+        <locale name="pl">
+          <short>Domyślne opcje dla montowania systemu plików vfat</short>
+          <long>Lista domyślnych opcji montowania woluminów używających systemu plików vfat.</long>
+        </locale>
+
+        <locale name="pt">
+          <short>Opções por omissão de montagem para o sistema de ficheiros vfat</short>
+          <long>Uma lista de opções por omissão de montagem para unidades formatadas com o sistema de ficheiros vfat.</long>
+        </locale>
+
+        <locale name="pt_BR">
+          <short>Opções de montagem padrão para o sistema de arquivos vfat</short>
+          <long>Uma lista de opções de montagem predefinidas para volumes formatados com a sistema de arquivos vfat.</long>
+        </locale>
+
+        <locale name="ru">
+          <short>Параметры подключения по умолчанию для файловой системы vfat</short>
+          <long>Список параметров по умолчанию для томов, использующих файловую систему vfat.</long>
+        </locale>
+
+        <locale name="sv">
+          <short>Standardmonteringsalternativ för vfat-filsystem</short>
+          <long>En lista på standardmonteringsalternativ för volymer som är formaterade med vfat-filsystemet.</long>
+        </locale>
+
+        <locale name="vi">
+          <short>Tuỳ chọn gắn kết mặc định cho hệ tập tin vfat</short>
+          <long>Danh sách các tuỳ chọn gắn kết mặc định cho các khối dùng hệ tập tin vfat</long>
+        </locale>
+
+        <locale name="zh_HK">
+          <short>使用在 vfat 檔案系統的預設掛在選項</short>
+          <long>格式為 vfat 檔案系統的磁區的預設掛載選項清單。</long>
+        </locale>
+
+        <locale name="zh_TW">
+          <short>使用在 vfat 檔案系統的預設掛在選項</short>
+          <long>格式為 vfat 檔案系統的磁區的預設掛載選項清單。</long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/system/storage/default_options/iso9660/mount_options</key>
+        <applyto>/system/storage/default_options/iso9660/mount_options</applyto>
+        <type>list</type>
+        <list_type>string</list_type>
+        <default>[]</default>
+        <locale name="C">
+          <short>Default mount options for iso9660 fs</short>
+          <long>A list of default mount options for volumes formatted with the iso9660 file system.</long>
+        </locale>
+
+        <locale name="be">
+          <short>Звычайныя парамэтры мацавання для файлавай сістэмы iso9660</short>
+          <long>Спіс звычайных парамэтраў мацавання для файлавай сістэмы iso9660.</long>
+        </locale>
+
+        <locale name="be@latin">
+          <short>Zmoŭčanyja opcyi mantavańnia fajłavaj systemy iso9660</short>
+          <long>Śpis zmoŭčanych opcyjaŭ mantavańnia masivaŭ, jakija ŭžyvajuć fajłavuju systemu iso9660.</long>
+        </locale>
+
+        <locale name="ca">
+          <short>Opcions de muntatge per defecte per al sistema de fitxers iso9660</short>
+          <long>Llista d&apos;opcions de muntatge per defecte per a volums amb el sistema de fitxers iso9660.</long>
+        </locale>
+
+        <locale name="da">
+          <short>Standardmonteringvalg for iso9660-filsystem</short>
+          <long>En liste over standardmonteringsvalg for enheder formateret med iso9660-filsystemet.</long>
+        </locale>
+
+        <locale name="dz">
+          <short> ཨའི་ཨེསི་ཨོ་༩༦༦༠ ཨེཕ་ཨེསི་གི་དོན་ལུ་ སྔོན་སྒྲིག་སྦྱར་བརྩེགས་གདམ་ཁ་</short>
+          <long>ཨའི་ཨེསི་ཨོ་༩༦༦༠ ཡིག་སྣོད་རིམ་ལུགས་དང་གཅིག་ཁར་ རྩ་སྒྲིག་འབད་ཡོད་པའི་སྐད་ཤུགས་ཀྱི་དོན་ལུ་ སྔོན་སྒྲིག་སྦྱར་བརྩེགས་གདམ་ཁའི་ཐོ་ཡིག</long>
+        </locale>
+
+        <locale name="el">
+          <short>Προκαθορισμένες επιλογές προσάρτησης για το iso9660 fs</short>
+          <long>Λίστα με τις προκαθορισμένες επιλογές προσάρτησης για τόμους διαμορφωμένους με το σύστημα αρχείων iso9660.</long>
+        </locale>
+
+        <locale name="en_GB">
+          <short>Default mount options for iso9660 fs</short>
+          <long>A list of default mount options for volumes formatted with the iso9660 file system.</long>
+        </locale>
+
+        <locale name="es">
+          <short>Opciones de montaje predeterminadas para iso9660</short>
+          <long>Una lista de opciones de montaje predeterminadas para volúmenes con el sistema de archivos iso9660.</long>
+        </locale>
+
+        <locale name="fi">
+          <short>iso9660-tiedostojärjestelmän liitoksen oletusvalitsimet</short>
+          <long>Luettelo iso9660-muotoisten taltioiden liittämisen oletusvalitsimista.</long>
+        </locale>
+
+        <locale name="fr">
+          <short>Options de montage par défaut pour le système de fichiers iso9660</short>
+          <long>Une liste d&apos;options de montage par défaut pour les volumes formatés avec un système de fichiers iso9660.</long>
+        </locale>
+
+        <locale name="hu">
+          <short>Az iso9660 fájlrendszer alapértelmezett csatolási beállításai</short>
+          <long>Alapértelmezett csatolási beállítások listája iso9660 fájlrendszerűre formázott kötetekhez.</long>
+        </locale>
+
+        <locale name="it">
+          <short>Opzioni di mount predefinite per fs iso9660</short>
+          <long>Un elenco di opzioni di mount predefinite per volumi formattati con il file system iso9660.</long>
+        </locale>
+
+        <locale name="ja">
+          <short>ISO9660 形式のファイルシステム向けのマウント・オプション (デフォルト値)</short>
+          <long>ISO9660 形式でフォーマットされたボリュームに対するデフォルトのマウント・オプションの並びです。</long>
+        </locale>
+
+        <locale name="lv">
+          <short>Noklusētās montēšanas opcijas priekš iso9660 fs</short>
+          <long>Saraksts ar noklusētājām montēšanas opcijām priekš sējumiem, kas noformatēti ar iso9660 failu sistēmu.</long>
+        </locale>
+
+        <locale name="mk">
+          <short>Стандардни опции за монтирање за iso9660 датотечниот систем</short>
+          <long>Листа на стандардни опции за монтирање на просторот форматиран со iso9660 датотечниот систем.</long>
+        </locale>
+
+        <locale name="pa">
+          <short>iso9660 fs ਲਈ ਡਿਫਾਲਟ ਮਾਊਂਟ ਚੋਣਾਂ</short>
+          
+        </locale>
+
+        <locale name="pl">
+          <short>Domyślne opcje dla montowania systemu plików iso9660</short>
+          <long>Lista domyślnych opcji montowania woluminów używających systemu plików iso9660.</long>
+        </locale>
+
+        <locale name="pt">
+          <short>Opções por omissão de montagem para o sistema de ficheiros iso9660</short>
+          <long>Uma lista de opções por omissão de montagem para unidades formatadas com o sistema de ficheiros iso9660.</long>
+        </locale>
+
+        <locale name="pt_BR">
+          <short>Opções de montagem padrão para o sistema de arquivos iso9660</short>
+          <long>Uma lista de opções de montagem predefinidas para volumes formatados com a sistema de arquivos iso9660.</long>
+        </locale>
+
+        <locale name="ru">
+          <short>Параметры подключения по умолчанию для файловой системы iso9660</short>
+          <long>Список параметров по умолчанию для томов, использующих файловую систему iso9660.</long>
+        </locale>
+
+        <locale name="sv">
+          <short>Standardmonteringsalternativ för iso9960-filsystem</short>
+          <long>En lista på standardmonteringsalternativ för volymer som är formaterade med iso9660-filsystemet.</long>
+        </locale>
+
+        <locale name="vi">
+          <short>Tuỳ chọn gắn kết mặc định cho hệ tập tin iso9660</short>
+          <long>Danh sách các tuỳ chọn gắn kết mặc định cho các khối dùng hệ tập tin iso9660</long>
+        </locale>
+
+        <locale name="zh_HK">
+          <short>使用在 iso9660 檔案系統的預設掛在選項</short>
+          <long>格式為 iso9660 檔案系統的磁區的預設掛載選項清單。</long>
+        </locale>
+
+        <locale name="zh_TW">
+          <short>使用在 iso9660 檔案系統的預設掛在選項</short>
+          <long>格式為 iso9660 檔案系統的磁區的預設掛載選項清單。</long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/system/storage/default_options/udf/mount_options</key>
+        <applyto>/system/storage/default_options/udf/mount_options</applyto>
+        <type>list</type>
+        <list_type>string</list_type>
+        <default>[]</default>
+        <locale name="C">
+          <short>Default mount options for udf fs</short>
+          <long>A list of default mount options for volumes formatted with the udf file system.</long>
+        </locale>
+
+        <locale name="be">
+          <short>Звычайныя парамэтры мацавання для файлавай сістэмы udf</short>
+          <long>Спіс звычайных парамэтраў мацавання для файлавай сістэмы udf.</long>
+        </locale>
+
+        <locale name="be@latin">
+          <short>Zmoŭčanyja opcyi mantavańnia fajłavaj systemy udf</short>
+          <long>Śpis zmoŭčanych opcyjaŭ mantavańnia masivaŭ, jakija ŭžyvajuć fajłavuju systemu udf.</long>
+        </locale>
+
+        <locale name="ca">
+          <short>Opcions de muntatge per defecte per al sistema de fitxers udf</short>
+          <long>Llista d&apos;opcions de muntatge per defecte per a volums amb el sistema de fitxers udf.</long>
+        </locale>
+
+        <locale name="da">
+          <short>Standardmonteringsvalg for udf-filsystem</short>
+          <long>En liste over standardmonteringsvalg for enheder formateret med udf-filsystemet.</long>
+        </locale>
+
+        <locale name="dz">
+          <short>ཡུ་ཌི་ཨེཕ་ ཨེཕ་ཨེསི་གི་དོན་ལུ་ སྔོན་སྒྲིག་སྦྱར་བརྩེགས་གདམ་ཁ་</short>
+          <long>ཡུ་ཌི་ཨེཕ་ ཡིག་སྣོད་རིམ་ལུགས་དང་གཅིག་ཁར་ རྩ་སྒྲིག་འབད་ཡོད་པའི་སྐད་ཤུགས་ཀྱི་དོན་ལུ་ སྔོན་སྒྲིག་སྦྱར་བརྩེགས་གདམ་ཁའི་ཐོ་ཡིག</long>
+        </locale>
+
+        <locale name="el">
+          <short>Προκαθορισμένες επιλογές προσάρτησης για το udf fs</short>
+          <long>Λίστα με τις προκαθορισμένες επιλογές προσάρτησης για τόμους διαμορφωμένους με το σύστημα αρχείων udf.</long>
+        </locale>
+
+        <locale name="en_GB">
+          <short>Default mount options for udf fs</short>
+          <long>A list of default mount options for volumes formatted with the udf file system.</long>
+        </locale>
+
+        <locale name="es">
+          <short>Opciones de montaje predeterminadas para udf</short>
+          <long>Una lista de opciones de montaje predeterminadas para volúmenes con el sistema de archivos udf.</long>
+        </locale>
+
+        <locale name="fi">
+          <short>UDF-tiedostojärjestelmän liitoksen oletusvalitsimet</short>
+          <long>Luettelo UDF-muotoisten taltioiden liittämisen oletusvalitsimista.</long>
+        </locale>
+
+        <locale name="fr">
+          <short>Options de montage par défaut pour le système de fichiers udf</short>
+          <long>Une liste d&apos;options de montage par défaut pour les volumes formatés avec un système de fichiers udf.</long>
+        </locale>
+
+        <locale name="hu">
+          <short>Az udf fájlrendszer alapértelmezett csatolási beállításai</short>
+          <long>Alapértelmezett csatolási beállítások listája udf fájlrendszerűre formázott kötetekhez.</long>
+        </locale>
+
+        <locale name="it">
+          <short>Opzioni di mount predefinite per fs udf</short>
+          <long>Un elenco di opzioni di mount predefinite per volumi formattati con il file system udf.</long>
+        </locale>
+
+        <locale name="ja">
+          <short>UDF 形式のマウント・オプション (デフォルト値)</short>
+          <long>UDF 形式でフォーマットされたボリュームに対するデフォルトのマウント・オプションの並びです。</long>
+        </locale>
+
+        <locale name="lv">
+          <short>Noklusētās montēšanas opcijas priekš udf fs</short>
+          <long>Saraksts ar noklusētājām montēšanas opcijām priekš sējumiem, kas noformatēti ar udf failu sistēmu.</long>
+        </locale>
+
+        <locale name="mk">
+          <short>Стандардни опции за монтирање за udf датотечниот систем</short>
+          <long>Листа на стандардни опции за монтирање на просторот форматиран со udf датотечниот систем.</long>
+        </locale>
+
+        <locale name="pl">
+          <short>Domyślne opcje dla montowania systemu plików udf</short>
+          <long>Lista domyślnych opcji montowania woluminów używających systemu plików udf.</long>
+        </locale>
+
+        <locale name="pt">
+          <short>Opções por omissão de montagem para o sistema de ficheiros udf</short>
+          <long>Uma lista de opções por omissão de montagem para unidades formatadas com o sistema de ficheiros udf.</long>
+        </locale>
+
+        <locale name="pt_BR">
+          <short>Opções de montagem padrão para o sistema de arquivos udf</short>
+          <long>Uma lista de opções de montagem predefinidas para volumes formatados com a sistema de arquivos udf.</long>
+        </locale>
+
+        <locale name="ru">
+          <short>Параметры подключения по умолчанию для файловой системы udf</short>
+          <long>Список параметров по умолчанию для томов, использующих файловую систему udf.</long>
+        </locale>
+
+        <locale name="sv">
+          <short>Standardmonteringsalternativ för udf-filsystem</short>
+          <long>En lista på standardmonteringsalternativ för volymer som är formaterade med udf-filsystemet.</long>
+        </locale>
+
+        <locale name="vi">
+          <short>Tuỳ chọn gắn kết mặc định cho hệ tập tin udf</short>
+          <long>Danh sách các tuỳ chọn gắn kết mặc định cho các khối dùng hệ tập tin udf</long>
+        </locale>
+
+        <locale name="zh_HK">
+          <short>使用在 udf 檔案系統的預設掛在選項</short>
+          <long>格式為 udf 檔案系統的磁區的預設掛載選項清單。</long>
+        </locale>
+
+        <locale name="zh_TW">
+          <short>使用在 udf 檔案系統的預設掛在選項</short>
+          <long>格式為 udf 檔案系統的磁區的預設掛載選項清單。</long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/system/storage/default_options/ntfs/mount_options</key>
+        <applyto>/system/storage/default_options/ntfs/mount_options</applyto>
+        <type>list</type>
+        <list_type>string</list_type>
+        <default>[-m=755]</default>
+        <locale name="C">
+          <short>Default mount options for ntfs fs</short>
+          <long>A list of default mount options for volumes formatted with the ntfs file system.</long>
+        </locale>
+
+        <locale name="be">
+          <short>Звычайныя парамэтры мацавання для файлавай сістэмы ntfs</short>
+          <long>Спіс звычайных парамэтраў мацавання для файлавай сістэмы ntfs.</long>
+        </locale>
+
+        <locale name="be@latin">
+          <short>Zmoŭčanyja opcyi mantavańnia fajłavaj systemy ntfs</short>
+          <long>Śpis zmoŭčanych opcyjaŭ mantavańnia masivaŭ, jakija ŭžyvajuć fajłavuju systemu ntfs.</long>
+        </locale>
+
+        <locale name="ca">
+          <short>Opcions de muntatge per defecte per al sistema de fitxers ntfs</short>
+          <long>Llista d&apos;opcions de muntatge per defecte per a volums amb el sistema de fitxers ntfs.</long>
+        </locale>
+
+        <locale name="da">
+          <short>Standardmonteringsvalg for ntfs-filsystem</short>
+          <long>En liste over standardmonteringsvalg for enheder formateret med ntfs-filsystemet.</long>
+        </locale>
+
+        <locale name="dz">
+          <short>ཨེན་ཊི་ཨེཕ་ཨེསི་ ཨེཕ་ཨེསི་གི་དོན་ལུ་ སྔོན་སྒྲིག་སྦྱར་བརྩེགས་གདམ་ཁ་</short>
+          <long>ཨེན་ཊི་ཨེཕ་ཨེསི་ ཡིག་སྣོད་རིམ་ལུགས་དང་གཅིག་ཁར་ རྩ་སྒྲིག་འབད་ཡོད་པའི་སྐད་ཤུགས་ཀྱི་དོན་ལུ་ སྔོན་སྒྲིག་སྦྱར་བརྩེགས་གདམ་ཁའི་ཐོ་ཡིག</long>
+        </locale>
+
+        <locale name="el">
+          <short>Προκαθορισμένες επιλογές προσάρτησης για το ntfs fs</short>
+          <long>Λίστα με τις προκαθορισμένες επιλογές προσάρτησης για τόμους διαμορφωμένους με το σύστημα αρχείων ntfs.</long>
+        </locale>
+
+        <locale name="en_GB">
+          <short>Default mount options for ntfs fs</short>
+          <long>A list of default mount options for volumes formatted with the ntfs file system.</long>
+        </locale>
+
+        <locale name="es">
+          <short>Opciones de montaje predeterminadas para ntfs</short>
+          <long>Una lista de opciones de montaje predeterminadas para volúmenes con el sistema de archivos ntfs.</long>
+        </locale>
+
+        <locale name="fi">
+          <short>NTFS-tiedostojärjestelmän liitoksen oletusvalitsimet</short>
+          <long>Luettelo NTFS-muotoisten taltioiden liittämisen oletusvalitsimista.</long>
+        </locale>
+
+        <locale name="fr">
+          <short>Options de montage par défaut pour le système de fichiers ntfs</short>
+          <long>Une liste d&apos;options de montage par défaut pour les volumes formatés avec un système de fichiers ntfs.</long>
+        </locale>
+
+        <locale name="hu">
+          <short>Az ntfs fájlrendszer alapértelmezett csatolási beállításai</short>
+          <long>Alapértelmezett csatolási beállítások listája ntfs fájlrendszerűre formázott kötetekhez.</long>
+        </locale>
+
+        <locale name="it">
+          <short>Opzioni di mount predefinite per fs btfs</short>
+          <long>Un elenco di opzioni di mount predefinite per volumi formattati con il file system ntfs.</long>
+        </locale>
+
+        <locale name="ja">
+          <short>NTFS 形式のマウント・オプション (デフォルト値)</short>
+          <long>NTFS 形式でフォーマットされたボリュームに対するデフォルトのマウント・オプションの並びです。</long>
+        </locale>
+
+        <locale name="lv">
+          <short>Noklusētās montēšanas opcijas priekš ntfs-fs</short>
+          <long>Saraksts ar noklusētājām montēšanas opcijām priekš sējumiem, kas noformatēti ar ntfs failu sistēmu.</long>
+        </locale>
+
+        <locale name="mk">
+          <short>Стандардни опции за монтирање за ntfs датотечниот систем</short>
+          <long>Листа на стандардни опции за монтирање на просторот форматиран со ntfs датотечниот систем.</long>
+        </locale>
+
+        <locale name="pl">
+          <short>Domyślne opcje dla montowania systemu plików ntfs</short>
+          <long>Lista domyślnych opcji montowania woluminów używających systemu plików ntfs.</long>
+        </locale>
+
+        <locale name="pt">
+          <short>Opções por omissão de montagem para o sistema de ficheiros ntfs</short>
+          <long>Uma lista de opções por omissão de montagem para unidades formatadas com o sistema de ficheiros ntfs.</long>
+        </locale>
+
+        <locale name="pt_BR">
+          <short>Opções de montagem padrão para o sistema de arquivos ntfs</short>
+          <long>Uma lista de opções de montagem predefinidas para volumes formatados com a sistema de arquivos ntfs.</long>
+        </locale>
+
+        <locale name="ru">
+          <short>Параметры подключения по умолчанию для файловой системы ntfs</short>
+          <long>Список параметров по умолчанию для томов, использующих файловую систему ntfs.</long>
+        </locale>
+
+        <locale name="sv">
+          <short>Standardmonteringsalternativ för ntfs-filsystem</short>
+          <long>En lista på standardmonteringsalternativ för volymer som är formaterade med ntfs-filsystemet.</long>
+        </locale>
+
+        <locale name="vi">
+          <short>Tuỳ chọn gắn kết mặc định cho hệ tập tin ntfs</short>
+          <long>Danh sách các tuỳ chọn gắn kết mặc định cho các khối dùng hệ tập tin ntfs</long>
+        </locale>
+
+        <locale name="zh_HK">
+          <short>使用在 ntfs 檔案系統的預設掛在選項</short>
+          <long>格式為 ntfs 檔案系統的磁區的預設掛載選項清單。</long>
+        </locale>
+
+        <locale name="zh_TW">
+          <short>使用在 ntfs 檔案系統的預設掛在選項</short>
+          <long>格式為 ntfs 檔案系統的磁區的預設掛載選項清單。</long>
+        </locale>
+      </schema>
+      <schema>
+        <key>/schemas/system/storage/default_options/ntfs/fstype_override</key>
+        <applyto>/system/storage/default_options/ntfs/fstype_override</applyto>
+        <type>string</type>
+        <default></default>
+        <locale name="C">
+          <short>When 'ntfs' is detected, what file system driver to use by default</short>
+          <long>The name of the file system driver to use by default when 'ntfs' is detected. This is useful for configuring the system to use the 'ntfs-3g' driver for all 'ntfs' file systems by default. User can still choose to use the 'ntfs' file system driver by overriding it per-volume or on the command line.</long>
+        </locale>
+
+        <locale name="be@latin">
+          <short>Zmoŭčany drajver fajłavaj systemy, užyty ŭ jakaści zmoŭčanaha paśla vykryćcia &quot;ntfs&quot;</short>
+          <long>Nazva drajvera fajavaj systemy, jaki maje być zmoŭčana ŭžyvany, kali budzie vykryty &quot;ntfs&quot;. Heta karysna pry kanfihuracyi systemy, dzie zmoŭčana ŭžyvajecca drajver &quot;ntfs-3g&quot; dla ŭsich fajłavych systemaŭ &quot;ntfs&quot;. Karystalnik moža nadalej vybrać drajver &quot;ntfs&quot; dla peŭnych masivaŭ albo z zahadnaha radka.</long>
+        </locale>
+
+        <locale name="ca">
+          <short>En detectar el sistema de fitxers «ntfs», el controlador de sistema de fitxers a utilitzar per defecte</short>
+          <long>El nom del sistema de fitxers a utilitzar per defecte en detectar «ntfs». Això pot ser útil en configurar el sistema de manera que s&apos;utilitzi per defecte el controlador «ntfs-3g» per a tots els sistemes de fitxers «ntfs». De totes maneres, l&apos;usuari sempre podrà decidir fer servir el sistema de fitxers «ntfs» especificant-ho de manera explícita per a cada volum o bé a la línia d&apos;ordres.</long>
+        </locale>
+
+        <locale name="dz">
+          <short> &apos;ntfs&apos;འདི་སྐྱོང་འཛིན་འབྱུང་ཡོད་པའི་སྐབས་ སྔོན་སྒྲིག་གིས་ཡིག་སྣོད་རིམ་ལུགས་འདྲེན་བྱེད་ག་དེ་ལག་ལེན་འཐབ་ནི་ཨིན་ན།</short>
+          <long> &apos;ntfs&apos;འདི་སྐྱོན་འཛིན་འབྱུང་ཡོད་འི་སྐབས་སྔོན་སྒྲིག་གིས་ལག་ལེན་འཐབ་མི་ཡིག་སྣོད་རིམ་ལུགས་འདྲེན་བྱེད་ཀྱི་མིང་འདི། སྔོན་སྒྲིག་གིས་ཡིག་སྣོད་རིམ་ལུགས་ཚུ་&apos;ntfs&apos; ཆ་མཉམ་དོན་ལུ་འདྲེན་བྱེད་ &apos;ntfs-3g&apos; འདི་ལག་ལེན་འཐབ་མི་རིམ་ལུགས་འདི་རིམ་སྒྲིག་བཟོ་ནི་དོན་ལུ་ཕན་ཐོགས་ཅན་ཅིག་ཨིན། ལག་ལེན་པ་འདི་གིས་ད་ལྟོ་ཡང་&apos;ntfs&apos;འདི་སྐད་ཤུགས་རེ་རེ་ཡང་ན་བརྡ་བཀོད་གྱལ་འདི་གུ་མེདཔ་གཏང་དེ་ལག་ལེན་འཐབ་ནི་ལུ་གདམ་བཏུབ་ཨིན།</long>
+        </locale>
+
+        <locale name="el">
+          <short>Ποιος οδηγός συστήματος αρχείων θα χρησιμοποιείται εξ ορισμού όταν ανιχνεύεται ntfs</short>
+          
+        </locale>
+
+        <locale name="en_GB">
+          <short>When &apos;ntfs&apos; is detected, what file system driver to use by default</short>
+          <long>The name of the file system driver to use by default when &apos;ntfs&apos; is detected. This is useful for configuring the system to use the &apos;ntfs-3g&apos; driver for all &apos;ntfs&apos; file systems by default. User can still choose to use the &apos;ntfs&apos; file system driver by overriding it per-volume or on the command line.</long>
+        </locale>
+
+        <locale name="es">
+          <short>Qué controlador usar de forma predeterminada para el sistema de archivos cuando se detecta «ntfs»</short>
+          <long>El nombre del controlador para el sistema de archivos a usar de forma predeterminada cuando se detecta «ntfs». Esto es útil para configurar el sistema para usar «ntfs-3g» para todos los sistemas de archivos «ntfs» de forma predeterminada. El usuario todavía podrá elegir usar el controlador del sistema de archivos «ntfs» sobreescribiéndolo por volumen o en la línea de comandos.</long>
+        </locale>
+
+        <locale name="fi">
+          <short>Mitä tiedostojärjestelmäajuria käytetään havaittaessa &apos;ntfs&apos;-tiedostojärjestelmä</short>
+          <long>Nimi tiedostojärjestelmäajurille, jota käytetään oletuksena avattaessa ntfs-tiedostojärjestelmiä. Tämä on hyödyllinen, kun halutaan määritellä järjestelmä avaamaan kaikki ntfs-tiedostojärjestelmät oletuksena ajurilla ntfs-3g. Käyttäjät voivat edelleen avata tiedostojärjestelmän käyttäen vanhaa ntfs-ajuria komentorivin valitsimien avulla.</long>
+        </locale>
+
+        <locale name="fr">
+          <short>Le pilote de système de fichiers à utiliser par défaut quand « ntfs » est détecté</short>
+          <long>Le nom du pilote de système de fichiers, à utiliser par défaut, quand « ntfs » est détecté. Ceci est utile pour configurer le système afin qu&apos;il utilise par défaut, le pilote « ntfs-3g » pour tous les systèmes de fichiers « ntfs ». L&apos;utilisateur a la possibilité d&apos;utiliser le pilote de système de fichiers « ntfs » en le définissant spécifiquement par volume ou en utilisant la ligne de commande. </long>
+        </locale>
+
+        <locale name="hu">
+          <short>ntfs fájlrendszer észlelésekor alapértelmezésben használandó fájlrendszer-illesztőprogram</short>
+          <long>Az alapértelmezésben használandó fájlrendszer-illesztőprogram ntfs észlelésekor. Ennek segítségével egyszerűen beállíthatja a rendszert az ntfs-3g alapértelmezett használatára minden ntfs fájlrendszerhez. A felhasználók kötetenként vagy a parancssorban felülbírálhatják ezt és használhatják továbbra is az ntfs illesztőt.</long>
+        </locale>
+
+        <locale name="it">
+          <short>Quando è rilevato &apos;ntfs&apos;, quale driver di file system usare come predefinito</short>
+          <long>Il nome del driver di file system da usare come predefinito quando è rilevato &apos;ntfs&apos;. Ciò è utile per configurare il sistema in modo che usi in modo predefinito il driver &apos;ntfs-3g&apos; per tutti i file system &apos;ntfs&apos;. Gli utenti possono comunque scegliere di usare il driver di file system &apos;ntfs&apos; scavalcando questo per-volume o sulla riga di comando.</long>
+        </locale>
+
+        <locale name="ja">
+          <short>NTFS を検出した時にデフォルトで使用するファイルシステムのドライバ</short>
+          <long>NTFS 形式のファイルシステムを検出した時にデフォルトで使用するファイルシステムのドライバ名です。これは、デフォルトで全ての NTFS 形式のファイルシステムに対して NTFS-3g 用のドライバを使用するようシステムを設定する際に便利な機能です。但し、ユーザはボリュームをマウントする前、あるいはコマンドラインから、このドライバ名を上書きすることで NTFS 用のドライバを選択することも可能になっています。</long>
+        </locale>
+
+        <locale name="lv">
+          <short>Kādu failu sistēmas dzini izmantot kā noklusēto, kad &apos;ntfs&apos; ir atklāts</short>
+          <long>Kādu failu sistēmas dzini izmantot kā noklusēto kad &apos;ntfs&apos; ir atklāts. Šis ir noderīgi konfigurējot sistēmu &apos;ntfs-3g&apos;&apos;dziņa lietošanai visām &apos;ntfs&apos; failu sistēmām pēc noklusējuma. Lietotājs var izvēlēties &apos;ntfs&apos; failu sistēmas draiveri uzstādot to atsevišķi katram sējuma caur komandrindu.</long>
+        </locale>
+
+        <locale name="pl">
+          <short>Domyślny sterownik systemu plików użyty jako domyślny po wykryciu &quot;ntfs&quot;</short>
+          <long>Nazwa sterownika systemu plików, która ma być używana domyślnie, gdy zostanie wykryty &quot;ntfs&quot;. Jest to użyteczne przy konfiguracji systemu, gdzie domyślnie jest używany sterownik &quot;ntfs-3g&quot; dla wszystkich systemów plików &quot;ntfs&quot;. Użytkownik może nadal wybrać sterownik &quot;ntfs&quot; poprzez wymuszenie go na woluminie lub z wiersza poleceń.</long>
+        </locale>
+
+        <locale name="pt">
+          <short>Quando for detectado &apos;ntfs&apos;, que sistema de ficheiros utilizar por omissão</short>
+          <long>O nome do controlador do sistema de ficheiros a utilizar por omissão quando é detectado &apos;ntfs&apos;. Isto é útil para configurar o sistema para utilizar o controlador &apos;ntfs-3g&apos; para todos os sistemas de ficheiros &apos;ntfs&apos; por omissão. O utilizador pode ainda escolher utilizar o sistema de ficheiros &apos;ntfs&apos;, sobrepondo a escolha unidade a unidade ou na linha de comando.</long>
+        </locale>
+
+        <locale name="pt_BR">
+          <short>Driver de sistema de arquivos padrão para &quot;ntfs&quot;</short>
+          <long>O nome do &quot;driver&quot; (controlador) de sistema de arquivos usado padrão quando &quot;ntfs&quot; for detectado. Isso é útil para configurar o sistema para usar o driver &quot;ntfs-3g&quot; para todos os sistemas de arquivos &quot;ntfs&quot; por padrão. Os usuários podem ainda escolher o driver &quot;ntfs&quot; substituindo o driver volume-a-volume ou na linha de comando.</long>
+        </locale>
+
+        <locale name="ru">
+          <short>Какой драйвер использовать для файловых систем ntfs</short>
+          <long>Драйвер по умолчанию для работы с файловой системой ntfs. Эта настойка полезна, если требуется использовать новый драйвер ntfs-3g для всех систем ntfs. Пользователь может также выбирать драйвер файловой системы ntfs, указав его для каждого тома или передав его в аргументах командной строки.</long>
+        </locale>
+
+        <locale name="sv">
+          <short>När &quot;ntfs&quot; identifieras, vilken filsystemdrivrutin ska användas som standard</short>
+          <long>Namnet på filsystemdrivrutinen som ska användas som standard när &quot;ntfs&quot; identifieras. Det här är användbart för konfigurering av systemet till att använda drivrutinen &quot;ntfs-3g&quot; för alla &quot;ntfs&quot;-filsystem som standard. Användaren kan fortfarande välja att använda filsystemsdrivrutinen &quot;ntfs&quot; genom att åsidosätta den för varje volym eller på kommandoraden.</long>
+        </locale>
+
+        <locale name="zh_HK">
+          <short>當偵測到 &apos;ntfs&apos; ，預設要使用哪個檔案系統驅動程式</short>
+          <long>當偵測到「ntfs」時預設要使用的檔案系統驅動程式的名稱。這在將「ntfs-3g」驅動程式設為所有「ntfs」檔案系統的預設驅動程式時非常有用。使用者仍可以選擇使用「ntfs」檔案系統驅動程式藉由覆蓋每個磁區的設定或是在指令列中使用。</long>
+        </locale>
+
+        <locale name="zh_TW">
+          <short>當偵測到 &apos;ntfs&apos; ，預設要使用哪個檔案系統驅動程式</short>
+          <long>當偵測到「ntfs」時預設要使用的檔案系統驅動程式的名稱。這在將「ntfs-3g」驅動程式設為所有「ntfs」檔案系統的預設驅動程式時非常有用。使用者仍可以選擇使用「ntfs」檔案系統驅動程式藉由覆蓋每個磁區的設定或是在指令列中使用。</long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/system/storage/default_options/ntfs-3g/mount_options</key>
+        <applyto>/system/storage/default_options/ntfs-3g/mount_options</applyto>
+        <type>list</type>
+        <list_type>string</list_type>
+        <default>[locale=]</default>
+        <locale name="C">
+          <short>Default mount options for ntfs-3g fs</short>
+          <long>A list of default mount options for volumes formatted with the ntfs file system using ntfs-3g.</long>
+        </locale>
+
+        <locale name="be@latin">
+          <short>Zmoŭčanyja opcyi mantavańnia fajłavaj systemy ntfs-3g</short>
+          <long>Śpis zmoŭčanych opcyjaŭ mantavańnia masivaŭ, jakija ŭžyvajuć fajłavuju systemu ntfs (praz ntfs-3g).</long>
+        </locale>
+
+        <locale name="ca">
+          <short>Opcions de muntatge per defecte per al sistema de fitxers ntfs-3g</short>
+          <long>Llista d&apos;opcions de muntatge per defecte per a volums amb el sistema de fitxers ntfs que utilitzen ntfs-3g.</long>
+        </locale>
+
+        <locale name="dz">
+          <short>ཨེན་ཊི་ཨེཕ་ཨེསི་-༣་ཇི་གི་དོན་ལུ་ སྔོན་སྒྲིག་སྦྱར་བརྩེགས་གདམ་ཁ་ཚུ་</short>
+          <long>ཨེན་ཊི་ཨེཕ་ཨེསི་-༣་ཇི་ལག་ལེན་འཐབ་དེ་ ཨེན་ཊི་ཨེཕ་ཨེསི་ ཡིག་སྣོད་རིམ་ལུགས་དང་གཅིག་ཁར་ རྩ་སྒྲིག་འབད་ཡོད་པའི་སྐད་ཤུགས་ཀྱི་དོན་ལུ་ སྔོན་སྒྲིག་སྦྱར་བརྩེགས་གདམ་ཁའི་ཐོ་ཡིག་ཅིག</long>
+        </locale>
+
+        <locale name="el">
+          <short>Προκαθορισμένες επιλογές προσάρτησης για το ntfs-3g fs</short>
+          <long>Λίστα με τις προκαθορισμένες επιλογές προσάρτησης για τόμους διαμορφωμένους με το σύστημα αρχείων ntfs χρησιμοποιώντας το ntfs-3g.</long>
+        </locale>
+
+        <locale name="en_GB">
+          <short>Default mount options for ntfs-3g fs</short>
+          <long>A list of default mount options for volumes formatted with the ntfs file system using ntfs-3g.</long>
+        </locale>
+
+        <locale name="es">
+          <short>Opciones de montaje predeterminadas para el sistema de archivos ntfs-3g</short>
+          <long>Una lista de opciones de montaje predeterminadas para volúmenes formateados con el sistema de archivos ntfs usando ntfs-3g.</long>
+        </locale>
+
+        <locale name="fi">
+          <short>NTFS-3g-tiedostojärjestelmän liitoksen oletusvalitsimet</short>
+          <long>Luettelo NTFS-muotoisten taltioiden liittämisen oletusvalitsimista käytettäessä ntfs-3g-ajuria.</long>
+        </locale>
+
+        <locale name="fr">
+          <short>Options de montage par défaut pour le système de fichiers « ntfs-3g »</short>
+          <long>Une liste d&apos;options de montage par défaut pour les volumes formatés avec un système de fichiers ntfs utilisant le pilote « ntfs-3g »</long>
+        </locale>
+
+        <locale name="hu">
+          <short>Az ntfs-3g fájlrendszer alapértelmezett csatolási beállításai</short>
+          <long>Alapértelmezett csatolási beállítások listája ntfs-3g fájlrendszerűre formázott kötetekhez.</long>
+        </locale>
+
+        <locale name="it">
+          <short>Opzioni di mount predefinite per fs ntfs-3g</short>
+          <long>Un elenco di opzioni di mount predefinite per volumi formattati con il file system ntfs usando ntfs-3g.</long>
+        </locale>
+
+        <locale name="ja">
+          <short>NTFS-3g 形式のマウント・オプション (デフォルト値)</short>
+          <long>NTFS-3g 形式でフォーマットされたボリュームに対するデフォルトのマウント・オプションの並びです。</long>
+        </locale>
+
+        <locale name="lv">
+          <short>Noklusētās montēšanas opcijas priekš ntfs-3g fs</short>
+          <long>Saraksts ar noklusētājām montēšanas opcijām priekš sējumiem, kas noformatēti ar ntfs failu sistēmu izmantojot ntfs-3g.</long>
+        </locale>
+
+        <locale name="pl">
+          <short>Domyślne opcje dla montowania systemu plików ntfs-3g</short>
+          <long>Lista domyślnych opcji montowania woluminów używających systemu plików ntfs (używając ntfs-3g).</long>
+        </locale>
+
+        <locale name="pt">
+          <short>Opções por omissão de montagem para o sistema de ficheiros ntfs-3g</short>
+          <long>Uma lista de opções por omissão de montagem para unidades formatadas com o sistema de ficheiros ntfs utilizando ntfs-3g.</long>
+        </locale>
+
+        <locale name="pt_BR">
+          <short>Opções de montagem padrão para o sistema de arquivos ntfs-3g</short>
+          <long>Uma lista de opções predefinidas para montar com ntfs-3g volumes formatados com o sistema de arquivos ntfs.</long>
+        </locale>
+
+        <locale name="ru">
+          <short>Параметры подключения по умолчанию для файловой системы ntfs-3g</short>
+          <long>Список параметров по умолчанию для томов, использующих файловую систему ntfs с драйвером ntfs-3g.</long>
+        </locale>
+
+        <locale name="sv">
+          <short>Standardmonteringsalternativ för ntfs-3g-filsystem</short>
+          <long>En lista på standardmonteringsalternativ för volymer som är formaterade med ntfs-filsystemet med ntfs-3g.</long>
+        </locale>
+
+        <locale name="zh_HK">
+          <short>使用在 ntfs-3g 檔案系統的預設掛在選項</short>
+          <long>格式為 ntfs 檔案系統並使用 ntfs-3g 的磁區的預設掛載選項清單。</long>
+        </locale>
+
+        <locale name="zh_TW">
+          <short>使用在 ntfs-3g 檔案系統的預設掛在選項</short>
+          <long>格式為 ntfs 檔案系統並使用 ntfs-3g 的磁區的預設掛載選項清單。</long>
+        </locale>
+      </schema>
+
+
+  </schemalist>
+</gconfschemafile>

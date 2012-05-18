@@ -1,0 +1,3 @@
+/usr/local/openjdk6/bin/java # OpenJDK6
+/usr/local/diablo-jdk1.6.0/bin/java # DiabloCaffe1.6.0
+/usr/local/jdk1.6.0/bin/java # FREEBSD-JDK1.6.0
