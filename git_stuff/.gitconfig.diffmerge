@@ -13,7 +13,7 @@
 
 [diff]
 	tool = p4merge
-        tool = diffmerge	
+    tool = diffmerge	
 [difftool "diffmerge"]
         cmd = diffmerge -nosplash -ro2 -t1=\"$LOCAL\" -t2=\"$REMOTE\" \"$LOCAL\" \"$REMOTE\"
 
