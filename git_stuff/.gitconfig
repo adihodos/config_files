@@ -4,7 +4,7 @@
 [core]
     pager = most
     autocrlf = input
-    editor = emacs -mm
+    editor = gvim -f
 [color]
     ui = always
 
@@ -12,17 +12,16 @@
 	format = web
 
 [diff]
-	tool = p4merge
-[difftool "p4merge"]
-	cmd = \"$LOCAL\" \"$REMOTE\"
+	tool = kdiff3
 
 [difftool]
-        prompt = false
+    prompt = false
 
 [merge]
-	tool = p4merge
-[mergetool "p4merge"]
-	cmd = \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+	tool = kdiff3
+    trustExitCode = false
+    keepBackup = false
+
 [github]
 	user = adi.hodos@gmail.com
 	token = 08e8b4227fffcdc6c54b90c4324543fb

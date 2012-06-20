@@ -1,3 +1,6 @@
+(setq on-linux (eq 'gnu/linux system-type))
+(setq on-windows (eq 'windows-nt system-type))
+
 ;;
 ;; disable beep + startup messages
 (setq visible-bell t)
@@ -60,8 +63,10 @@
                     :weight 'bold :underline t :overline nil :slant 'normal)        
 
 (setq scalable-fonts-allowed t)
-(set-default-font "Liberation Mono-14")
+;;(set-default-font "Liberation Mono-14")
 ;;(set-default-font "Dina-14")
+(if on-linux (set-frame-font "Liberation Mono-14"))
+(if on-windows (set-frame-font "Consolas-10"))
 
 ;; open my Emacs init file
 (defun my-open-dot-emacs ()
@@ -88,3 +93,9 @@
 )
 
 (add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
+
+(setq auto-mode-alist
+      (append '(("\\.cg$" . cg-mode)
+                ("\\.hlsl$" . cg-mode)
+                ("\\.f[xh]$" . cg-mode))
+              auto-mode-alist))

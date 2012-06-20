@@ -9,6 +9,12 @@
 (load "autocomplete-init.el")
 
 ;;
+;; shader languages
+(add-to-list 'load-path "~/.emacs.d/plugins/shader_languages")
+(load "cg-mode.el")
+(load "glsl-mode.el")
+
+;;
 ;; color-theme
 (add-to-list 'load-path "~/.emacs.d/plugins/color-theme-6.6.0")
 (load "color-theme-init.el")
