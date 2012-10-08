@@ -9,19 +9,19 @@
     ui = always
 
 [help]
-	format = web
+    format = web
 
 [diff]
-	tool = kdiff3
+    tool = meld
 
 [difftool]
     prompt = false
 
 [merge]
-	tool = kdiff3
+    tool = meld
     trustExitCode = false
     keepBackup = false
 
 [github]
-	user = adi.hodos@gmail.com
-	token = 08e8b4227fffcdc6c54b90c4324543fb
+    user = adi.hodos@gmail.com
+    token = 08e8b4227fffcdc6c54b90c4324543fb

@@ -38,9 +38,9 @@ set foldopen=all
 if has("win32")
   set guifont=Consolas:h14
 elseif has("unix")
-  "set guifont=Liberation\ Mono\ 14
+  set guifont=Source\ Code\ Pro\ 14
   "set guifont=Envy\ Code\ R\ 10
-  set guifont=Consolas\ 14
+  "set guifont=Consolas\ 14
 endif
 set history=100
 set ruler
