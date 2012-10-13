@@ -31,18 +31,21 @@ Section "Files"
 EndSection
 
 Section "InputDevice"
-	Identifier  "Mouse0"
-	Driver      "mouse"
-	Option	    "Protocol" "auto"
-	Option	    "Device" "/dev/sysmouse"
-	Option	    "ZAxisMapping" "4 5 6 7"
+
+    # generated from default
+    Identifier     "Mouse0"
+    Driver         "mouse"
+    Option         "Protocol" "auto"
+    Option         "Device" "/dev/psaux"
+    Option         "Emulate3Buttons" "no"
+    Option         "ZAxisMapping" "4 5"
 EndSection
 
 
 Section "InputDevice"
     # generated from default
     Identifier     "Keyboard0"
-    Driver         "keyboard"
+    Driver         "kbd"
 EndSection
 
 Section "Monitor"
@@ -69,8 +72,8 @@ Section "Device"
     Identifier     "Device0"
     Driver         "nvidia"
     VendorName     "NVIDIA Corporation"
-    BoardName      "GeForce 8600 GT"
-    BusID          "PCI:1:0:0"
+    BoardName      "GeForce 430 GT"
+#   BusID          "PCI:1:0:0"
     Option	   "RandRRotation" "on"
     Option	   "rotate" "ccw"
     Screen          0
@@ -80,8 +83,8 @@ Section "Device"
     Identifier     "Device1"
     Driver         "nvidia"
     VendorName     "NVIDIA Corporation"
-    BoardName      "GeForce 8600 GT"
-    BusID          "PCI:1:0:0"
+    BoardName      "GeForce 430 GT"
+#    BusID          "PCI:1:0:0"
     Screen          1
 EndSection
 
