@@ -1,0 +1,27 @@
+[user]
+    name = Adi Hodos
+    email = adi.hodos@gmail.com
+[core]
+    pager = most
+    autocrlf = input
+    editor = gvim -f
+[color]
+    ui = always
+
+[help]
+    format = web
+
+[diff]
+    tool = meld
+
+[difftool]
+    prompt = false
+
+[merge]
+    tool = meld
+    trustExitCode = false
+    keepBackup = false
+
+[github]
+    user = adi.hodos@gmail.com
+    token = 08e8b4227fffcdc6c54b90c4324543fb
