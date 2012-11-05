@@ -4,7 +4,8 @@ set nocompatible
 "colorscheme vividchalk
 "
 set background=dark
-colorscheme solarized
+set t_Co=256
+colorscheme molokai
 let g:load_doxygen_syntax=1
 set ff=unix
 set matchpairs+={:},(:),[:],<:>
@@ -66,8 +67,8 @@ set wildmenu
 set showfulltag
 set display+=lastline
 set printoptions=syntax:y,wrap:y
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.*/
+"highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+"match OverLength /\%81v.*/
 " configure tags - add additional tags here or comment out not-used ones
 if has("win32")
   set tags+=C:/opt/utils/tags/msvcrt_tags
@@ -131,7 +132,6 @@ let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1
-let Tlist_Ctags_Cmd='/usr/local/bin/exctags'
 map T :TaskList<CR>
 map P :TlistToggle<CR>
 
@@ -148,7 +148,7 @@ autocmd BufNewFile,BufRead *.h set filetype=cpp
 " clnag complete
 let g:clang_snippets = 1
 let g:clang_snippets_engine = 'clang_complete'
-
+let g:clang_use_library = 1
 
 "let g:clang_snippets = 1
 "let g:clang_snippets_engine = 'snipmate'
