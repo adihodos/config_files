@@ -2,6 +2,50 @@
 <gconf>
 	<dir name="schemas">
 		<dir name="system">
+			<dir name="storage">
+				<dir name="default_options">
+					<dir name="ntfs-3g">
+						<entry name="mount_options">
+							<local_schema short_desc="Opções por omissão de montagem para o sistema de ficheiros ntfs-3g">
+								<longdesc>Uma lista de opções por omissão de montagem para unidades formatadas com o sistema de ficheiros ntfs utilizando ntfs-3g.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ntfs">
+						<entry name="fstype_override">
+							<local_schema short_desc="Quando for detectado &apos;ntfs&apos;, que sistema de ficheiros utilizar por omissão">
+								<longdesc>O nome do controlador do sistema de ficheiros a utilizar por omissão quando é detectado &apos;ntfs&apos;. Isto é útil para configurar o sistema para utilizar o controlador &apos;ntfs-3g&apos; para todos os sistemas de ficheiros &apos;ntfs&apos; por omissão. O utilizador pode ainda escolher utilizar o sistema de ficheiros &apos;ntfs&apos;, sobrepondo a escolha unidade a unidade ou na linha de comando.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="mount_options">
+							<local_schema short_desc="Opções por omissão de montagem para o sistema de ficheiros ntfs">
+								<longdesc>Uma lista de opções por omissão de montagem para unidades formatadas com o sistema de ficheiros ntfs.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="udf">
+						<entry name="mount_options">
+							<local_schema short_desc="Opções por omissão de montagem para o sistema de ficheiros udf">
+								<longdesc>Uma lista de opções por omissão de montagem para unidades formatadas com o sistema de ficheiros udf.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="iso9660">
+						<entry name="mount_options">
+							<local_schema short_desc="Opções por omissão de montagem para o sistema de ficheiros iso9660">
+								<longdesc>Uma lista de opções por omissão de montagem para unidades formatadas com o sistema de ficheiros iso9660.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="vfat">
+						<entry name="mount_options">
+							<local_schema short_desc="Opções por omissão de montagem para o sistema de ficheiros vfat">
+								<longdesc>Uma lista de opções por omissão de montagem para unidades formatadas com o sistema de ficheiros vfat.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
 			<dir name="smb">
 				<entry name="workgroup">
 					<local_schema short_desc="Grupo de trabalho SMB">
@@ -99,50 +143,6 @@
 						<longdesc>Valores possíveis são &quot;merged&quot;, &quot;separate&quot; e &quot;disabled&quot;.</longdesc>
 					</local_schema>
 				</entry>
-			</dir>
-			<dir name="storage">
-				<dir name="default_options">
-					<dir name="ntfs-3g">
-						<entry name="mount_options">
-							<local_schema short_desc="Opções por omissão de montagem para o sistema de ficheiros ntfs-3g">
-								<longdesc>Uma lista de opções por omissão de montagem para unidades formatadas com o sistema de ficheiros ntfs utilizando ntfs-3g.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="ntfs">
-						<entry name="fstype_override">
-							<local_schema short_desc="Quando for detectado &apos;ntfs&apos;, que sistema de ficheiros utilizar por omissão">
-								<longdesc>O nome do controlador do sistema de ficheiros a utilizar por omissão quando é detectado &apos;ntfs&apos;. Isto é útil para configurar o sistema para utilizar o controlador &apos;ntfs-3g&apos; para todos os sistemas de ficheiros &apos;ntfs&apos; por omissão. O utilizador pode ainda escolher utilizar o sistema de ficheiros &apos;ntfs&apos;, sobrepondo a escolha unidade a unidade ou na linha de comando.</longdesc>
-							</local_schema>
-						</entry>
-						<entry name="mount_options">
-							<local_schema short_desc="Opções por omissão de montagem para o sistema de ficheiros ntfs">
-								<longdesc>Uma lista de opções por omissão de montagem para unidades formatadas com o sistema de ficheiros ntfs.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="udf">
-						<entry name="mount_options">
-							<local_schema short_desc="Opções por omissão de montagem para o sistema de ficheiros udf">
-								<longdesc>Uma lista de opções por omissão de montagem para unidades formatadas com o sistema de ficheiros udf.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="iso9660">
-						<entry name="mount_options">
-							<local_schema short_desc="Opções por omissão de montagem para o sistema de ficheiros iso9660">
-								<longdesc>Uma lista de opções por omissão de montagem para unidades formatadas com o sistema de ficheiros iso9660.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="vfat">
-						<entry name="mount_options">
-							<local_schema short_desc="Opções por omissão de montagem para o sistema de ficheiros vfat">
-								<longdesc>Uma lista de opções por omissão de montagem para unidades formatadas com o sistema de ficheiros vfat.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-				</dir>
 			</dir>
 		</dir>
 		<dir name="desktop">
@@ -548,6 +548,23 @@
 						</entry>
 					</dir>
 				</dir>
+				<dir name="policykit">
+					<entry name="auth_dialog_retain_authorization_blacklist">
+						<local_schema short_desc="Uma lista de acções onde a caixa de selecção &quot;Reter Autorização&quot; não se encontra marcada por omissão">
+							<longdesc>Uma lista de acções do PolicyKit onde a caixa de selecção &quot;Reter Autorização&quot; não se encontra marcada por omissão; esta lista é mantida pelo próprio código de diálogo da autenticação. Por exemplo, se um utilizador desmarca a caixa de selecção &quot;Reter Autorização&quot; para uma determinada acção e obtém uma autorização para esta, a acção será adicionada à lista.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="auth_dialog_retain_authorization">
+						<local_schema short_desc="Se a caixa de selecção &quot;reter autorização&quot; encontra-se marcada por omissão">
+							<longdesc>Se definido como verdadeiro, então a caixa de selecção &quot;Reter Autorização&quot; (caso esteja presente) encontra-se marcada por omissão, excepto se a acção está mencionada na chave  &quot;/desktop/gnome/policykit/auth_dialog_retain_authorization_blacklist&quot;.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="auth_dialog_grab_keyboard">
+						<local_schema short_desc="Se o diálogo de autenticação deverá ou não capturar o teclado">
+							<longdesc>Se definido como verdadeiro, o diálogo de autenticação do PolicyKit-gnome irá capturar o teclado, pelo que não será possível enviar pressões de tecla para outras aplicações enquanto o diálogo estiver activo. Utilize esta opção se o seu gestor de janelas não transmitir o foco automaticamente ao diálogo de autenticação, e deseja evitar introduzir acidentalmente a sua senha noutra aplicação.</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
 				<dir name="url-handlers">
 					<dir name="h323">
 						<entry name="needs_terminal">
@@ -829,23 +846,6 @@
 							</local_schema>
 						</entry>
 					</dir>
-				</dir>
-				<dir name="policykit">
-					<entry name="auth_dialog_retain_authorization_blacklist">
-						<local_schema short_desc="Uma lista de acções onde a caixa de selecção &quot;Reter Autorização&quot; não se encontra marcada por omissão">
-							<longdesc>Uma lista de acções do PolicyKit onde a caixa de selecção &quot;Reter Autorização&quot; não se encontra marcada por omissão; esta lista é mantida pelo próprio código de diálogo da autenticação. Por exemplo, se um utilizador desmarca a caixa de selecção &quot;Reter Autorização&quot; para uma determinada acção e obtém uma autorização para esta, a acção será adicionada à lista.</longdesc>
-						</local_schema>
-					</entry>
-					<entry name="auth_dialog_retain_authorization">
-						<local_schema short_desc="Se a caixa de selecção &quot;reter autorização&quot; encontra-se marcada por omissão">
-							<longdesc>Se definido como verdadeiro, então a caixa de selecção &quot;Reter Autorização&quot; (caso esteja presente) encontra-se marcada por omissão, excepto se a acção está mencionada na chave  &quot;/desktop/gnome/policykit/auth_dialog_retain_authorization_blacklist&quot;.</longdesc>
-						</local_schema>
-					</entry>
-					<entry name="auth_dialog_grab_keyboard">
-						<local_schema short_desc="Se o diálogo de autenticação deverá ou não capturar o teclado">
-							<longdesc>Se definido como verdadeiro, o diálogo de autenticação do PolicyKit-gnome irá capturar o teclado, pelo que não será possível enviar pressões de tecla para outras aplicações enquanto o diálogo estiver activo. Utilize esta opção se o seu gestor de janelas não transmitir o foco automaticamente ao diálogo de autenticação, e deseja evitar introduzir acidentalmente a sua senha noutra aplicação.</longdesc>
-						</local_schema>
-					</entry>
 				</dir>
 				<dir name="thumbnailers">
 					<entry name="disable_all">

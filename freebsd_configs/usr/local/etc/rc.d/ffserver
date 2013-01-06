@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/multimedia/ffmpeg/files/ffserver.in,v 1.3 2010/03/27 00:13:31 dougb Exp $
+# $FreeBSD: ports/multimedia/ffmpeg/files/ffserver.in,v 1.4 2012/01/14 08:56:07 dougb Exp $
 #
 
 # PROVIDE: ffserver
@@ -17,7 +17,7 @@ ffserver_enable="${ffserver_enable-NO}"
 . /etc/rc.subr
 
 name=ffserver
-rcvar=`set_rcvar`
+rcvar=ffserver_enable
 
 command="/usr/local/bin/${name} &"
 required_files=/usr/local/etc/ffserver.conf

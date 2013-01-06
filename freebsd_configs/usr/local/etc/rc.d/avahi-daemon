@@ -17,7 +17,7 @@ avahi_daemon_flags=${avahi_daemon_flags-"-D"}
 avahi_daemon_enable=${avahi_daemon_enable-${gnome_enable}}
 
 name=avahi_daemon
-rcvar=`set_rcvar`
+rcvar=avahi_daemon_enable
 
 start_cmd=avahi_daemon_start
 stop_cmd=avahi_daemon_stop

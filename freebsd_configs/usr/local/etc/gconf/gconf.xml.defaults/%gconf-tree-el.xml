@@ -2,6 +2,49 @@
 <gconf>
 	<dir name="schemas">
 		<dir name="system">
+			<dir name="storage">
+				<dir name="default_options">
+					<dir name="ntfs-3g">
+						<entry name="mount_options">
+							<local_schema short_desc="Προκαθορισμένες επιλογές προσάρτησης για το ntfs-3g fs">
+								<longdesc>Λίστα με τις προκαθορισμένες επιλογές προσάρτησης για τόμους διαμορφωμένους με το σύστημα αρχείων ntfs χρησιμοποιώντας το ntfs-3g.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ntfs">
+						<entry name="fstype_override">
+							<local_schema short_desc="Ποιος οδηγός συστήματος αρχείων θα χρησιμοποιείται εξ ορισμού όταν ανιχνεύεται ntfs">
+							</local_schema>
+						</entry>
+						<entry name="mount_options">
+							<local_schema short_desc="Προκαθορισμένες επιλογές προσάρτησης για το ntfs fs">
+								<longdesc>Λίστα με τις προκαθορισμένες επιλογές προσάρτησης για τόμους διαμορφωμένους με το σύστημα αρχείων ntfs.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="udf">
+						<entry name="mount_options">
+							<local_schema short_desc="Προκαθορισμένες επιλογές προσάρτησης για το udf fs">
+								<longdesc>Λίστα με τις προκαθορισμένες επιλογές προσάρτησης για τόμους διαμορφωμένους με το σύστημα αρχείων udf.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="iso9660">
+						<entry name="mount_options">
+							<local_schema short_desc="Προκαθορισμένες επιλογές προσάρτησης για το iso9660 fs">
+								<longdesc>Λίστα με τις προκαθορισμένες επιλογές προσάρτησης για τόμους διαμορφωμένους με το σύστημα αρχείων iso9660.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="vfat">
+						<entry name="mount_options">
+							<local_schema short_desc="Προκαθορισμένες επιλογές προσάρτησης για το vfat fs">
+								<longdesc>Λίστα με τις προκαθορισμένες επιλογές προσάρτησης για τόμους διαμορφωμένους με το σύστημα αρχείων vfat.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
 			<dir name="smb">
 				<entry name="workgroup">
 					<local_schema short_desc="Ομάδα εργασίας SMB">
@@ -99,49 +142,6 @@
 						<longdesc>Πιθανές τιμές είναι &quot;merged&quot;, &quot;separate&quot; and &quot;disabled&quot;.</longdesc>
 					</local_schema>
 				</entry>
-			</dir>
-			<dir name="storage">
-				<dir name="default_options">
-					<dir name="ntfs-3g">
-						<entry name="mount_options">
-							<local_schema short_desc="Προκαθορισμένες επιλογές προσάρτησης για το ntfs-3g fs">
-								<longdesc>Λίστα με τις προκαθορισμένες επιλογές προσάρτησης για τόμους διαμορφωμένους με το σύστημα αρχείων ntfs χρησιμοποιώντας το ntfs-3g.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="ntfs">
-						<entry name="fstype_override">
-							<local_schema short_desc="Ποιος οδηγός συστήματος αρχείων θα χρησιμοποιείται εξ ορισμού όταν ανιχνεύεται ntfs">
-							</local_schema>
-						</entry>
-						<entry name="mount_options">
-							<local_schema short_desc="Προκαθορισμένες επιλογές προσάρτησης για το ntfs fs">
-								<longdesc>Λίστα με τις προκαθορισμένες επιλογές προσάρτησης για τόμους διαμορφωμένους με το σύστημα αρχείων ntfs.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="udf">
-						<entry name="mount_options">
-							<local_schema short_desc="Προκαθορισμένες επιλογές προσάρτησης για το udf fs">
-								<longdesc>Λίστα με τις προκαθορισμένες επιλογές προσάρτησης για τόμους διαμορφωμένους με το σύστημα αρχείων udf.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="iso9660">
-						<entry name="mount_options">
-							<local_schema short_desc="Προκαθορισμένες επιλογές προσάρτησης για το iso9660 fs">
-								<longdesc>Λίστα με τις προκαθορισμένες επιλογές προσάρτησης για τόμους διαμορφωμένους με το σύστημα αρχείων iso9660.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="vfat">
-						<entry name="mount_options">
-							<local_schema short_desc="Προκαθορισμένες επιλογές προσάρτησης για το vfat fs">
-								<longdesc>Λίστα με τις προκαθορισμένες επιλογές προσάρτησης για τόμους διαμορφωμένους με το σύστημα αρχείων vfat.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-				</dir>
 			</dir>
 		</dir>
 		<dir name="desktop">

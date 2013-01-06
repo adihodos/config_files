@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/sysutils/fusefs-kmod/files/fusefs.in,v 1.8 2010/03/27 00:14:55 dougb Exp $
+# $FreeBSD: ports/sysutils/fusefs-kmod/files/fusefs.in,v 1.10 2012/11/17 06:01:31 svnexp Exp $
 #
 # PROVIDE: fusefs
 # REQUIRE: sysctl
@@ -24,9 +24,10 @@
 
 . /etc/rc.subr
 
-kmod="/usr/local/modules/fuse.ko"
 name="fusefs"
-rcvar=${name}_enable
+rcvar=fusefs_enable
+
+kmod="/usr/local/modules/fuse.ko"
 
 start_cmd="fusefs_start"
 stop_cmd="fusefs_stop"

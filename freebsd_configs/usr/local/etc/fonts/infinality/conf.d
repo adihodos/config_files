@@ -1,1 +1,1 @@
-styles.conf.avail/infinality
+styles.conf.avail/linux

@@ -2,6 +2,50 @@
 <gconf>
 	<dir name="schemas">
 		<dir name="system">
+			<dir name="storage">
+				<dir name="default_options">
+					<dir name="ntfs-3g">
+						<entry name="mount_options">
+							<local_schema short_desc="Opcions de muntatge per defecte per al sistema de fitxers ntfs-3g">
+								<longdesc>Llista d&apos;opcions de muntatge per defecte per a volums amb el sistema de fitxers ntfs que utilitzen ntfs-3g.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ntfs">
+						<entry name="fstype_override">
+							<local_schema short_desc="En detectar el sistema de fitxers «ntfs», el controlador de sistema de fitxers a utilitzar per defecte">
+								<longdesc>El nom del sistema de fitxers a utilitzar per defecte en detectar «ntfs». Això pot ser útil en configurar el sistema de manera que s&apos;utilitzi per defecte el controlador «ntfs-3g» per a tots els sistemes de fitxers «ntfs». De totes maneres, l&apos;usuari sempre podrà decidir fer servir el sistema de fitxers «ntfs» especificant-ho de manera explícita per a cada volum o bé a la línia d&apos;ordres.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="mount_options">
+							<local_schema short_desc="Opcions de muntatge per defecte per al sistema de fitxers ntfs">
+								<longdesc>Llista d&apos;opcions de muntatge per defecte per a volums amb el sistema de fitxers ntfs.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="udf">
+						<entry name="mount_options">
+							<local_schema short_desc="Opcions de muntatge per defecte per al sistema de fitxers udf">
+								<longdesc>Llista d&apos;opcions de muntatge per defecte per a volums amb el sistema de fitxers udf.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="iso9660">
+						<entry name="mount_options">
+							<local_schema short_desc="Opcions de muntatge per defecte per al sistema de fitxers iso9660">
+								<longdesc>Llista d&apos;opcions de muntatge per defecte per a volums amb el sistema de fitxers iso9660.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="vfat">
+						<entry name="mount_options">
+							<local_schema short_desc="Opcions de muntatge per defecte per al sistema de fitxers vfat">
+								<longdesc>Llista d&apos;opcions de muntatge per defecte per a volums amb el sistema de fitxers vfat.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
 			<dir name="smb">
 				<entry name="workgroup">
 					<local_schema short_desc="Grup de treball d&apos;SMB">
@@ -99,50 +143,6 @@
 						<longdesc>Els valors possibles són «merged», «separate» i «disabled».</longdesc>
 					</local_schema>
 				</entry>
-			</dir>
-			<dir name="storage">
-				<dir name="default_options">
-					<dir name="ntfs-3g">
-						<entry name="mount_options">
-							<local_schema short_desc="Opcions de muntatge per defecte per al sistema de fitxers ntfs-3g">
-								<longdesc>Llista d&apos;opcions de muntatge per defecte per a volums amb el sistema de fitxers ntfs que utilitzen ntfs-3g.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="ntfs">
-						<entry name="fstype_override">
-							<local_schema short_desc="En detectar el sistema de fitxers «ntfs», el controlador de sistema de fitxers a utilitzar per defecte">
-								<longdesc>El nom del sistema de fitxers a utilitzar per defecte en detectar «ntfs». Això pot ser útil en configurar el sistema de manera que s&apos;utilitzi per defecte el controlador «ntfs-3g» per a tots els sistemes de fitxers «ntfs». De totes maneres, l&apos;usuari sempre podrà decidir fer servir el sistema de fitxers «ntfs» especificant-ho de manera explícita per a cada volum o bé a la línia d&apos;ordres.</longdesc>
-							</local_schema>
-						</entry>
-						<entry name="mount_options">
-							<local_schema short_desc="Opcions de muntatge per defecte per al sistema de fitxers ntfs">
-								<longdesc>Llista d&apos;opcions de muntatge per defecte per a volums amb el sistema de fitxers ntfs.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="udf">
-						<entry name="mount_options">
-							<local_schema short_desc="Opcions de muntatge per defecte per al sistema de fitxers udf">
-								<longdesc>Llista d&apos;opcions de muntatge per defecte per a volums amb el sistema de fitxers udf.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="iso9660">
-						<entry name="mount_options">
-							<local_schema short_desc="Opcions de muntatge per defecte per al sistema de fitxers iso9660">
-								<longdesc>Llista d&apos;opcions de muntatge per defecte per a volums amb el sistema de fitxers iso9660.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="vfat">
-						<entry name="mount_options">
-							<local_schema short_desc="Opcions de muntatge per defecte per al sistema de fitxers vfat">
-								<longdesc>Llista d&apos;opcions de muntatge per defecte per a volums amb el sistema de fitxers vfat.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-				</dir>
 			</dir>
 		</dir>
 		<dir name="desktop">

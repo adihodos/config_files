@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $FreeBSD: ports/devel/git/files/git_daemon.in,v 1.6 2010/07/04 18:49:43 wxs Exp $
+# $FreeBSD: ports/devel/git/files/git_daemon.in,v 1.7 2012/01/14 08:55:34 dougb Exp $
 #
 
 # PROVIDE: git_daemon
@@ -15,7 +15,7 @@
 . /etc/rc.subr
 
 name="git_daemon"
-rcvar=`set_rcvar`
+rcvar=git_daemon_enable
 
 load_rc_config $name
 

@@ -1,4 +1,6 @@
 # Device	Mountpoint	FStype	Options	Dump	Pass#
-/dev/ada0s4a	/		ufs	rw	1	1
-/dev/ada0s4b	none		swap	sw	0	0
-proc            /proc           procfs  rw      0       0
+/dev/ada0s3a	/		ufs	rw	1	1
+proc		/proc		procfs	rw	0	0
+#/dev/ada0s1	/media/win_c	ntfs-3g	ro,umask=0222	0	0
+#/dev/ada0s2	/media/win_d	ntfs-3g	ro,umask=0222	0	0
+

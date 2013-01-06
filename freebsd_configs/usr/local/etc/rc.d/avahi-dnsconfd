@@ -20,7 +20,7 @@ avahi_dnsconfd_flags=${avahi_dnsconfd_flags-"-D"}
 avahi_dnsconfd_enable=${avahi_dnsconfd_enable-${gnome_enable}}
 
 name=avahi_dnsconfd
-rcvar=`set_rcvar`
+rcvar=avahi_dnsconfd_enable
 
 start_cmd=avahi_dnsconfd_start
 stop_cmd=avahi_dnsconfd_stop

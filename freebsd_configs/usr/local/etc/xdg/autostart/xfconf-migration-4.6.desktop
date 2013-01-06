@@ -1,8 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Name=Xfconf Migration Script
-Exec=/usr/local/lib/xfce4/xfconf-migration/xfconf-migration-4.6.pl
-Terminal=false
-Type=Application
-StartupNotify=false
-Categories=Utility

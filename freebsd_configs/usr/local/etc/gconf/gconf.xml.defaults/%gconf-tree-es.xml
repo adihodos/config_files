@@ -2,6 +2,50 @@
 <gconf>
 	<dir name="schemas">
 		<dir name="system">
+			<dir name="storage">
+				<dir name="default_options">
+					<dir name="ntfs-3g">
+						<entry name="mount_options">
+							<local_schema short_desc="Opciones de montaje predeterminadas para el sistema de archivos ntfs-3g">
+								<longdesc>Una lista de opciones de montaje predeterminadas para volúmenes formateados con el sistema de archivos ntfs usando ntfs-3g.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ntfs">
+						<entry name="fstype_override">
+							<local_schema short_desc="Qué controlador usar de forma predeterminada para el sistema de archivos cuando se detecta «ntfs»">
+								<longdesc>El nombre del controlador para el sistema de archivos a usar de forma predeterminada cuando se detecta «ntfs». Esto es útil para configurar el sistema para usar «ntfs-3g» para todos los sistemas de archivos «ntfs» de forma predeterminada. El usuario todavía podrá elegir usar el controlador del sistema de archivos «ntfs» sobreescribiéndolo por volumen o en la línea de comandos.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="mount_options">
+							<local_schema short_desc="Opciones de montaje predeterminadas para ntfs">
+								<longdesc>Una lista de opciones de montaje predeterminadas para volúmenes con el sistema de archivos ntfs.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="udf">
+						<entry name="mount_options">
+							<local_schema short_desc="Opciones de montaje predeterminadas para udf">
+								<longdesc>Una lista de opciones de montaje predeterminadas para volúmenes con el sistema de archivos udf.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="iso9660">
+						<entry name="mount_options">
+							<local_schema short_desc="Opciones de montaje predeterminadas para iso9660">
+								<longdesc>Una lista de opciones de montaje predeterminadas para volúmenes con el sistema de archivos iso9660.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="vfat">
+						<entry name="mount_options">
+							<local_schema short_desc="Opciones de montaje predeterminadas para vfat">
+								<longdesc>Una lista de opciones de montaje predeterminadas para volúmenes con el sistema de archivos vfat.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
 			<dir name="smb">
 				<entry name="workgroup">
 					<local_schema short_desc="Grupo de trabajo SMB">
@@ -99,50 +143,6 @@
 						<longdesc>Los valores posibles son &quot;merged&quot; (mezclar), &quot;separate&quot; (separar) y &quot;disabled&quot; (desactivado).</longdesc>
 					</local_schema>
 				</entry>
-			</dir>
-			<dir name="storage">
-				<dir name="default_options">
-					<dir name="ntfs-3g">
-						<entry name="mount_options">
-							<local_schema short_desc="Opciones de montaje predeterminadas para el sistema de archivos ntfs-3g">
-								<longdesc>Una lista de opciones de montaje predeterminadas para volúmenes formateados con el sistema de archivos ntfs usando ntfs-3g.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="ntfs">
-						<entry name="fstype_override">
-							<local_schema short_desc="Qué controlador usar de forma predeterminada para el sistema de archivos cuando se detecta «ntfs»">
-								<longdesc>El nombre del controlador para el sistema de archivos a usar de forma predeterminada cuando se detecta «ntfs». Esto es útil para configurar el sistema para usar «ntfs-3g» para todos los sistemas de archivos «ntfs» de forma predeterminada. El usuario todavía podrá elegir usar el controlador del sistema de archivos «ntfs» sobreescribiéndolo por volumen o en la línea de comandos.</longdesc>
-							</local_schema>
-						</entry>
-						<entry name="mount_options">
-							<local_schema short_desc="Opciones de montaje predeterminadas para ntfs">
-								<longdesc>Una lista de opciones de montaje predeterminadas para volúmenes con el sistema de archivos ntfs.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="udf">
-						<entry name="mount_options">
-							<local_schema short_desc="Opciones de montaje predeterminadas para udf">
-								<longdesc>Una lista de opciones de montaje predeterminadas para volúmenes con el sistema de archivos udf.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="iso9660">
-						<entry name="mount_options">
-							<local_schema short_desc="Opciones de montaje predeterminadas para iso9660">
-								<longdesc>Una lista de opciones de montaje predeterminadas para volúmenes con el sistema de archivos iso9660.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="vfat">
-						<entry name="mount_options">
-							<local_schema short_desc="Opciones de montaje predeterminadas para vfat">
-								<longdesc>Una lista de opciones de montaje predeterminadas para volúmenes con el sistema de archivos vfat.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-				</dir>
 			</dir>
 		</dir>
 		<dir name="desktop">
@@ -548,6 +548,12 @@
 						</entry>
 					</dir>
 				</dir>
+				<dir name="policykit">
+					<entry name="auth_dialog_grab_keyboard">
+						<local_schema short_desc="Indica si el diálogo de autenticación debería obtener el teclado">
+						</local_schema>
+					</entry>
+				</dir>
 				<dir name="url-handlers">
 					<dir name="h323">
 						<entry name="needs_terminal">
@@ -829,12 +835,6 @@
 							</local_schema>
 						</entry>
 					</dir>
-				</dir>
-				<dir name="policykit">
-					<entry name="auth_dialog_grab_keyboard">
-						<local_schema short_desc="Indica si el diálogo de autenticación debería obtener el teclado">
-						</local_schema>
-					</entry>
 				</dir>
 				<dir name="thumbnailers">
 					<entry name="disable_all">

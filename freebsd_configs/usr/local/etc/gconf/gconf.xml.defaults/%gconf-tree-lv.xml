@@ -2,6 +2,50 @@
 <gconf>
 	<dir name="schemas">
 		<dir name="system">
+			<dir name="storage">
+				<dir name="default_options">
+					<dir name="ntfs-3g">
+						<entry name="mount_options">
+							<local_schema short_desc="Noklusētās montēšanas opcijas priekš ntfs-3g fs">
+								<longdesc>Saraksts ar noklusētājām montēšanas opcijām priekš sējumiem, kas noformatēti ar ntfs failu sistēmu izmantojot ntfs-3g.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ntfs">
+						<entry name="fstype_override">
+							<local_schema short_desc="Kādu failu sistēmas dzini izmantot kā noklusēto, kad &apos;ntfs&apos; ir atklāts">
+								<longdesc>Kādu failu sistēmas dzini izmantot kā noklusēto kad &apos;ntfs&apos; ir atklāts. Šis ir noderīgi konfigurējot sistēmu &apos;ntfs-3g&apos;&apos;dziņa lietošanai visām &apos;ntfs&apos; failu sistēmām pēc noklusējuma. Lietotājs var izvēlēties &apos;ntfs&apos; failu sistēmas draiveri uzstādot to atsevišķi katram sējuma caur komandrindu.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="mount_options">
+							<local_schema short_desc="Noklusētās montēšanas opcijas priekš ntfs-fs">
+								<longdesc>Saraksts ar noklusētājām montēšanas opcijām priekš sējumiem, kas noformatēti ar ntfs failu sistēmu.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="udf">
+						<entry name="mount_options">
+							<local_schema short_desc="Noklusētās montēšanas opcijas priekš udf fs">
+								<longdesc>Saraksts ar noklusētājām montēšanas opcijām priekš sējumiem, kas noformatēti ar udf failu sistēmu.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="iso9660">
+						<entry name="mount_options">
+							<local_schema short_desc="Noklusētās montēšanas opcijas priekš iso9660 fs">
+								<longdesc>Saraksts ar noklusētājām montēšanas opcijām priekš sējumiem, kas noformatēti ar iso9660 failu sistēmu.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="vfat">
+						<entry name="mount_options">
+							<local_schema short_desc="Noklusētās montēšanas opcijas priekš vfat fs">
+								<longdesc>Saraksts ar noklusētājām montēšanas opcijām priekš sējumiem, kas noformatēti ar vfat failu sistēmu.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
 			<dir name="smb">
 				<entry name="workgroup">
 					<local_schema short_desc="SMB darba grupa">
@@ -99,50 +143,6 @@
 						<longdesc>Iespējamās vērtības ir &quot;merged&quot;, &quot;separate&quot; un &quot;disabled&quot;.</longdesc>
 					</local_schema>
 				</entry>
-			</dir>
-			<dir name="storage">
-				<dir name="default_options">
-					<dir name="ntfs-3g">
-						<entry name="mount_options">
-							<local_schema short_desc="Noklusētās montēšanas opcijas priekš ntfs-3g fs">
-								<longdesc>Saraksts ar noklusētājām montēšanas opcijām priekš sējumiem, kas noformatēti ar ntfs failu sistēmu izmantojot ntfs-3g.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="ntfs">
-						<entry name="fstype_override">
-							<local_schema short_desc="Kādu failu sistēmas dzini izmantot kā noklusēto, kad &apos;ntfs&apos; ir atklāts">
-								<longdesc>Kādu failu sistēmas dzini izmantot kā noklusēto kad &apos;ntfs&apos; ir atklāts. Šis ir noderīgi konfigurējot sistēmu &apos;ntfs-3g&apos;&apos;dziņa lietošanai visām &apos;ntfs&apos; failu sistēmām pēc noklusējuma. Lietotājs var izvēlēties &apos;ntfs&apos; failu sistēmas draiveri uzstādot to atsevišķi katram sējuma caur komandrindu.</longdesc>
-							</local_schema>
-						</entry>
-						<entry name="mount_options">
-							<local_schema short_desc="Noklusētās montēšanas opcijas priekš ntfs-fs">
-								<longdesc>Saraksts ar noklusētājām montēšanas opcijām priekš sējumiem, kas noformatēti ar ntfs failu sistēmu.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="udf">
-						<entry name="mount_options">
-							<local_schema short_desc="Noklusētās montēšanas opcijas priekš udf fs">
-								<longdesc>Saraksts ar noklusētājām montēšanas opcijām priekš sējumiem, kas noformatēti ar udf failu sistēmu.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="iso9660">
-						<entry name="mount_options">
-							<local_schema short_desc="Noklusētās montēšanas opcijas priekš iso9660 fs">
-								<longdesc>Saraksts ar noklusētājām montēšanas opcijām priekš sējumiem, kas noformatēti ar iso9660 failu sistēmu.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="vfat">
-						<entry name="mount_options">
-							<local_schema short_desc="Noklusētās montēšanas opcijas priekš vfat fs">
-								<longdesc>Saraksts ar noklusētājām montēšanas opcijām priekš sējumiem, kas noformatēti ar vfat failu sistēmu.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-				</dir>
 			</dir>
 		</dir>
 		<dir name="desktop">

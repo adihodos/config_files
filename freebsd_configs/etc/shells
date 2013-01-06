@@ -9,4 +9,4 @@
 /bin/tcsh
 /usr/local/bin/bash
 /usr/local/bin/rbash
-/usr/local/libexec/git-core/git-stage
+/usr/local/libexec/git-core/git-shell

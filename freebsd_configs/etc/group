@@ -34,8 +34,12 @@ adi.hodos:*:1001:
 messagebus:*:556:
 polkit:*:562:
 haldaemon:*:560:
-cyrus:*:60:
-mysql:*:88:
-saned:*:194:
 avahi:*:558:
+mysql:*:88:
+cyrus:*:60:
+pulse:*:563:
+pulse-access:*:564:
+pulse-rt:*:557:
 kdm:*:147:
+saned:*:194:
+virtuoso:*:79:

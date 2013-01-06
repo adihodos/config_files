@@ -2,6 +2,38 @@
 <gconf>
 	<dir name="schemas">
 		<dir name="system">
+			<dir name="storage">
+				<dir name="default_options">
+					<dir name="ntfs">
+						<entry name="mount_options">
+							<local_schema short_desc="Tuỳ chọn gắn kết mặc định cho hệ tập tin ntfs">
+								<longdesc>Danh sách các tuỳ chọn gắn kết mặc định cho các khối dùng hệ tập tin ntfs</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="udf">
+						<entry name="mount_options">
+							<local_schema short_desc="Tuỳ chọn gắn kết mặc định cho hệ tập tin udf">
+								<longdesc>Danh sách các tuỳ chọn gắn kết mặc định cho các khối dùng hệ tập tin udf</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="iso9660">
+						<entry name="mount_options">
+							<local_schema short_desc="Tuỳ chọn gắn kết mặc định cho hệ tập tin iso9660">
+								<longdesc>Danh sách các tuỳ chọn gắn kết mặc định cho các khối dùng hệ tập tin iso9660</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="vfat">
+						<entry name="mount_options">
+							<local_schema short_desc="Tuỳ chọn gắn kết mặc định cho hệ tập tin vfat">
+								<longdesc>Danh sách các tuỳ chọn gắn kết mặc định cho các khối dùng hệ tập tin vfat</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
 			<dir name="smb">
 				<entry name="workgroup">
 					<local_schema short_desc="Nhóm làm việc SMB">
@@ -105,38 +137,6 @@
  • disabled — đã tắt.</longdesc>
 					</local_schema>
 				</entry>
-			</dir>
-			<dir name="storage">
-				<dir name="default_options">
-					<dir name="ntfs">
-						<entry name="mount_options">
-							<local_schema short_desc="Tuỳ chọn gắn kết mặc định cho hệ tập tin ntfs">
-								<longdesc>Danh sách các tuỳ chọn gắn kết mặc định cho các khối dùng hệ tập tin ntfs</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="udf">
-						<entry name="mount_options">
-							<local_schema short_desc="Tuỳ chọn gắn kết mặc định cho hệ tập tin udf">
-								<longdesc>Danh sách các tuỳ chọn gắn kết mặc định cho các khối dùng hệ tập tin udf</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="iso9660">
-						<entry name="mount_options">
-							<local_schema short_desc="Tuỳ chọn gắn kết mặc định cho hệ tập tin iso9660">
-								<longdesc>Danh sách các tuỳ chọn gắn kết mặc định cho các khối dùng hệ tập tin iso9660</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="vfat">
-						<entry name="mount_options">
-							<local_schema short_desc="Tuỳ chọn gắn kết mặc định cho hệ tập tin vfat">
-								<longdesc>Danh sách các tuỳ chọn gắn kết mặc định cho các khối dùng hệ tập tin vfat</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-				</dir>
 			</dir>
 		</dir>
 		<dir name="desktop">

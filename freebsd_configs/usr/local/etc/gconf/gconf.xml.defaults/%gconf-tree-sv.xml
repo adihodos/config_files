@@ -2,6 +2,50 @@
 <gconf>
 	<dir name="schemas">
 		<dir name="system">
+			<dir name="storage">
+				<dir name="default_options">
+					<dir name="ntfs-3g">
+						<entry name="mount_options">
+							<local_schema short_desc="Standardmonteringsalternativ för ntfs-3g-filsystem">
+								<longdesc>En lista på standardmonteringsalternativ för volymer som är formaterade med ntfs-filsystemet med ntfs-3g.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ntfs">
+						<entry name="fstype_override">
+							<local_schema short_desc="När &quot;ntfs&quot; identifieras, vilken filsystemdrivrutin ska användas som standard">
+								<longdesc>Namnet på filsystemdrivrutinen som ska användas som standard när &quot;ntfs&quot; identifieras. Det här är användbart för konfigurering av systemet till att använda drivrutinen &quot;ntfs-3g&quot; för alla &quot;ntfs&quot;-filsystem som standard. Användaren kan fortfarande välja att använda filsystemsdrivrutinen &quot;ntfs&quot; genom att åsidosätta den för varje volym eller på kommandoraden.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="mount_options">
+							<local_schema short_desc="Standardmonteringsalternativ för ntfs-filsystem">
+								<longdesc>En lista på standardmonteringsalternativ för volymer som är formaterade med ntfs-filsystemet.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="udf">
+						<entry name="mount_options">
+							<local_schema short_desc="Standardmonteringsalternativ för udf-filsystem">
+								<longdesc>En lista på standardmonteringsalternativ för volymer som är formaterade med udf-filsystemet.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="iso9660">
+						<entry name="mount_options">
+							<local_schema short_desc="Standardmonteringsalternativ för iso9960-filsystem">
+								<longdesc>En lista på standardmonteringsalternativ för volymer som är formaterade med iso9660-filsystemet.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="vfat">
+						<entry name="mount_options">
+							<local_schema short_desc="Standardmonteringsalternativ för vfat-filsystem">
+								<longdesc>En lista på standardmonteringsalternativ för volymer som är formaterade med vfat-filsystemet.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
 			<dir name="smb">
 				<entry name="workgroup">
 					<local_schema short_desc="SMB-arbetsgrupp">
@@ -99,50 +143,6 @@
 						<longdesc>Möjliga värden är &quot;merged&quot;, &quot;separate&quot; och &quot;disabled&quot;.</longdesc>
 					</local_schema>
 				</entry>
-			</dir>
-			<dir name="storage">
-				<dir name="default_options">
-					<dir name="ntfs-3g">
-						<entry name="mount_options">
-							<local_schema short_desc="Standardmonteringsalternativ för ntfs-3g-filsystem">
-								<longdesc>En lista på standardmonteringsalternativ för volymer som är formaterade med ntfs-filsystemet med ntfs-3g.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="ntfs">
-						<entry name="fstype_override">
-							<local_schema short_desc="När &quot;ntfs&quot; identifieras, vilken filsystemdrivrutin ska användas som standard">
-								<longdesc>Namnet på filsystemdrivrutinen som ska användas som standard när &quot;ntfs&quot; identifieras. Det här är användbart för konfigurering av systemet till att använda drivrutinen &quot;ntfs-3g&quot; för alla &quot;ntfs&quot;-filsystem som standard. Användaren kan fortfarande välja att använda filsystemsdrivrutinen &quot;ntfs&quot; genom att åsidosätta den för varje volym eller på kommandoraden.</longdesc>
-							</local_schema>
-						</entry>
-						<entry name="mount_options">
-							<local_schema short_desc="Standardmonteringsalternativ för ntfs-filsystem">
-								<longdesc>En lista på standardmonteringsalternativ för volymer som är formaterade med ntfs-filsystemet.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="udf">
-						<entry name="mount_options">
-							<local_schema short_desc="Standardmonteringsalternativ för udf-filsystem">
-								<longdesc>En lista på standardmonteringsalternativ för volymer som är formaterade med udf-filsystemet.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="iso9660">
-						<entry name="mount_options">
-							<local_schema short_desc="Standardmonteringsalternativ för iso9960-filsystem">
-								<longdesc>En lista på standardmonteringsalternativ för volymer som är formaterade med iso9660-filsystemet.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="vfat">
-						<entry name="mount_options">
-							<local_schema short_desc="Standardmonteringsalternativ för vfat-filsystem">
-								<longdesc>En lista på standardmonteringsalternativ för volymer som är formaterade med vfat-filsystemet.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-				</dir>
 			</dir>
 		</dir>
 		<dir name="desktop">

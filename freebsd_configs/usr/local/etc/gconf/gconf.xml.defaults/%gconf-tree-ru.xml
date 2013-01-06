@@ -2,6 +2,50 @@
 <gconf>
 	<dir name="schemas">
 		<dir name="system">
+			<dir name="storage">
+				<dir name="default_options">
+					<dir name="ntfs-3g">
+						<entry name="mount_options">
+							<local_schema short_desc="Параметры подключения по умолчанию для файловой системы ntfs-3g">
+								<longdesc>Список параметров по умолчанию для томов, использующих файловую систему ntfs с драйвером ntfs-3g.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ntfs">
+						<entry name="fstype_override">
+							<local_schema short_desc="Какой драйвер использовать для файловых систем ntfs">
+								<longdesc>Драйвер по умолчанию для работы с файловой системой ntfs. Эта настойка полезна, если требуется использовать новый драйвер ntfs-3g для всех систем ntfs. Пользователь может также выбирать драйвер файловой системы ntfs, указав его для каждого тома или передав его в аргументах командной строки.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="mount_options">
+							<local_schema short_desc="Параметры подключения по умолчанию для файловой системы ntfs">
+								<longdesc>Список параметров по умолчанию для томов, использующих файловую систему ntfs.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="udf">
+						<entry name="mount_options">
+							<local_schema short_desc="Параметры подключения по умолчанию для файловой системы udf">
+								<longdesc>Список параметров по умолчанию для томов, использующих файловую систему udf.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="iso9660">
+						<entry name="mount_options">
+							<local_schema short_desc="Параметры подключения по умолчанию для файловой системы iso9660">
+								<longdesc>Список параметров по умолчанию для томов, использующих файловую систему iso9660.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="vfat">
+						<entry name="mount_options">
+							<local_schema short_desc="Параметры подключения по умолчанию для файловой системы vfat">
+								<longdesc>Список параметров по умолчанию для томов, использующих файловую систему vfat.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
 			<dir name="smb">
 				<entry name="workgroup">
 					<local_schema short_desc="Рабочая группа SMB">
@@ -99,50 +143,6 @@
 						<longdesc>Возможные значения &quot;merged&quot; (&quot;совместные&quot;), &quot;separate&quot; (&quot;раздельные&quot;) и &quot;disabled&quot; (&quot;отключено&quot;).</longdesc>
 					</local_schema>
 				</entry>
-			</dir>
-			<dir name="storage">
-				<dir name="default_options">
-					<dir name="ntfs-3g">
-						<entry name="mount_options">
-							<local_schema short_desc="Параметры подключения по умолчанию для файловой системы ntfs-3g">
-								<longdesc>Список параметров по умолчанию для томов, использующих файловую систему ntfs с драйвером ntfs-3g.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="ntfs">
-						<entry name="fstype_override">
-							<local_schema short_desc="Какой драйвер использовать для файловых систем ntfs">
-								<longdesc>Драйвер по умолчанию для работы с файловой системой ntfs. Эта настойка полезна, если требуется использовать новый драйвер ntfs-3g для всех систем ntfs. Пользователь может также выбирать драйвер файловой системы ntfs, указав его для каждого тома или передав его в аргументах командной строки.</longdesc>
-							</local_schema>
-						</entry>
-						<entry name="mount_options">
-							<local_schema short_desc="Параметры подключения по умолчанию для файловой системы ntfs">
-								<longdesc>Список параметров по умолчанию для томов, использующих файловую систему ntfs.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="udf">
-						<entry name="mount_options">
-							<local_schema short_desc="Параметры подключения по умолчанию для файловой системы udf">
-								<longdesc>Список параметров по умолчанию для томов, использующих файловую систему udf.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="iso9660">
-						<entry name="mount_options">
-							<local_schema short_desc="Параметры подключения по умолчанию для файловой системы iso9660">
-								<longdesc>Список параметров по умолчанию для томов, использующих файловую систему iso9660.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="vfat">
-						<entry name="mount_options">
-							<local_schema short_desc="Параметры подключения по умолчанию для файловой системы vfat">
-								<longdesc>Список параметров по умолчанию для томов, использующих файловую систему vfat.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-				</dir>
 			</dir>
 		</dir>
 		<dir name="desktop">
@@ -548,6 +548,13 @@
 						</entry>
 					</dir>
 				</dir>
+				<dir name="policykit">
+					<entry name="auth_dialog_grab_keyboard">
+						<local_schema short_desc="Должен ли диалог аутентификации перехватывать клавиатуру">
+							<longdesc>Если установлено, диалог аутентификации программы PolicyKit-gnome будет перехватывать клавиатуру, то есть вы не сможете вводить текст в другой программе, пока диалог активен.  Используйте этот менеджер окон не передаёт фокус диалогу аутентификации автоматически и если вы не хотите случайно набрать пароль в другой программе.</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
 				<dir name="url-handlers">
 					<dir name="h323">
 						<entry name="needs_terminal">
@@ -829,13 +836,6 @@
 							</local_schema>
 						</entry>
 					</dir>
-				</dir>
-				<dir name="policykit">
-					<entry name="auth_dialog_grab_keyboard">
-						<local_schema short_desc="Должен ли диалог аутентификации перехватывать клавиатуру">
-							<longdesc>Если установлено, диалог аутентификации программы PolicyKit-gnome будет перехватывать клавиатуру, то есть вы не сможете вводить текст в другой программе, пока диалог активен.  Используйте этот менеджер окон не передаёт фокус диалогу аутентификации автоматически и если вы не хотите случайно набрать пароль в другой программе.</longdesc>
-						</local_schema>
-					</entry>
 				</dir>
 				<dir name="thumbnailers">
 					<entry name="disable_all">
