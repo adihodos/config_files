@@ -2,6 +2,50 @@
 <gconf>
 	<dir name="schemas">
 		<dir name="system">
+			<dir name="storage">
+				<dir name="default_options">
+					<dir name="ntfs-3g">
+						<entry name="mount_options">
+							<local_schema short_desc="使用在 ntfs-3g 檔案系統的預設掛在選項">
+								<longdesc>格式為 ntfs 檔案系統並使用 ntfs-3g 的磁區的預設掛載選項清單。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ntfs">
+						<entry name="fstype_override">
+							<local_schema short_desc="當偵測到 &apos;ntfs&apos; ，預設要使用哪個檔案系統驅動程式">
+								<longdesc>當偵測到「ntfs」時預設要使用的檔案系統驅動程式的名稱。這在將「ntfs-3g」驅動程式設為所有「ntfs」檔案系統的預設驅動程式時非常有用。使用者仍可以選擇使用「ntfs」檔案系統驅動程式藉由覆蓋每個磁區的設定或是在指令列中使用。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="mount_options">
+							<local_schema short_desc="使用在 ntfs 檔案系統的預設掛在選項">
+								<longdesc>格式為 ntfs 檔案系統的磁區的預設掛載選項清單。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="udf">
+						<entry name="mount_options">
+							<local_schema short_desc="使用在 udf 檔案系統的預設掛在選項">
+								<longdesc>格式為 udf 檔案系統的磁區的預設掛載選項清單。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="iso9660">
+						<entry name="mount_options">
+							<local_schema short_desc="使用在 iso9660 檔案系統的預設掛在選項">
+								<longdesc>格式為 iso9660 檔案系統的磁區的預設掛載選項清單。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="vfat">
+						<entry name="mount_options">
+							<local_schema short_desc="使用在 vfat 檔案系統的預設掛在選項">
+								<longdesc>格式為 vfat 檔案系統的磁區的預設掛載選項清單。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
 			<dir name="smb">
 				<entry name="workgroup">
 					<local_schema short_desc="SMB 工作群組">
@@ -100,50 +144,6 @@
 						<longdesc>可能值為“merged”,“separate”以及“disabled”。</longdesc>
 					</local_schema>
 				</entry>
-			</dir>
-			<dir name="storage">
-				<dir name="default_options">
-					<dir name="ntfs-3g">
-						<entry name="mount_options">
-							<local_schema short_desc="使用在 ntfs-3g 檔案系統的預設掛在選項">
-								<longdesc>格式為 ntfs 檔案系統並使用 ntfs-3g 的磁區的預設掛載選項清單。</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="ntfs">
-						<entry name="fstype_override">
-							<local_schema short_desc="當偵測到 &apos;ntfs&apos; ，預設要使用哪個檔案系統驅動程式">
-								<longdesc>當偵測到「ntfs」時預設要使用的檔案系統驅動程式的名稱。這在將「ntfs-3g」驅動程式設為所有「ntfs」檔案系統的預設驅動程式時非常有用。使用者仍可以選擇使用「ntfs」檔案系統驅動程式藉由覆蓋每個磁區的設定或是在指令列中使用。</longdesc>
-							</local_schema>
-						</entry>
-						<entry name="mount_options">
-							<local_schema short_desc="使用在 ntfs 檔案系統的預設掛在選項">
-								<longdesc>格式為 ntfs 檔案系統的磁區的預設掛載選項清單。</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="udf">
-						<entry name="mount_options">
-							<local_schema short_desc="使用在 udf 檔案系統的預設掛在選項">
-								<longdesc>格式為 udf 檔案系統的磁區的預設掛載選項清單。</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="iso9660">
-						<entry name="mount_options">
-							<local_schema short_desc="使用在 iso9660 檔案系統的預設掛在選項">
-								<longdesc>格式為 iso9660 檔案系統的磁區的預設掛載選項清單。</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="vfat">
-						<entry name="mount_options">
-							<local_schema short_desc="使用在 vfat 檔案系統的預設掛在選項">
-								<longdesc>格式為 vfat 檔案系統的磁區的預設掛載選項清單。</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-				</dir>
 			</dir>
 		</dir>
 		<dir name="desktop">

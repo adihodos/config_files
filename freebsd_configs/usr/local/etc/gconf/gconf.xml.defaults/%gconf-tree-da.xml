@@ -2,6 +2,38 @@
 <gconf>
 	<dir name="schemas">
 		<dir name="system">
+			<dir name="storage">
+				<dir name="default_options">
+					<dir name="ntfs">
+						<entry name="mount_options">
+							<local_schema short_desc="Standardmonteringsvalg for ntfs-filsystem">
+								<longdesc>En liste over standardmonteringsvalg for enheder formateret med ntfs-filsystemet.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="udf">
+						<entry name="mount_options">
+							<local_schema short_desc="Standardmonteringsvalg for udf-filsystem">
+								<longdesc>En liste over standardmonteringsvalg for enheder formateret med udf-filsystemet.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="iso9660">
+						<entry name="mount_options">
+							<local_schema short_desc="Standardmonteringvalg for iso9660-filsystem">
+								<longdesc>En liste over standardmonteringsvalg for enheder formateret med iso9660-filsystemet.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="vfat">
+						<entry name="mount_options">
+							<local_schema short_desc="Standardmonteringsvalg for vfat-filsystem">
+								<longdesc>En liste over standardmonteringsvalg for enheder formateret med vfat-filsystemet.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
 			<dir name="smb">
 				<entry name="workgroup">
 					<local_schema short_desc="SMB-arbejdsgruppe">
@@ -99,38 +131,6 @@
 						<longdesc>Mulige værdier er &quot;merged&quot;, &quot;separate&quot; og &quot;disabled&quot;.</longdesc>
 					</local_schema>
 				</entry>
-			</dir>
-			<dir name="storage">
-				<dir name="default_options">
-					<dir name="ntfs">
-						<entry name="mount_options">
-							<local_schema short_desc="Standardmonteringsvalg for ntfs-filsystem">
-								<longdesc>En liste over standardmonteringsvalg for enheder formateret med ntfs-filsystemet.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="udf">
-						<entry name="mount_options">
-							<local_schema short_desc="Standardmonteringsvalg for udf-filsystem">
-								<longdesc>En liste over standardmonteringsvalg for enheder formateret med udf-filsystemet.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="iso9660">
-						<entry name="mount_options">
-							<local_schema short_desc="Standardmonteringvalg for iso9660-filsystem">
-								<longdesc>En liste over standardmonteringsvalg for enheder formateret med iso9660-filsystemet.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="vfat">
-						<entry name="mount_options">
-							<local_schema short_desc="Standardmonteringsvalg for vfat-filsystem">
-								<longdesc>En liste over standardmonteringsvalg for enheder formateret med vfat-filsystemet.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-				</dir>
 			</dir>
 		</dir>
 		<dir name="desktop">

@@ -1,8 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Name=Xfce Settings Helper
-Exec=xfce4-settings-helper
-Terminal=false
-Type=Application
-StartupNotify=false
-OnlyShowIn=XFCE;

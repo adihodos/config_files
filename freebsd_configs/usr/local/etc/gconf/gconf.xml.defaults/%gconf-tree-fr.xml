@@ -2,6 +2,50 @@
 <gconf>
 	<dir name="schemas">
 		<dir name="system">
+			<dir name="storage">
+				<dir name="default_options">
+					<dir name="ntfs-3g">
+						<entry name="mount_options">
+							<local_schema short_desc="Options de montage par défaut pour le système de fichiers « ntfs-3g »">
+								<longdesc>Une liste d&apos;options de montage par défaut pour les volumes formatés avec un système de fichiers ntfs utilisant le pilote « ntfs-3g »</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ntfs">
+						<entry name="fstype_override">
+							<local_schema short_desc="Le pilote de système de fichiers à utiliser par défaut quand « ntfs » est détecté">
+								<longdesc>Le nom du pilote de système de fichiers, à utiliser par défaut, quand « ntfs » est détecté. Ceci est utile pour configurer le système afin qu&apos;il utilise par défaut, le pilote « ntfs-3g » pour tous les systèmes de fichiers « ntfs ». L&apos;utilisateur a la possibilité d&apos;utiliser le pilote de système de fichiers « ntfs » en le définissant spécifiquement par volume ou en utilisant la ligne de commande. </longdesc>
+							</local_schema>
+						</entry>
+						<entry name="mount_options">
+							<local_schema short_desc="Options de montage par défaut pour le système de fichiers ntfs">
+								<longdesc>Une liste d&apos;options de montage par défaut pour les volumes formatés avec un système de fichiers ntfs.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="udf">
+						<entry name="mount_options">
+							<local_schema short_desc="Options de montage par défaut pour le système de fichiers udf">
+								<longdesc>Une liste d&apos;options de montage par défaut pour les volumes formatés avec un système de fichiers udf.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="iso9660">
+						<entry name="mount_options">
+							<local_schema short_desc="Options de montage par défaut pour le système de fichiers iso9660">
+								<longdesc>Une liste d&apos;options de montage par défaut pour les volumes formatés avec un système de fichiers iso9660.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="vfat">
+						<entry name="mount_options">
+							<local_schema short_desc="Options de montage par défaut pour le système de fichiers vfat">
+								<longdesc>Une liste d&apos;options de montage par défaut pour les volumes formatés avec un système de fichiers vfat.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
 			<dir name="smb">
 				<entry name="workgroup">
 					<local_schema short_desc="Groupe de travail SMB">
@@ -99,50 +143,6 @@
 						<longdesc>Les valeurs possibles sont « merged » (fusionné), « separate » (séparé) et « disabled » (désactivé).</longdesc>
 					</local_schema>
 				</entry>
-			</dir>
-			<dir name="storage">
-				<dir name="default_options">
-					<dir name="ntfs-3g">
-						<entry name="mount_options">
-							<local_schema short_desc="Options de montage par défaut pour le système de fichiers « ntfs-3g »">
-								<longdesc>Une liste d&apos;options de montage par défaut pour les volumes formatés avec un système de fichiers ntfs utilisant le pilote « ntfs-3g »</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="ntfs">
-						<entry name="fstype_override">
-							<local_schema short_desc="Le pilote de système de fichiers à utiliser par défaut quand « ntfs » est détecté">
-								<longdesc>Le nom du pilote de système de fichiers, à utiliser par défaut, quand « ntfs » est détecté. Ceci est utile pour configurer le système afin qu&apos;il utilise par défaut, le pilote « ntfs-3g » pour tous les systèmes de fichiers « ntfs ». L&apos;utilisateur a la possibilité d&apos;utiliser le pilote de système de fichiers « ntfs » en le définissant spécifiquement par volume ou en utilisant la ligne de commande. </longdesc>
-							</local_schema>
-						</entry>
-						<entry name="mount_options">
-							<local_schema short_desc="Options de montage par défaut pour le système de fichiers ntfs">
-								<longdesc>Une liste d&apos;options de montage par défaut pour les volumes formatés avec un système de fichiers ntfs.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="udf">
-						<entry name="mount_options">
-							<local_schema short_desc="Options de montage par défaut pour le système de fichiers udf">
-								<longdesc>Une liste d&apos;options de montage par défaut pour les volumes formatés avec un système de fichiers udf.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="iso9660">
-						<entry name="mount_options">
-							<local_schema short_desc="Options de montage par défaut pour le système de fichiers iso9660">
-								<longdesc>Une liste d&apos;options de montage par défaut pour les volumes formatés avec un système de fichiers iso9660.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="vfat">
-						<entry name="mount_options">
-							<local_schema short_desc="Options de montage par défaut pour le système de fichiers vfat">
-								<longdesc>Une liste d&apos;options de montage par défaut pour les volumes formatés avec un système de fichiers vfat.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-				</dir>
 			</dir>
 		</dir>
 		<dir name="desktop">

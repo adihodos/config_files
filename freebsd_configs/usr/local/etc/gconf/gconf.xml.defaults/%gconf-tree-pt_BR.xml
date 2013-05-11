@@ -2,6 +2,50 @@
 <gconf>
 	<dir name="schemas">
 		<dir name="system">
+			<dir name="storage">
+				<dir name="default_options">
+					<dir name="ntfs-3g">
+						<entry name="mount_options">
+							<local_schema short_desc="Opções de montagem padrão para o sistema de arquivos ntfs-3g">
+								<longdesc>Uma lista de opções predefinidas para montar com ntfs-3g volumes formatados com o sistema de arquivos ntfs.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ntfs">
+						<entry name="fstype_override">
+							<local_schema short_desc="Driver de sistema de arquivos padrão para &quot;ntfs&quot;">
+								<longdesc>O nome do &quot;driver&quot; (controlador) de sistema de arquivos usado padrão quando &quot;ntfs&quot; for detectado. Isso é útil para configurar o sistema para usar o driver &quot;ntfs-3g&quot; para todos os sistemas de arquivos &quot;ntfs&quot; por padrão. Os usuários podem ainda escolher o driver &quot;ntfs&quot; substituindo o driver volume-a-volume ou na linha de comando.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="mount_options">
+							<local_schema short_desc="Opções de montagem padrão para o sistema de arquivos ntfs">
+								<longdesc>Uma lista de opções de montagem predefinidas para volumes formatados com a sistema de arquivos ntfs.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="udf">
+						<entry name="mount_options">
+							<local_schema short_desc="Opções de montagem padrão para o sistema de arquivos udf">
+								<longdesc>Uma lista de opções de montagem predefinidas para volumes formatados com a sistema de arquivos udf.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="iso9660">
+						<entry name="mount_options">
+							<local_schema short_desc="Opções de montagem padrão para o sistema de arquivos iso9660">
+								<longdesc>Uma lista de opções de montagem predefinidas para volumes formatados com a sistema de arquivos iso9660.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="vfat">
+						<entry name="mount_options">
+							<local_schema short_desc="Opções de montagem padrão para o sistema de arquivos vfat">
+								<longdesc>Uma lista de opções de montagem predefinidas para volumes formatados com a sistema de arquivos vfat.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
 			<dir name="smb">
 				<entry name="workgroup">
 					<local_schema short_desc="Grupo de trabalho SMB">
@@ -99,50 +143,6 @@
 						<longdesc>Valores possíveis são &quot;merged&quot; (junto), &quot;separate&quot; (à parte) e &quot;disabled&quot; (desabilitado).</longdesc>
 					</local_schema>
 				</entry>
-			</dir>
-			<dir name="storage">
-				<dir name="default_options">
-					<dir name="ntfs-3g">
-						<entry name="mount_options">
-							<local_schema short_desc="Opções de montagem padrão para o sistema de arquivos ntfs-3g">
-								<longdesc>Uma lista de opções predefinidas para montar com ntfs-3g volumes formatados com o sistema de arquivos ntfs.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="ntfs">
-						<entry name="fstype_override">
-							<local_schema short_desc="Driver de sistema de arquivos padrão para &quot;ntfs&quot;">
-								<longdesc>O nome do &quot;driver&quot; (controlador) de sistema de arquivos usado padrão quando &quot;ntfs&quot; for detectado. Isso é útil para configurar o sistema para usar o driver &quot;ntfs-3g&quot; para todos os sistemas de arquivos &quot;ntfs&quot; por padrão. Os usuários podem ainda escolher o driver &quot;ntfs&quot; substituindo o driver volume-a-volume ou na linha de comando.</longdesc>
-							</local_schema>
-						</entry>
-						<entry name="mount_options">
-							<local_schema short_desc="Opções de montagem padrão para o sistema de arquivos ntfs">
-								<longdesc>Uma lista de opções de montagem predefinidas para volumes formatados com a sistema de arquivos ntfs.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="udf">
-						<entry name="mount_options">
-							<local_schema short_desc="Opções de montagem padrão para o sistema de arquivos udf">
-								<longdesc>Uma lista de opções de montagem predefinidas para volumes formatados com a sistema de arquivos udf.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="iso9660">
-						<entry name="mount_options">
-							<local_schema short_desc="Opções de montagem padrão para o sistema de arquivos iso9660">
-								<longdesc>Uma lista de opções de montagem predefinidas para volumes formatados com a sistema de arquivos iso9660.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="vfat">
-						<entry name="mount_options">
-							<local_schema short_desc="Opções de montagem padrão para o sistema de arquivos vfat">
-								<longdesc>Uma lista de opções de montagem predefinidas para volumes formatados com a sistema de arquivos vfat.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-				</dir>
 			</dir>
 		</dir>
 		<dir name="desktop">
@@ -548,6 +548,23 @@
 						</entry>
 					</dir>
 				</dir>
+				<dir name="policykit">
+					<entry name="auth_dialog_retain_authorization_blacklist">
+						<local_schema short_desc="Uma lista de ações na qual a caixa de seleção &quot;retain authorization&quot; (preservar autorização) não está marcada por padrão">
+							<longdesc>Uma lista de ações do PolicyKit na qual a caixa de seleção &quot;retain authorization&quot; (preservar autorização) não está marcada por padrão; essa lista é mantida pelo próprio código da caixa de diálogo. Por exemplo, se um usuário desmarcar a caixa de seleção &quot;retain authorization&quot; para uma ação e obter com sucesso uma autorização para realizá-la, então a ação será adicionada à lista.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="auth_dialog_retain_authorization">
+						<local_schema short_desc="Se a caixa de seleção de preservar autorização deve ou não ser marcada por padrão">
+							<longdesc>Caso esteja definida para &quot;true&quot; (verdadeiro), então a caixa de seleção &quot;retain authorization&quot; (preservar autorização) - caso presente - está marcada por padrão na caixa de diálogo de autenticação, a não ser que a ação esteja mencionada na chave &quot;/desktop/gnome/policykit/auth_dialog_retain_authorization_blacklist&quot;.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="auth_dialog_grab_keyboard">
+						<local_schema short_desc="Se o diálogo de autenticação deve capturar o teclado">
+							<longdesc>Se ajustado para verdadeiro, o diálogo de autenticação do PolicyKit-gnome irá capturar o teclado, então você não será capaz de digitar em outros programas enquanto o diálogo estiver ativo. Use isto se seu gerenciador de janelas não der o foco no diálogo de autenticação automaticamente e você você deseja evitar digitar acidentalmente a senha em outros programas.</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
 				<dir name="url-handlers">
 					<dir name="h323">
 						<entry name="needs_terminal">
@@ -829,23 +846,6 @@
 							</local_schema>
 						</entry>
 					</dir>
-				</dir>
-				<dir name="policykit">
-					<entry name="auth_dialog_retain_authorization_blacklist">
-						<local_schema short_desc="Uma lista de ações na qual a caixa de seleção &quot;retain authorization&quot; (preservar autorização) não está marcada por padrão">
-							<longdesc>Uma lista de ações do PolicyKit na qual a caixa de seleção &quot;retain authorization&quot; (preservar autorização) não está marcada por padrão; essa lista é mantida pelo próprio código da caixa de diálogo. Por exemplo, se um usuário desmarcar a caixa de seleção &quot;retain authorization&quot; para uma ação e obter com sucesso uma autorização para realizá-la, então a ação será adicionada à lista.</longdesc>
-						</local_schema>
-					</entry>
-					<entry name="auth_dialog_retain_authorization">
-						<local_schema short_desc="Se a caixa de seleção de preservar autorização deve ou não ser marcada por padrão">
-							<longdesc>Caso esteja definida para &quot;true&quot; (verdadeiro), então a caixa de seleção &quot;retain authorization&quot; (preservar autorização) - caso presente - está marcada por padrão na caixa de diálogo de autenticação, a não ser que a ação esteja mencionada na chave &quot;/desktop/gnome/policykit/auth_dialog_retain_authorization_blacklist&quot;.</longdesc>
-						</local_schema>
-					</entry>
-					<entry name="auth_dialog_grab_keyboard">
-						<local_schema short_desc="Se o diálogo de autenticação deve capturar o teclado">
-							<longdesc>Se ajustado para verdadeiro, o diálogo de autenticação do PolicyKit-gnome irá capturar o teclado, então você não será capaz de digitar em outros programas enquanto o diálogo estiver ativo. Use isto se seu gerenciador de janelas não der o foco no diálogo de autenticação automaticamente e você você deseja evitar digitar acidentalmente a senha em outros programas.</longdesc>
-						</local_schema>
-					</entry>
 				</dir>
 				<dir name="thumbnailers">
 					<entry name="disable_all">

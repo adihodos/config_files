@@ -1,0 +1,75 @@
+#!/bin/sh -f
+#
+# Copyright (c) 2004 Oliver Eikemeier. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#
+# 1. Redistributions of source code must retain the above copyright notice
+#    this list of conditions and the following disclaimer.
+#
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# 3. Neither the name of the author nor the names of its contributors may be
+#    used to endorse or promote products derived from this software without
+#    specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+# INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY
+# AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+# COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+# INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+# NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+# THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+# $FreeBSD$
+#
+
+# If there is a global system configuration file, suck it in.
+#
+if [ -r /etc/defaults/periodic.conf ]; then
+    . /etc/defaults/periodic.conf
+    source_periodic_confs
+fi
+
+# Compute PKG_DBDIR from the config file.
+if [ -z "${PKG_DBDIR}" ] && [ -f /usr/local/etc/pkg.conf ]; then
+  PKG_DBDIR=`awk 'toupper($1) ~ /PKG_DBDIR/ { print $3 }' \
+             < /usr/local/etc/pkg.conf`
+fi
+: ${PKG_DBDIR="/var/db/pkg"}
+auditfile="${PKG_DBDIR}/auditfile"
+
+rc=0
+case "${daily_status_security_pkgaudit_enable:-YES}" in
+	[Nn][Oo])
+		;;
+	*)
+		echo
+                echo "Checking for packages with security vulnerabilities:"
+		then=`stat -f '%m' "${auditfile}" 2> /dev/null` || rc=3
+		now=`date +%s` || rc=3
+		# Add 10 minutes of padding since the check is in seconds.
+		if [ $rc -ne 0 -o \
+			$(( 86400 \* "${daily_status_security_pkgaudit_expiry:-2}" )) \
+			-le $(( ${now} - ${then} + 600 )) ]; then
+			/usr/local/sbin/pkg audit -Fq || {
+			  rc=$?; [ $rc -lt 3 ] && rc=3
+			}
+		else
+			echo -n "Database fetched: ";
+			date -r "${then}" || rc=3
+			/usr/local/sbin/pkg audit || {
+			  rc=$?; [ $rc -lt 3 ] && rc=3
+			}
+		fi
+		;;
+esac
+
+exit "$rc"

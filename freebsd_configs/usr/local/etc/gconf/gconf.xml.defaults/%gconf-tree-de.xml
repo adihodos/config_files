@@ -504,6 +504,13 @@
 						</entry>
 					</dir>
 				</dir>
+				<dir name="policykit">
+					<entry name="auth_dialog_grab_keyboard">
+						<local_schema short_desc="Legt fest, ob der Legitimationsdialog Tastatureingaben auf sich ziehen soll.">
+							<longdesc>Ist dies auf wahr gesetzt, zieht der Legitimationsdialog Tastatureingaben auf sich, sodass es nicht möglich ist, in anderen Programmen zu tippen, solange der Dialog aktiv ist. Benutzen Sie dies, wenn ihr Fenstermanager den Legitimationsdialog nicht automatisch fokussiert und sie vermeiden wollen, versehentlich Passwörter in andere Programme zu schreiben.</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
 				<dir name="url-handlers">
 					<dir name="h323">
 						<entry name="needs_terminal">
@@ -785,13 +792,6 @@
 							</local_schema>
 						</entry>
 					</dir>
-				</dir>
-				<dir name="policykit">
-					<entry name="auth_dialog_grab_keyboard">
-						<local_schema short_desc="Legt fest, ob der Legitimationsdialog Tastatureingaben auf sich ziehen soll.">
-							<longdesc>Ist dies auf wahr gesetzt, zieht der Legitimationsdialog Tastatureingaben auf sich, sodass es nicht möglich ist, in anderen Programmen zu tippen, solange der Dialog aktiv ist. Benutzen Sie dies, wenn ihr Fenstermanager den Legitimationsdialog nicht automatisch fokussiert und sie vermeiden wollen, versehentlich Passwörter in andere Programme zu schreiben.</longdesc>
-						</local_schema>
-					</entry>
 				</dir>
 				<dir name="thumbnailers">
 					<entry name="disable_all">

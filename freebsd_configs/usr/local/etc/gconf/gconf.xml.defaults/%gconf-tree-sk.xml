@@ -504,6 +504,13 @@
 						</entry>
 					</dir>
 				</dir>
+				<dir name="policykit">
+					<entry name="auth_dialog_grab_keyboard">
+						<local_schema short_desc="Či má overovacie dialógové okno odchytiť vstup z klávesnice">
+							<longdesc>Ak má hodnotu true, dialógové okno overenia z PolicyKit-gnome odchytí vstup z klávesnice, takže pokiaľ bude toto dialógové okno aktívne, nebudete môcť písať do iných aplikácií. Použite to, ak váš správca okien toto dialógové okno nepresunie automaticky do popredia a chcete zabrániť náhodnému vpísaniu hesiel do iných programov.</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
 				<dir name="url-handlers">
 					<dir name="h323">
 						<entry name="needs_terminal">
@@ -785,13 +792,6 @@
 							</local_schema>
 						</entry>
 					</dir>
-				</dir>
-				<dir name="policykit">
-					<entry name="auth_dialog_grab_keyboard">
-						<local_schema short_desc="Či má overovacie dialógové okno odchytiť vstup z klávesnice">
-							<longdesc>Ak má hodnotu true, dialógové okno overenia z PolicyKit-gnome odchytí vstup z klávesnice, takže pokiaľ bude toto dialógové okno aktívne, nebudete môcť písať do iných aplikácií. Použite to, ak váš správca okien toto dialógové okno nepresunie automaticky do popredia a chcete zabrániť náhodnému vpísaniu hesiel do iných programov.</longdesc>
-						</local_schema>
-					</entry>
 				</dir>
 				<dir name="thumbnailers">
 					<entry name="disable_all">

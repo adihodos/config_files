@@ -2,6 +2,38 @@
 <gconf>
 	<dir name="schemas">
 		<dir name="system">
+			<dir name="storage">
+				<dir name="default_options">
+					<dir name="ntfs">
+						<entry name="mount_options">
+							<local_schema short_desc="Стандардни опции за монтирање за ntfs датотечниот систем">
+								<longdesc>Листа на стандардни опции за монтирање на просторот форматиран со ntfs датотечниот систем.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="udf">
+						<entry name="mount_options">
+							<local_schema short_desc="Стандардни опции за монтирање за udf датотечниот систем">
+								<longdesc>Листа на стандардни опции за монтирање на просторот форматиран со udf датотечниот систем.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="iso9660">
+						<entry name="mount_options">
+							<local_schema short_desc="Стандардни опции за монтирање за iso9660 датотечниот систем">
+								<longdesc>Листа на стандардни опции за монтирање на просторот форматиран со iso9660 датотечниот систем.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="vfat">
+						<entry name="mount_options">
+							<local_schema short_desc="Стандардни опции за монтирање за vfat датотечниот систем">
+								<longdesc>Листа на стандардни опции за монтирање на просторот форматиран со vfatдатотечниот систем.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
 			<dir name="smb">
 				<entry name="workgroup">
 					<local_schema short_desc="SMB работна група">
@@ -99,38 +131,6 @@
 						<longdesc>Можни вредности се &quot;припоено&quot;, &quot;одделено&quot; и &quot;искулучено&quot;.</longdesc>
 					</local_schema>
 				</entry>
-			</dir>
-			<dir name="storage">
-				<dir name="default_options">
-					<dir name="ntfs">
-						<entry name="mount_options">
-							<local_schema short_desc="Стандардни опции за монтирање за ntfs датотечниот систем">
-								<longdesc>Листа на стандардни опции за монтирање на просторот форматиран со ntfs датотечниот систем.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="udf">
-						<entry name="mount_options">
-							<local_schema short_desc="Стандардни опции за монтирање за udf датотечниот систем">
-								<longdesc>Листа на стандардни опции за монтирање на просторот форматиран со udf датотечниот систем.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="iso9660">
-						<entry name="mount_options">
-							<local_schema short_desc="Стандардни опции за монтирање за iso9660 датотечниот систем">
-								<longdesc>Листа на стандардни опции за монтирање на просторот форматиран со iso9660 датотечниот систем.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="vfat">
-						<entry name="mount_options">
-							<local_schema short_desc="Стандардни опции за монтирање за vfat датотечниот систем">
-								<longdesc>Листа на стандардни опции за монтирање на просторот форматиран со vfatдатотечниот систем.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-				</dir>
 			</dir>
 		</dir>
 		<dir name="desktop">

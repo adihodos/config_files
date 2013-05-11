@@ -2,6 +2,50 @@
 <gconf>
 	<dir name="schemas">
 		<dir name="system">
+			<dir name="storage">
+				<dir name="default_options">
+					<dir name="ntfs-3g">
+						<entry name="mount_options">
+							<local_schema short_desc="Default mount options for ntfs-3g fs">
+								<longdesc>A list of default mount options for volumes formatted with the ntfs file system using ntfs-3g.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ntfs">
+						<entry name="fstype_override">
+							<local_schema short_desc="When &apos;ntfs&apos; is detected, what file system driver to use by default">
+								<longdesc>The name of the file system driver to use by default when &apos;ntfs&apos; is detected. This is useful for configuring the system to use the &apos;ntfs-3g&apos; driver for all &apos;ntfs&apos; file systems by default. User can still choose to use the &apos;ntfs&apos; file system driver by overriding it per-volume or on the command line.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="mount_options">
+							<local_schema short_desc="Default mount options for ntfs fs">
+								<longdesc>A list of default mount options for volumes formatted with the ntfs file system.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="udf">
+						<entry name="mount_options">
+							<local_schema short_desc="Default mount options for udf fs">
+								<longdesc>A list of default mount options for volumes formatted with the udf file system.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="iso9660">
+						<entry name="mount_options">
+							<local_schema short_desc="Default mount options for iso9660 fs">
+								<longdesc>A list of default mount options for volumes formatted with the iso9660 file system.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="vfat">
+						<entry name="mount_options">
+							<local_schema short_desc="Default mount options for vfat fs">
+								<longdesc>A list of default mount options for volumes formatted with the vfat file system.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
 			<dir name="smb">
 				<entry name="workgroup">
 					<local_schema short_desc="SMB workgroup">
@@ -99,50 +143,6 @@
 						<longdesc>Possible values are &quot;merged&quot;, &quot;separate&quot; and &quot;disabled&quot;.</longdesc>
 					</local_schema>
 				</entry>
-			</dir>
-			<dir name="storage">
-				<dir name="default_options">
-					<dir name="ntfs-3g">
-						<entry name="mount_options">
-							<local_schema short_desc="Default mount options for ntfs-3g fs">
-								<longdesc>A list of default mount options for volumes formatted with the ntfs file system using ntfs-3g.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="ntfs">
-						<entry name="fstype_override">
-							<local_schema short_desc="When &apos;ntfs&apos; is detected, what file system driver to use by default">
-								<longdesc>The name of the file system driver to use by default when &apos;ntfs&apos; is detected. This is useful for configuring the system to use the &apos;ntfs-3g&apos; driver for all &apos;ntfs&apos; file systems by default. User can still choose to use the &apos;ntfs&apos; file system driver by overriding it per-volume or on the command line.</longdesc>
-							</local_schema>
-						</entry>
-						<entry name="mount_options">
-							<local_schema short_desc="Default mount options for ntfs fs">
-								<longdesc>A list of default mount options for volumes formatted with the ntfs file system.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="udf">
-						<entry name="mount_options">
-							<local_schema short_desc="Default mount options for udf fs">
-								<longdesc>A list of default mount options for volumes formatted with the udf file system.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="iso9660">
-						<entry name="mount_options">
-							<local_schema short_desc="Default mount options for iso9660 fs">
-								<longdesc>A list of default mount options for volumes formatted with the iso9660 file system.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="vfat">
-						<entry name="mount_options">
-							<local_schema short_desc="Default mount options for vfat fs">
-								<longdesc>A list of default mount options for volumes formatted with the vfat file system.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-				</dir>
 			</dir>
 		</dir>
 		<dir name="desktop">

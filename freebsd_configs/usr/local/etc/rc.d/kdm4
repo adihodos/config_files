@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/x11/kde4-workspace/files/kdm4.in,v 1.6 2011/11/14 02:59:39 rakuco Exp $
+# $FreeBSD: ports/x11/kde4-workspace/files/kdm4.in,v 1.7 2012/01/14 08:57:22 dougb Exp $
 #
 # PROVIDE: kdm4
 # REQUIRE: LOGIN cleanvar moused syscons dbus hald
@@ -18,7 +18,7 @@
 . /etc/rc.subr
 
 name=kdm4
-rcvar=`set_rcvar`
+rcvar=kdm4_enable
 
 load_rc_config ${name}
 

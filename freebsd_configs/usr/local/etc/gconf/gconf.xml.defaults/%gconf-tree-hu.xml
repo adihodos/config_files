@@ -2,6 +2,50 @@
 <gconf>
 	<dir name="schemas">
 		<dir name="system">
+			<dir name="storage">
+				<dir name="default_options">
+					<dir name="ntfs-3g">
+						<entry name="mount_options">
+							<local_schema short_desc="Az ntfs-3g fájlrendszer alapértelmezett csatolási beállításai">
+								<longdesc>Alapértelmezett csatolási beállítások listája ntfs-3g fájlrendszerűre formázott kötetekhez.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ntfs">
+						<entry name="fstype_override">
+							<local_schema short_desc="ntfs fájlrendszer észlelésekor alapértelmezésben használandó fájlrendszer-illesztőprogram">
+								<longdesc>Az alapértelmezésben használandó fájlrendszer-illesztőprogram ntfs észlelésekor. Ennek segítségével egyszerűen beállíthatja a rendszert az ntfs-3g alapértelmezett használatára minden ntfs fájlrendszerhez. A felhasználók kötetenként vagy a parancssorban felülbírálhatják ezt és használhatják továbbra is az ntfs illesztőt.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="mount_options">
+							<local_schema short_desc="Az ntfs fájlrendszer alapértelmezett csatolási beállításai">
+								<longdesc>Alapértelmezett csatolási beállítások listája ntfs fájlrendszerűre formázott kötetekhez.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="udf">
+						<entry name="mount_options">
+							<local_schema short_desc="Az udf fájlrendszer alapértelmezett csatolási beállításai">
+								<longdesc>Alapértelmezett csatolási beállítások listája udf fájlrendszerűre formázott kötetekhez.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="iso9660">
+						<entry name="mount_options">
+							<local_schema short_desc="Az iso9660 fájlrendszer alapértelmezett csatolási beállításai">
+								<longdesc>Alapértelmezett csatolási beállítások listája iso9660 fájlrendszerűre formázott kötetekhez.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="vfat">
+						<entry name="mount_options">
+							<local_schema short_desc="A vfat fájlrendszer alapértelmezett csatolási beállításai">
+								<longdesc>Alapértelmezett csatolási beállítások listája vfat fájlrendszerűre formázott kötetekhez.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
 			<dir name="smb">
 				<entry name="workgroup">
 					<local_schema short_desc="SMB-munkacsoport">
@@ -99,50 +143,6 @@
 						<longdesc>Lehetséges értékek: „merged”, „separate” és „disabled”.</longdesc>
 					</local_schema>
 				</entry>
-			</dir>
-			<dir name="storage">
-				<dir name="default_options">
-					<dir name="ntfs-3g">
-						<entry name="mount_options">
-							<local_schema short_desc="Az ntfs-3g fájlrendszer alapértelmezett csatolási beállításai">
-								<longdesc>Alapértelmezett csatolási beállítások listája ntfs-3g fájlrendszerűre formázott kötetekhez.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="ntfs">
-						<entry name="fstype_override">
-							<local_schema short_desc="ntfs fájlrendszer észlelésekor alapértelmezésben használandó fájlrendszer-illesztőprogram">
-								<longdesc>Az alapértelmezésben használandó fájlrendszer-illesztőprogram ntfs észlelésekor. Ennek segítségével egyszerűen beállíthatja a rendszert az ntfs-3g alapértelmezett használatára minden ntfs fájlrendszerhez. A felhasználók kötetenként vagy a parancssorban felülbírálhatják ezt és használhatják továbbra is az ntfs illesztőt.</longdesc>
-							</local_schema>
-						</entry>
-						<entry name="mount_options">
-							<local_schema short_desc="Az ntfs fájlrendszer alapértelmezett csatolási beállításai">
-								<longdesc>Alapértelmezett csatolási beállítások listája ntfs fájlrendszerűre formázott kötetekhez.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="udf">
-						<entry name="mount_options">
-							<local_schema short_desc="Az udf fájlrendszer alapértelmezett csatolási beállításai">
-								<longdesc>Alapértelmezett csatolási beállítások listája udf fájlrendszerűre formázott kötetekhez.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="iso9660">
-						<entry name="mount_options">
-							<local_schema short_desc="Az iso9660 fájlrendszer alapértelmezett csatolási beállításai">
-								<longdesc>Alapértelmezett csatolási beállítások listája iso9660 fájlrendszerűre formázott kötetekhez.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="vfat">
-						<entry name="mount_options">
-							<local_schema short_desc="A vfat fájlrendszer alapértelmezett csatolási beállításai">
-								<longdesc>Alapértelmezett csatolási beállítások listája vfat fájlrendszerűre formázott kötetekhez.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-				</dir>
 			</dir>
 		</dir>
 		<dir name="desktop">

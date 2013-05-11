@@ -2,6 +2,16 @@
 <gconf>
 	<dir name="schemas">
 		<dir name="system">
+			<dir name="storage">
+				<dir name="default_options">
+					<dir name="iso9660">
+						<entry name="mount_options">
+							<local_schema short_desc="iso9660 fs ਲਈ ਡਿਫਾਲਟ ਮਾਊਂਟ ਚੋਣਾਂ">
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
 			<dir name="smb">
 				<entry name="workgroup">
 					<local_schema short_desc="SMB ਵਰਕਗਰੁੱਪ">

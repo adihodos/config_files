@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/astro/gpsd/files/gpsd.in,v 1.4 2011/05/15 02:49:04 dougb Exp $
+# $FreeBSD: ports/astro/gpsd/files/gpsd.in,v 1.5 2012/01/14 08:55:22 dougb Exp $
 #
 
 # PROVIDE: gpsd
@@ -24,7 +24,7 @@
 . /etc/rc.subr
 
 name=gpsd
-rcvar=`set_rcvar`
+rcvar=gpsd_enable
 
 start_postcmd=start_postcmd
 stop_postcmd=stop_postcmd

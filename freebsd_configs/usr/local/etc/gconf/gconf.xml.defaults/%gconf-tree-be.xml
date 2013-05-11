@@ -2,6 +2,38 @@
 <gconf>
 	<dir name="schemas">
 		<dir name="system">
+			<dir name="storage">
+				<dir name="default_options">
+					<dir name="ntfs">
+						<entry name="mount_options">
+							<local_schema short_desc="Звычайныя парамэтры мацавання для файлавай сістэмы ntfs">
+								<longdesc>Спіс звычайных парамэтраў мацавання для файлавай сістэмы ntfs.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="udf">
+						<entry name="mount_options">
+							<local_schema short_desc="Звычайныя парамэтры мацавання для файлавай сістэмы udf">
+								<longdesc>Спіс звычайных парамэтраў мацавання для файлавай сістэмы udf.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="iso9660">
+						<entry name="mount_options">
+							<local_schema short_desc="Звычайныя парамэтры мацавання для файлавай сістэмы iso9660">
+								<longdesc>Спіс звычайных парамэтраў мацавання для файлавай сістэмы iso9660.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="vfat">
+						<entry name="mount_options">
+							<local_schema short_desc="Звычайныя парамэтры мацавання для файлавай сістэмы vfat">
+								<longdesc>Спіс звычайных парамэтраў мацавання для файлавай сістэмы vfat.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
 			<dir name="smb">
 				<entry name="workgroup">
 					<local_schema short_desc="Працоўная група SMB">
@@ -99,38 +131,6 @@
 						<longdesc>Магчымыя значэньні &quot;merged&quot;, &quot;separate&quot; і &quot;disabled&quot;.</longdesc>
 					</local_schema>
 				</entry>
-			</dir>
-			<dir name="storage">
-				<dir name="default_options">
-					<dir name="ntfs">
-						<entry name="mount_options">
-							<local_schema short_desc="Звычайныя парамэтры мацавання для файлавай сістэмы ntfs">
-								<longdesc>Спіс звычайных парамэтраў мацавання для файлавай сістэмы ntfs.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="udf">
-						<entry name="mount_options">
-							<local_schema short_desc="Звычайныя парамэтры мацавання для файлавай сістэмы udf">
-								<longdesc>Спіс звычайных парамэтраў мацавання для файлавай сістэмы udf.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="iso9660">
-						<entry name="mount_options">
-							<local_schema short_desc="Звычайныя парамэтры мацавання для файлавай сістэмы iso9660">
-								<longdesc>Спіс звычайных парамэтраў мацавання для файлавай сістэмы iso9660.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="vfat">
-						<entry name="mount_options">
-							<local_schema short_desc="Звычайныя парамэтры мацавання для файлавай сістэмы vfat">
-								<longdesc>Спіс звычайных парамэтраў мацавання для файлавай сістэмы vfat.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-				</dir>
 			</dir>
 		</dir>
 		<dir name="desktop">

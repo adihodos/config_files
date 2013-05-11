@@ -2,6 +2,50 @@
 <gconf>
 	<dir name="schemas">
 		<dir name="system">
+			<dir name="storage">
+				<dir name="default_options">
+					<dir name="ntfs-3g">
+						<entry name="mount_options">
+							<local_schema short_desc="NTFS-3g 形式のマウント・オプション (デフォルト値)">
+								<longdesc>NTFS-3g 形式でフォーマットされたボリュームに対するデフォルトのマウント・オプションの並びです。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ntfs">
+						<entry name="fstype_override">
+							<local_schema short_desc="NTFS を検出した時にデフォルトで使用するファイルシステムのドライバ">
+								<longdesc>NTFS 形式のファイルシステムを検出した時にデフォルトで使用するファイルシステムのドライバ名です。これは、デフォルトで全ての NTFS 形式のファイルシステムに対して NTFS-3g 用のドライバを使用するようシステムを設定する際に便利な機能です。但し、ユーザはボリュームをマウントする前、あるいはコマンドラインから、このドライバ名を上書きすることで NTFS 用のドライバを選択することも可能になっています。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="mount_options">
+							<local_schema short_desc="NTFS 形式のマウント・オプション (デフォルト値)">
+								<longdesc>NTFS 形式でフォーマットされたボリュームに対するデフォルトのマウント・オプションの並びです。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="udf">
+						<entry name="mount_options">
+							<local_schema short_desc="UDF 形式のマウント・オプション (デフォルト値)">
+								<longdesc>UDF 形式でフォーマットされたボリュームに対するデフォルトのマウント・オプションの並びです。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="iso9660">
+						<entry name="mount_options">
+							<local_schema short_desc="ISO9660 形式のファイルシステム向けのマウント・オプション (デフォルト値)">
+								<longdesc>ISO9660 形式でフォーマットされたボリュームに対するデフォルトのマウント・オプションの並びです。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="vfat">
+						<entry name="mount_options">
+							<local_schema short_desc="VFAT 形式のマウント・オプション (デフォルト値)">
+								<longdesc>VFAT 形式でフォーマットされたボリュームに対するデフォルトのマウント・オプションの並びです。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
 			<dir name="smb">
 				<entry name="workgroup">
 					<local_schema short_desc="SMB ワークグループ">
@@ -99,50 +143,6 @@
 						<longdesc>設定可能な値: &quot;merged&quot;、&quot;separate&quot;、&quot;disabled&quot;</longdesc>
 					</local_schema>
 				</entry>
-			</dir>
-			<dir name="storage">
-				<dir name="default_options">
-					<dir name="ntfs-3g">
-						<entry name="mount_options">
-							<local_schema short_desc="NTFS-3g 形式のマウント・オプション (デフォルト値)">
-								<longdesc>NTFS-3g 形式でフォーマットされたボリュームに対するデフォルトのマウント・オプションの並びです。</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="ntfs">
-						<entry name="fstype_override">
-							<local_schema short_desc="NTFS を検出した時にデフォルトで使用するファイルシステムのドライバ">
-								<longdesc>NTFS 形式のファイルシステムを検出した時にデフォルトで使用するファイルシステムのドライバ名です。これは、デフォルトで全ての NTFS 形式のファイルシステムに対して NTFS-3g 用のドライバを使用するようシステムを設定する際に便利な機能です。但し、ユーザはボリュームをマウントする前、あるいはコマンドラインから、このドライバ名を上書きすることで NTFS 用のドライバを選択することも可能になっています。</longdesc>
-							</local_schema>
-						</entry>
-						<entry name="mount_options">
-							<local_schema short_desc="NTFS 形式のマウント・オプション (デフォルト値)">
-								<longdesc>NTFS 形式でフォーマットされたボリュームに対するデフォルトのマウント・オプションの並びです。</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="udf">
-						<entry name="mount_options">
-							<local_schema short_desc="UDF 形式のマウント・オプション (デフォルト値)">
-								<longdesc>UDF 形式でフォーマットされたボリュームに対するデフォルトのマウント・オプションの並びです。</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="iso9660">
-						<entry name="mount_options">
-							<local_schema short_desc="ISO9660 形式のファイルシステム向けのマウント・オプション (デフォルト値)">
-								<longdesc>ISO9660 形式でフォーマットされたボリュームに対するデフォルトのマウント・オプションの並びです。</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="vfat">
-						<entry name="mount_options">
-							<local_schema short_desc="VFAT 形式のマウント・オプション (デフォルト値)">
-								<longdesc>VFAT 形式でフォーマットされたボリュームに対するデフォルトのマウント・オプションの並びです。</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-				</dir>
 			</dir>
 		</dir>
 		<dir name="desktop">
@@ -548,6 +548,23 @@
 						</entry>
 					</dir>
 				</dir>
+				<dir name="policykit">
+					<entry name="auth_dialog_retain_authorization_blacklist">
+						<local_schema short_desc="デフォルトで &quot;認証結果を使用し続ける&quot; のチェックボックスを OFF にしておくアクション">
+							<longdesc>&quot;認証結果を使用し続ける&quot; のチェックボックスをデフォルトで OFF にしておく PolicyKit アクションを並べたリストです。このリストは認証ダイアログのオブジェクトよって管理されます。例えば、ユーザが任意のアクションに対して &quot;認証結果を使用し続ける&quot; のチェックを外し、そのアクションを実行する権限を手に入れたら、このリストにそのアクションが追加されるということです。</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="auth_dialog_retain_authorization">
+						<local_schema short_desc="&quot;認証結果を使用し続ける&quot; のチェックボックスをデフォルトで ON にするかどうか">
+							<longdesc>TRUE にすると、&quot;/desktop/gnome/policykit/auth_dialog_retain_authorization_blacklist&quot; キーに格納したアクションを除き、認証ダイアログで &quot;認証結果を使用し続ける&quot; のチェックボックスをデフォルトで ON にしておきます。</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="auth_dialog_grab_keyboard">
+						<local_schema short_desc="認証ダイアログでキーボード入力をつかんだままにするかどうか">
+							<longdesc>TRUE にすると、PolicyKit-gnome の認証ダイアログでキーボード入力をつかんだままにするので、このダイアログが表示されている間は他のアプリでキーボードを利用することができなくなります。この機能を使えば、お使いのウィンドウ・マネージャが認証ダイアログにフォーカスを与えなかった場合、キーボードからパスワードを入力した時にフォーカスが当たっている他のプログラムに誤って表示されるという危険性を回避することができます。</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
 				<dir name="url-handlers">
 					<dir name="h323">
 						<entry name="needs_terminal">
@@ -829,23 +846,6 @@
 							</local_schema>
 						</entry>
 					</dir>
-				</dir>
-				<dir name="policykit">
-					<entry name="auth_dialog_retain_authorization_blacklist">
-						<local_schema short_desc="デフォルトで &quot;認証結果を使用し続ける&quot; のチェックボックスを OFF にしておくアクション">
-							<longdesc>&quot;認証結果を使用し続ける&quot; のチェックボックスをデフォルトで OFF にしておく PolicyKit アクションを並べたリストです。このリストは認証ダイアログのオブジェクトよって管理されます。例えば、ユーザが任意のアクションに対して &quot;認証結果を使用し続ける&quot; のチェックを外し、そのアクションを実行する権限を手に入れたら、このリストにそのアクションが追加されるということです。</longdesc>
-						</local_schema>
-					</entry>
-					<entry name="auth_dialog_retain_authorization">
-						<local_schema short_desc="&quot;認証結果を使用し続ける&quot; のチェックボックスをデフォルトで ON にするかどうか">
-							<longdesc>TRUE にすると、&quot;/desktop/gnome/policykit/auth_dialog_retain_authorization_blacklist&quot; キーに格納したアクションを除き、認証ダイアログで &quot;認証結果を使用し続ける&quot; のチェックボックスをデフォルトで ON にしておきます。</longdesc>
-						</local_schema>
-					</entry>
-					<entry name="auth_dialog_grab_keyboard">
-						<local_schema short_desc="認証ダイアログでキーボード入力をつかんだままにするかどうか">
-							<longdesc>TRUE にすると、PolicyKit-gnome の認証ダイアログでキーボード入力をつかんだままにするので、このダイアログが表示されている間は他のアプリでキーボードを利用することができなくなります。この機能を使えば、お使いのウィンドウ・マネージャが認証ダイアログにフォーカスを与えなかった場合、キーボードからパスワードを入力した時にフォーカスが当たっている他のプログラムに誤って表示されるという危険性を回避することができます。</longdesc>
-						</local_schema>
-					</entry>
 				</dir>
 				<dir name="thumbnailers">
 					<entry name="disable_all">

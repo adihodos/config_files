@@ -2,6 +2,50 @@
 <gconf>
 	<dir name="schemas">
 		<dir name="system">
+			<dir name="storage">
+				<dir name="default_options">
+					<dir name="ntfs-3g">
+						<entry name="mount_options">
+							<local_schema short_desc="NTFS-3g-tiedostojärjestelmän liitoksen oletusvalitsimet">
+								<longdesc>Luettelo NTFS-muotoisten taltioiden liittämisen oletusvalitsimista käytettäessä ntfs-3g-ajuria.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ntfs">
+						<entry name="fstype_override">
+							<local_schema short_desc="Mitä tiedostojärjestelmäajuria käytetään havaittaessa &apos;ntfs&apos;-tiedostojärjestelmä">
+								<longdesc>Nimi tiedostojärjestelmäajurille, jota käytetään oletuksena avattaessa ntfs-tiedostojärjestelmiä. Tämä on hyödyllinen, kun halutaan määritellä järjestelmä avaamaan kaikki ntfs-tiedostojärjestelmät oletuksena ajurilla ntfs-3g. Käyttäjät voivat edelleen avata tiedostojärjestelmän käyttäen vanhaa ntfs-ajuria komentorivin valitsimien avulla.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="mount_options">
+							<local_schema short_desc="NTFS-tiedostojärjestelmän liitoksen oletusvalitsimet">
+								<longdesc>Luettelo NTFS-muotoisten taltioiden liittämisen oletusvalitsimista.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="udf">
+						<entry name="mount_options">
+							<local_schema short_desc="UDF-tiedostojärjestelmän liitoksen oletusvalitsimet">
+								<longdesc>Luettelo UDF-muotoisten taltioiden liittämisen oletusvalitsimista.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="iso9660">
+						<entry name="mount_options">
+							<local_schema short_desc="iso9660-tiedostojärjestelmän liitoksen oletusvalitsimet">
+								<longdesc>Luettelo iso9660-muotoisten taltioiden liittämisen oletusvalitsimista.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="vfat">
+						<entry name="mount_options">
+							<local_schema short_desc="VFAT-tiedostojärjestelmän liitoksen oletusvalitsimet">
+								<longdesc>Luettelo VFAT-muotoisten taltioiden liittämisen oletusvalitsimista.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
 			<dir name="smb">
 				<entry name="workgroup">
 					<local_schema short_desc="SMB-työryhmä">
@@ -99,50 +143,6 @@
 						<longdesc>Mahdollisia arvoja ovat ”merged” (yhdessä), ”separate” (erillinen) ja ”disabled” (ei käytössä).</longdesc>
 					</local_schema>
 				</entry>
-			</dir>
-			<dir name="storage">
-				<dir name="default_options">
-					<dir name="ntfs-3g">
-						<entry name="mount_options">
-							<local_schema short_desc="NTFS-3g-tiedostojärjestelmän liitoksen oletusvalitsimet">
-								<longdesc>Luettelo NTFS-muotoisten taltioiden liittämisen oletusvalitsimista käytettäessä ntfs-3g-ajuria.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="ntfs">
-						<entry name="fstype_override">
-							<local_schema short_desc="Mitä tiedostojärjestelmäajuria käytetään havaittaessa &apos;ntfs&apos;-tiedostojärjestelmä">
-								<longdesc>Nimi tiedostojärjestelmäajurille, jota käytetään oletuksena avattaessa ntfs-tiedostojärjestelmiä. Tämä on hyödyllinen, kun halutaan määritellä järjestelmä avaamaan kaikki ntfs-tiedostojärjestelmät oletuksena ajurilla ntfs-3g. Käyttäjät voivat edelleen avata tiedostojärjestelmän käyttäen vanhaa ntfs-ajuria komentorivin valitsimien avulla.</longdesc>
-							</local_schema>
-						</entry>
-						<entry name="mount_options">
-							<local_schema short_desc="NTFS-tiedostojärjestelmän liitoksen oletusvalitsimet">
-								<longdesc>Luettelo NTFS-muotoisten taltioiden liittämisen oletusvalitsimista.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="udf">
-						<entry name="mount_options">
-							<local_schema short_desc="UDF-tiedostojärjestelmän liitoksen oletusvalitsimet">
-								<longdesc>Luettelo UDF-muotoisten taltioiden liittämisen oletusvalitsimista.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="iso9660">
-						<entry name="mount_options">
-							<local_schema short_desc="iso9660-tiedostojärjestelmän liitoksen oletusvalitsimet">
-								<longdesc>Luettelo iso9660-muotoisten taltioiden liittämisen oletusvalitsimista.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="vfat">
-						<entry name="mount_options">
-							<local_schema short_desc="VFAT-tiedostojärjestelmän liitoksen oletusvalitsimet">
-								<longdesc>Luettelo VFAT-muotoisten taltioiden liittämisen oletusvalitsimista.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-				</dir>
 			</dir>
 		</dir>
 		<dir name="desktop">

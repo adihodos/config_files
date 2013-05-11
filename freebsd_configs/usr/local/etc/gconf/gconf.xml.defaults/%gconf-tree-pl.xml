@@ -2,6 +2,50 @@
 <gconf>
 	<dir name="schemas">
 		<dir name="system">
+			<dir name="storage">
+				<dir name="default_options">
+					<dir name="ntfs-3g">
+						<entry name="mount_options">
+							<local_schema short_desc="Domyślne opcje dla montowania systemu plików ntfs-3g">
+								<longdesc>Lista domyślnych opcji montowania woluminów używających systemu plików ntfs (używając ntfs-3g).</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ntfs">
+						<entry name="fstype_override">
+							<local_schema short_desc="Domyślny sterownik systemu plików użyty jako domyślny po wykryciu &quot;ntfs&quot;">
+								<longdesc>Nazwa sterownika systemu plików, która ma być używana domyślnie, gdy zostanie wykryty &quot;ntfs&quot;. Jest to użyteczne przy konfiguracji systemu, gdzie domyślnie jest używany sterownik &quot;ntfs-3g&quot; dla wszystkich systemów plików &quot;ntfs&quot;. Użytkownik może nadal wybrać sterownik &quot;ntfs&quot; poprzez wymuszenie go na woluminie lub z wiersza poleceń.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="mount_options">
+							<local_schema short_desc="Domyślne opcje dla montowania systemu plików ntfs">
+								<longdesc>Lista domyślnych opcji montowania woluminów używających systemu plików ntfs.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="udf">
+						<entry name="mount_options">
+							<local_schema short_desc="Domyślne opcje dla montowania systemu plików udf">
+								<longdesc>Lista domyślnych opcji montowania woluminów używających systemu plików udf.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="iso9660">
+						<entry name="mount_options">
+							<local_schema short_desc="Domyślne opcje dla montowania systemu plików iso9660">
+								<longdesc>Lista domyślnych opcji montowania woluminów używających systemu plików iso9660.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="vfat">
+						<entry name="mount_options">
+							<local_schema short_desc="Domyślne opcje dla montowania systemu plików vfat">
+								<longdesc>Lista domyślnych opcji montowania woluminów używających systemu plików vfat.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
 			<dir name="smb">
 				<entry name="workgroup">
 					<local_schema short_desc="Grupa robocza SMB">
@@ -99,50 +143,6 @@
 						<longdesc>Dopuszczalne wartości to &quot;merged&quot; (połączone), &quot;separate&quot; (oddzielne) oraz &quot;disabled&quot; (wyłączone).</longdesc>
 					</local_schema>
 				</entry>
-			</dir>
-			<dir name="storage">
-				<dir name="default_options">
-					<dir name="ntfs-3g">
-						<entry name="mount_options">
-							<local_schema short_desc="Domyślne opcje dla montowania systemu plików ntfs-3g">
-								<longdesc>Lista domyślnych opcji montowania woluminów używających systemu plików ntfs (używając ntfs-3g).</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="ntfs">
-						<entry name="fstype_override">
-							<local_schema short_desc="Domyślny sterownik systemu plików użyty jako domyślny po wykryciu &quot;ntfs&quot;">
-								<longdesc>Nazwa sterownika systemu plików, która ma być używana domyślnie, gdy zostanie wykryty &quot;ntfs&quot;. Jest to użyteczne przy konfiguracji systemu, gdzie domyślnie jest używany sterownik &quot;ntfs-3g&quot; dla wszystkich systemów plików &quot;ntfs&quot;. Użytkownik może nadal wybrać sterownik &quot;ntfs&quot; poprzez wymuszenie go na woluminie lub z wiersza poleceń.</longdesc>
-							</local_schema>
-						</entry>
-						<entry name="mount_options">
-							<local_schema short_desc="Domyślne opcje dla montowania systemu plików ntfs">
-								<longdesc>Lista domyślnych opcji montowania woluminów używających systemu plików ntfs.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="udf">
-						<entry name="mount_options">
-							<local_schema short_desc="Domyślne opcje dla montowania systemu plików udf">
-								<longdesc>Lista domyślnych opcji montowania woluminów używających systemu plików udf.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="iso9660">
-						<entry name="mount_options">
-							<local_schema short_desc="Domyślne opcje dla montowania systemu plików iso9660">
-								<longdesc>Lista domyślnych opcji montowania woluminów używających systemu plików iso9660.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-					<dir name="vfat">
-						<entry name="mount_options">
-							<local_schema short_desc="Domyślne opcje dla montowania systemu plików vfat">
-								<longdesc>Lista domyślnych opcji montowania woluminów używających systemu plików vfat.</longdesc>
-							</local_schema>
-						</entry>
-					</dir>
-				</dir>
 			</dir>
 		</dir>
 		<dir name="desktop">
@@ -548,6 +548,23 @@
 						</entry>
 					</dir>
 				</dir>
+				<dir name="policykit">
+					<entry name="auth_dialog_retain_authorization_blacklist">
+						<local_schema short_desc="Lista działań, przy których opcja &quot;Zachowanie uwierzytelnienia&quot; nie jest domyślnie włączona.">
+							<longdesc>Lista działań PolicyKit, przy których opcja &quot;Zachowanie uwierzytelnienia&quot; nie jest domyślnie włączona; ta lista jest utrzymywana przez kod okna dialogowego uwierzytelniania. Przykładowo, jeśli użytkownik odznaczy opcję &quot;Zachowaj uwierzytelnienie&quot; dla działania i uzyska uwierzytelnienie dla tego działania, to te działanie zostanie dodane do listy.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="auth_dialog_retain_authorization">
+						<local_schema short_desc="Określa, czy opcja &quot;Zachowanie uwierzytelnienia&quot; jest domyślnie zaznaczona">
+							<longdesc>Jeśli ustawione na &quot;true&quot;, opcja &quot;Zachowanie uwierzytelnienia&quot; (jeśli obecna) jest domyślnie włączona w oknie dialogowym uwierzytelniania, chyba, że działanie jest wymienione w kluczu &quot;/desktop/gnome/policykit/auth_dialog_retain_authorization_blacklist&quot;.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="auth_dialog_grab_keyboard">
+						<local_schema short_desc="Określa, czy okno dialogowe uwierzytelniania powinno przejąć klawiaturę">
+							<longdesc>Jeśli ustawione na &quot;true&quot;, okno dialogowe uwierzytelniania z PolicyKit-gnome przechwyci klawiaturę, co uniemożliwi wprowadzanie znaków do innych programów podczas aktywności okna. Należy tego użyć, jeśli menedżer okien nie wprowadza automatycznie skupienia na okno dialogowe uwierzytelniania, a istnieje potrzeba uniknięcia przypadkowego wprowadzenia hasła w innych programach.</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
 				<dir name="url-handlers">
 					<dir name="h323">
 						<entry name="needs_terminal">
@@ -829,23 +846,6 @@
 							</local_schema>
 						</entry>
 					</dir>
-				</dir>
-				<dir name="policykit">
-					<entry name="auth_dialog_retain_authorization_blacklist">
-						<local_schema short_desc="Lista działań, przy których opcja &quot;Zachowanie uwierzytelnienia&quot; nie jest domyślnie włączona.">
-							<longdesc>Lista działań PolicyKit, przy których opcja &quot;Zachowanie uwierzytelnienia&quot; nie jest domyślnie włączona; ta lista jest utrzymywana przez kod okna dialogowego uwierzytelniania. Przykładowo, jeśli użytkownik odznaczy opcję &quot;Zachowaj uwierzytelnienie&quot; dla działania i uzyska uwierzytelnienie dla tego działania, to te działanie zostanie dodane do listy.</longdesc>
-						</local_schema>
-					</entry>
-					<entry name="auth_dialog_retain_authorization">
-						<local_schema short_desc="Określa, czy opcja &quot;Zachowanie uwierzytelnienia&quot; jest domyślnie zaznaczona">
-							<longdesc>Jeśli ustawione na &quot;true&quot;, opcja &quot;Zachowanie uwierzytelnienia&quot; (jeśli obecna) jest domyślnie włączona w oknie dialogowym uwierzytelniania, chyba, że działanie jest wymienione w kluczu &quot;/desktop/gnome/policykit/auth_dialog_retain_authorization_blacklist&quot;.</longdesc>
-						</local_schema>
-					</entry>
-					<entry name="auth_dialog_grab_keyboard">
-						<local_schema short_desc="Określa, czy okno dialogowe uwierzytelniania powinno przejąć klawiaturę">
-							<longdesc>Jeśli ustawione na &quot;true&quot;, okno dialogowe uwierzytelniania z PolicyKit-gnome przechwyci klawiaturę, co uniemożliwi wprowadzanie znaków do innych programów podczas aktywności okna. Należy tego użyć, jeśli menedżer okien nie wprowadza automatycznie skupienia na okno dialogowe uwierzytelniania, a istnieje potrzeba uniknięcia przypadkowego wprowadzenia hasła w innych programach.</longdesc>
-						</local_schema>
-					</entry>
 				</dir>
 				<dir name="thumbnailers">
 					<entry name="disable_all">
