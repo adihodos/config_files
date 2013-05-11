@@ -1,0 +1,34 @@
+[user]
+    name = Adi Hodos
+    email = adi.hodos@gmail.com
+[core]
+    pager = most
+    autocrlf = input
+    editor = gvim -f
+[color]
+    ui = always
+
+[help]
+    format = web
+
+[diff]
+    tool = diffmerge
+    prompt = false
+
+#[difftool]
+[difftool "diffmerge"]
+  cmd = sgdm -nosplash -t1="Local" -t2="Remote" "$REMOTE" "$LOCAL"
+
+[merge]
+    tool = diffmerge
+    trustExitCode = false
+    keepBackup = false
+    
+[mergetool "diffmerge"]
+    cmd = sgdm -merge -nosplash -result="$MERGED" -t1="Base file" -t2="Local File" -t3="Remote file" "$BASE" "$LOCAL" "$REMOTE" 
+
+[github]
+    user = adi.hodos@gmail.com
+    token = 08e8b4227fffcdc6c54b90c4324543fb
+[difftool]
+	prompt = false

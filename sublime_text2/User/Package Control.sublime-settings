@@ -1,0 +1,16 @@
+{
+	"auto_upgrade_last_run": null,
+	"installed_packages":
+	[
+		"CUDA C++",
+		"GL Shader Validator",
+		"hlsl",
+		"IndentGuides",
+		"KWrite Color Scheme",
+		"OpenGL Shading Language (GLSL)",
+		"Package Control",
+		"RailsCasts Colour Scheme",
+		"ShaderLanguages",
+		"Theme - Soda"
+	]
+}
