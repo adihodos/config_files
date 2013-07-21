@@ -37,7 +37,7 @@
 # If you want to enable support for zipped documentation (see below),
 # you may want to adapt viewer_* so that it starts a subshell:
 #
-viewer_pdf = (okular %s) &
+#viewer_pdf = (okular %s) &
 #
 # Otherwise, the & will have no effect since the viewing command is followed by
 # some cleanup-commands for temporary files. For the same reason, %s must be the
